@@ -61,4 +61,34 @@
         <pengirimanpesanan>jnt</pengirimanpesanan>
         <infopesanan>Menunggu Konfirmasi</infopesanan>
     </Pesanan>
+    <Pesanan>
+        <pembeli>
+            <email>mifta</email>
+            <password>mifta</password>
+            <NamaBadan>mifta</NamaBadan>
+            <NomorBadan>081</NomorBadan>
+            <alamatBadan>jalan mifta</alamatBadan>
+            <role>Buyer</role>
+        </pembeli>
+        <product>
+            <owner>
+                <email>widyahelo123@gmail.com</email>
+                <password>widya123</password>
+                <NamaBadan>PT WIDYA</NamaBadan>
+                <NomorBadan>0825437689</NomorBadan>
+                <alamatBadan>DIAS KOST MUSLIM</alamatBadan>
+                <role>Seller</role>
+            </owner>
+            <namaproduk>Wortel</namaproduk>
+            <deskripsiproduk>wortel ini sangat bagus untuk kesehatan mata</deskripsiproduk>
+            <categoriproduk>Sayur</categoriproduk>
+            <expiredproduk>2023-06-29</expiredproduk>
+            <pengirimanproduk>jne,pickup,</pengirimanproduk>
+            <fotoproduk>Database/Barang/fotoProduct/wortel.jpg</fotoproduk>
+            <stockproduk>95</stockproduk>
+        </product>
+        <jumlahpesanan>21</jumlahpesanan>
+        <pengirimanpesanan>pickup</pengirimanpesanan>
+        <infopesanan>Menunggu Konfirmasi</infopesanan>
+    </Pesanan>
 </PesananInfo>

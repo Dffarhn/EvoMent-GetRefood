@@ -184,12 +184,16 @@ public class Myrefood implements Initializable {
         
                     // Set different text for each label
                     Label nameLabel = (Label) item.lookup("#NamaToko");
-                    nameLabel.setText(Pesananuser.getRefoodPesanan().get(i).getProduct().getOwner().getNamaBadan());
+                    nameLabel.setText(Pesananuser.getRefoodPesanan().get(i).getProduct().getOwner().getNamaBadan() + " >");
         
                     // Label banyakPenjualanLabel = (Label) item.lookup("#banyakPenjualanLabel");
                     // banyakPenjualanLabel.setText(banyakPenjualanLabel.getText()+ barangdatashow.getRefoodBarang().get(i).getStockproduk());
                     Label NamaPesanan = (Label) item.lookup("#NamaPesanan");
                     NamaPesanan.setText(Pesananuser.getRefoodPesanan().get(i).getProduct().getNamaproduk());
+                    Label jumlahpesanan = (Label) item.lookup("#jumlahpesanan");
+                    jumlahpesanan.setText("X "+Pesananuser.getRefoodPesanan().get(i).getJumlahpesanan());
+                    Label statusorder = (Label) item.lookup("#statusorder");
+                    statusorder.setText(Pesananuser.getRefoodPesanan().get(i).getInfopesanan());
     
                     ImageView imageView = (ImageView) item.lookup("#fotoproduk");
                     Image image = new Image(getClass().getClassLoader().getResourceAsStream(Pesananuser.getRefoodPesanan().get(i).getProduct().getFotoproduk()));
