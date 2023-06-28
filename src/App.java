@@ -8,6 +8,7 @@ public class App extends Application {
    public void start(Stage stage) throws Exception {
 
       Parent root = FXMLLoader.load(getClass().getResource("Login/Scene1.fxml"));
+      // Parent root = FXMLLoader.load(getClass().getResource("HomePage\\myproduct.fxml"));
       // Parent root = FXMLLoader.load(getClass().getResource("MyReFood\\MyRefood.fxml"));
       // Parent root = FXMLLoader.load(getClass().getResource("HomePage\\searchview.fxml"));
       // Parent root = FXMLLoader.load(getClass().getResource("PageSeeProduct/seepro.fxml"));

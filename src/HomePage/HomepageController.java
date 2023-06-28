@@ -183,6 +183,17 @@ public class HomepageController implements Initializable {
         
     }
     @FXML
+    private void ToMyProduct(ActionEvent event) throws Exception {
+
+        Openscene os = new Openscene();
+
+        Pane root = os.getPane("HomePage/myproduct");
+
+        nowshow = root;
+        mainshow.getChildren().setAll(root);
+        
+    }
+    @FXML
     private void ToBeranda(ActionEvent event) throws Exception {
         try {
 
@@ -540,7 +551,7 @@ public class HomepageController implements Initializable {
             // ActionEvent fakeEvent = new ActionEvent();
             butmyprod.setOnAction(event -> {
                 try {
-                    ToMyaddProduct(event);
+                    ToMyProduct(event);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
