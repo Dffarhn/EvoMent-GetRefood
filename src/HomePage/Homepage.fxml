@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomePage.HomepageController">
+   <children>
+      <AnchorPane fx:id="mainshow" layoutX="170.0" layoutY="-1.0" prefHeight="692.0" prefWidth="1111.0" stylesheets="@Homepage.css">
+         <children>
+            <TextField fx:id="searchinput" layoutX="423.0" layoutY="22.0" prefHeight="25.0" prefWidth="244.0" promptText="Search" />
+            <Button layoutX="693.0" layoutY="20.0" mnemonicParsing="false" onAction="#ToSearch" text="Cari" />
+            <AnchorPane fx:id="mainshowbot" layoutY="65.0" prefHeight="636.0" prefWidth="1109.0">
+               <children>
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="632.0" prefWidth="899.0" style="-fx-background-color: white;">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2000.0" prefWidth="1105.0">
+                           <children>
+                              <GridPane fx:id="showbarang" hgap="20.0" layoutX="7.0" layoutY="732.0" onMouseClicked="#handleGridClickothers" prefHeight="1467.0" prefWidth="1075.0" vgap="20.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                              </GridPane>
+                              <Label layoutX="14.0" layoutY="22.0" prefHeight="40.0" prefWidth="188.0" text="What's New">
+                                 <font>
+                                    <Font name="System Bold" size="28.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="11.0" layoutY="319.0" prefHeight="40.0" prefWidth="273.0" text="The Most Popular">
+                                 <font>
+                                    <Font name="System Bold" size="28.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="9.0" layoutY="664.0" prefHeight="40.0" prefWidth="273.0" text="Others">
+                                 <font>
+                                    <Font name="System Bold" size="28.0" />
+                                 </font>
+                              </Label>
+                              <GridPane fx:id="showbarangnew" hgap="20.0" layoutX="17.0" layoutY="70.0" onMouseClicked="#handleGridClick" prefHeight="227.0" prefWidth="1075.0" vgap="20.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <GridPane fx:id="showbarangpopular" hgap="20.0" layoutX="15.0" layoutY="388.0" onMouseClicked="#handleGridClickmost" prefHeight="227.0" prefWidth="1075.0" vgap="20.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <Button fx:id="buttonback" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#Toback" text="&lt;-" visible="false" />
+         </children></AnchorPane>
+      <VBox layoutX="-2.0" layoutY="-1.0" prefHeight="700.0" prefWidth="172.0" spacing="20.0" styleClass="Sidebar" stylesheets="@Homepage.css">
+         <children>
+            <Button mnemonicParsing="false" onAction="#ToBeranda" prefHeight="57.0" prefWidth="189.0" styleClass="SidebarBut" stylesheets="@Homepage.css" text="Beranda" textFill="WHITE">
+               <padding>
+                  <Insets bottom="20.0" top="20.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#ToMyProfile" prefHeight="57.0" prefWidth="172.0" styleClass="SidebarBut" stylesheets="@Homepage.css" text="My-Profile" textFill="WHITE">
+               <padding>
+                  <Insets bottom="20.0" top="20.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="butmyprod" mnemonicParsing="false" onAction="#ToMyReFood" prefHeight="57.0" prefWidth="213.0" styleClass="SidebarBut" stylesheets="@Homepage.css" text="Pesanan" textFill="WHITE">
+               <padding>
+                  <Insets bottom="20.0" top="20.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="addprodbut" mnemonicParsing="false" onAction="#ToMyaddProduct" prefHeight="57.0" prefWidth="188.0" styleClass="SidebarBut" stylesheets="@Homepage.css" text="Add Product" textFill="WHITE">
+               <padding>
+                  <Insets bottom="20.0" top="20.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="150.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

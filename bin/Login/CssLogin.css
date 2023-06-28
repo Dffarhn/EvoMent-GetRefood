@@ -1,0 +1,125 @@
+
+.button3{
+
+  -fx-background-color: #00FFFF;
+
+
+  -fx-border-radius: 0px 0px 168px 181px;
+  -fx-background-radius: 0px 0px 168px 181px;
+  -fx-background-insets: 0, 1;
+  -fx-text-fill: #ffffff;
+  -fx-font-family: Arial;
+  -fx-font-size: 20px;
+  -fx-padding: 10px 20px;
+  -fx-text-decoration: none;
+  -fx-effect: dropshadow(three-pass-box, #666666, 3, 0, 0, 0);
+  -fx-cursor: hand;
+  -fx-opacity: 0.7;
+
+
+  
+}
+.button3:hover{
+
+  -fx-background-color: #00FFFF;
+  -fx-opacity: 1;
+  -fx-cursor: hand;
+
+
+  
+}
+
+
+
+.buttonin2{
+  -fx-background-color: #00FFFF;
+  -fx-cursor: hand;
+  -fx-opacity: 0.7;
+  -fx-background-radius: 0px 0px 168px 181px;
+
+  -fx-border-radius: 0px 0px 168px 181px;
+  -fx-background-insets: 0, 1;
+  -fx-text-fill: #ffffff;
+  -fx-font-family: Arial;
+  -fx-font-size: 20px;
+  -fx-padding: 10px 20px;
+  -fx-text-decoration: none;
+  -fx-effect: dropshadow(three-pass-box, #666666, 3, 0, 0, 0);
+
+}
+
+.buttonin2:hover{
+  -fx-background-color: #00FFFF;
+  -fx-opacity: 1;
+} 
+
+.buttonin2:focused{
+  -fx-border-color: #338ae0;
+  -fx-border-radius: 10px;
+  -fx-border-radius: 0px 0px 168px 181px;
+  -fx-text-fill: #272f3e;
+  -fx-opacity: 1;
+
+
+
+}
+.button3:focused{
+  -fx-border-color: #338ae0;
+  -fx-border-radius: 10px;
+  -fx-border-radius: 0px 0px 168px 181px;
+  -fx-text-fill: #272f3e;
+  -fx-opacity: 1;
+
+
+
+}
+
+.backde{
+    -fx-background-color: linear-gradient(to right, rgb(252, 115, 156) 0%, rgb(206, 135, 179,0.5) 79%, rgb(161, 145, 207,0.5) 100%);
+    
+
+}
+
+.buttonin {
+    -fx-font-family: "Roboto", sans-serif;
+    -fx-font-weight: normal;
+    -fx-font-size: 14px;
+    -fx-text-fill: #fff;
+    -fx-background-color: #0066CC;
+    -fx-padding: 10px 30px;
+    -fx-effect: none;
+    -fx-transition-duration: 1000ms;
+    -fx-alignment: center;
+    -fx-cursor: hand;
+  }
+  
+  .buttonin:hover {
+    -fx-background-color: #338ae0;
+    
+  }
+
+
+#textfield2 {
+    -fx-background-color:rgb(255, 255, 255) ;
+    -fx-background-radius: 10px;
+    
+    
+    
+  }
+
+  #textfield2:focused {
+    -fx-background-color:rgb(241, 241, 241) ;
+    
+    -fx-border-width: 2px;
+    
+    -fx-border-color: #338ae0;
+    -fx-border-radius: 10px;
+    
+  }
+
+#panebackground{
+    -fx-background-color: linear-gradient( #efd5ff 0%, #515ada 100%);
+
+}
+
+  

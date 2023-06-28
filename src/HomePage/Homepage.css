@@ -1,0 +1,27 @@
+.Sidebar{
+
+    -fx-background-color: #008A53 ;
+
+    
+    
+}
+
+
+.SidebarBut{
+    -fx-background-color: #008A53 ;
+
+
+    -fx-cursor: hand;
+
+}
+.SidebarBut:hover{
+    -fx-background-color: #03683f ;
+    -fx-border-color: white ;
+
+    -fx-border-width: 0px 0px 0px 5px ;
+
+
+
+    -fx-cursor: hand;
+
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="220.0" prefWidth="194.0" style="-fx-background-color: lightblue; -fx-background-radius: 20; -fx-border-radius: 10;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="nameLabel" layoutX="14.0" layoutY="124.0" text="Nama Barang">
+         <font>
+            <Font name="Yu Gothic Medium" size="20.0" />
+         </font></Label>
+      <Label fx:id="banyakPenjualanLabel" layoutX="15.0" layoutY="151.0" text="Stock : " />
+      <ImageView fx:id="imageproduct" blendMode="DARKEN" fitHeight="119.0" fitWidth="167.0" layoutX="13.0" layoutY="5.0" pickOnBounds="true" />
+      <Label alignment="CENTER" layoutX="116.0" layoutY="187.0" prefHeight="25.0" prefWidth="70.0" styleClass="seeprod" stylesheets="@DisplayShow/Displaybarang.css" text="See Product" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label fx:id="Penjual" layoutX="15.0" layoutY="191.0" text="by " />
+   </children>
+</AnchorPane>

@@ -1,0 +1,14 @@
+.seeprod{
+    -fx-background-color:  #E32636 ;
+    -fx-cursor: hand;
+
+    -fx-background-radius : 10px;
+
+
+}
+
+
+.seeprod:hover{
+    -fx-background-color:  #e16c76 ;
+
+}

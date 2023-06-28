@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomePage.HomepageController">
+   <children>
+      <AnchorPane fx:id="mainshow" layoutX="135.0" layoutY="58.0" prefHeight="540.0" prefWidth="865.0" style="-fx-border-color: black;" />
+      <VBox layoutX="1.0" layoutY="-1.0" prefHeight="599.0" prefWidth="131.0" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#ToMyProfile" prefHeight="57.0" prefWidth="136.0" text="My Profile">
+               <padding>
+                  <Insets bottom="20.0" top="20.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#ToMyReFood" prefHeight="57.0" prefWidth="213.0" text="My-ReFood">
+               <padding>
+                  <Insets bottom="20.0" top="20.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="172.0" text="Button">
+               <padding>
+                  <Insets bottom="20.0" top="20.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="188.0" text="Button">
+               <padding>
+                  <Insets bottom="20.0" top="20.0" />
+               </padding>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="150.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
