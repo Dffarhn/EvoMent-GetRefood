@@ -73,6 +73,8 @@
 
 .backde{
     -fx-background-color: #008A53;
+
+    -fx-background-radius: 20px;
     
 
 }
@@ -118,9 +120,5 @@
     
   }
 
-#panebackground{
-    -fx-background-color: linear-gradient( #efd5ff 0%, #515ada 100%);
-
-}
 
   

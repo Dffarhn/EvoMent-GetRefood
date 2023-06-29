@@ -23,7 +23,7 @@
             <Font size="19.0" />
          </font>
       </Label>
-      <Label fx:id="statusorder" alignment="CENTER" layoutX="897.0" layoutY="139.0" prefHeight="29.0" prefWidth="185.0" style="-fx-background-color: lightwhite;" text="Order Selesai">
+      <Label fx:id="statusorder" alignment="CENTER" layoutX="897.0" layoutY="139.0" prefHeight="29.0" prefWidth="185.0" text="Order Selesai">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>

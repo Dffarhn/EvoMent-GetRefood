@@ -37,10 +37,10 @@ public class MyprofileController implements Initializable {
     private TextField showephoneprofile;
 
     @FXML
-    private TextField shownameprofile;
+    private Label shownameprofile;
 
     @FXML
-    private TextField showroleprofile;
+    private Label showroleprofile;
 
     AllAccount datauser = new AllAccount();
 

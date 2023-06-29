@@ -10,22 +10,22 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="692.0" prefWidth="1111.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MyProfile.MyprofileController">
+<AnchorPane maxHeight="692.0" maxWidth="1111.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="692.0" prefWidth="1111.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MyProfile.MyprofileController">
    <children>
-      <AnchorPane layoutX="-1.0" prefHeight="690.0" prefWidth="1109.0" style="-fx-background-color: D9D9D9; -fx-background-radius: 20;" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="-1.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane layoutX="-1.0" maxHeight="690.0" maxWidth="1109.0" prefHeight="690.0" prefWidth="1109.0" style="-fx-background-color: D9D9D9; -fx-background-radius: 20;" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="-1.0" AnchorPane.topAnchor="0.0">
          <children>
             <ImageView blendMode="MULTIPLY" fitHeight="440.0" fitWidth="1134.0" layoutY="-126.0" pickOnBounds="true">
                <image>
                   <Image url="@backgroundup2.png" />
                </image>
             </ImageView>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f6f6f6" height="106.0" layoutX="1.0" layoutY="212.0" stroke="BLACK" strokeType="INSIDE" width="1132.0" />
-            <Label layoutX="234.0" layoutY="214.0" prefHeight="36.0" prefWidth="432.0" text="Institution Name">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f6f6f6" height="106.0" layoutX="-72.0" layoutY="212.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1205.0" />
+            <Label fx:id="shownameprofile" layoutX="234.0" layoutY="228.0" prefHeight="36.0" prefWidth="432.0" text="Institution Name">
                <font>
                   <Font name="System Bold" size="26.0" />
                </font>
             </Label>
-            <Label layoutX="561.0" layoutY="473.0" prefHeight="36.0" prefWidth="431.0" text="Adress :">
+            <Label layoutX="561.0" layoutY="500.0" prefHeight="36.0" prefWidth="431.0" text="Adress :">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -35,21 +35,25 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <TextField fx:id="shownameprofile" disable="true" layoutX="476.0" layoutY="220.0" prefHeight="31.0" prefWidth="340.0" style="-fx-background-color: white; -fx-background-radius: 15;" />
-            <TextField fx:id="showemailprofile" disable="true" layoutX="564.0" layoutY="373.0" prefHeight="31.0" prefWidth="340.0" style="-fx-background-color: white; -fx-background-radius: 15;" />
-            <Label layoutX="562.0" layoutY="408.0" prefHeight="36.0" prefWidth="432.0" text="Phone : ">
+            <TextField fx:id="showemailprofile" disable="true" layoutX="564.0" layoutY="373.0" prefHeight="31.0" prefWidth="340.0" style="-fx-background-color: white; -fx-background-radius: 15;">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font></TextField>
+            <Label layoutX="562.0" layoutY="415.0" prefHeight="36.0" prefWidth="432.0" text="Phone : ">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="238.0" layoutY="250.0" prefHeight="36.0" prefWidth="236.0" text="Role : ">
+            <Label fx:id="showroleprofile" layoutX="238.0" layoutY="264.0" prefHeight="36.0" prefWidth="236.0" text="Role : ">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <TextField fx:id="showephoneprofile" disable="true" layoutX="566.0" layoutY="439.0" prefHeight="31.0" prefWidth="340.0" style="-fx-background-color: white; -fx-background-radius: 15;" />
-            <TextField fx:id="showroleprofile" disable="true" layoutX="482.0" layoutY="267.0" prefHeight="31.0" prefWidth="340.0" style="-fx-background-color: white; -fx-background-radius: 15;" />
-            <TextArea fx:id="showalamatprofile" disable="true" layoutX="566.0" layoutY="504.0" prefHeight="64.0" prefWidth="340.0" style="-fx-background-color: white;" wrapText="true" />
+            <TextField fx:id="showephoneprofile" disable="true" layoutX="566.0" layoutY="446.0" prefHeight="31.0" prefWidth="340.0" style="-fx-background-color: white; -fx-background-radius: 15;">
+               <font>
+                  <Font size="19.0" />
+               </font></TextField>
+            <TextArea fx:id="showalamatprofile" disable="true" layoutX="566.0" layoutY="531.0" prefHeight="64.0" prefWidth="340.0" style="-fx-background-color: white;" wrapText="true" />
             <Circle fx:id="circmage" fill="DODGERBLUE" layoutX="152.0" layoutY="215.0" radius="72.0" stroke="BLACK" strokeType="INSIDE" />
          </children>
       </AnchorPane>
