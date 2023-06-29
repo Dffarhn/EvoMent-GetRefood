@@ -97,7 +97,7 @@
   
   .buttonmasuk:hover {
     -fx-background-color: #395346;
-    -fx-opacity: 0.5;
+    -fx-opacity: 0.8;
     
   }
 
@@ -105,20 +105,29 @@
 #textfield2 {
     -fx-background-color:rgb(255, 255, 255) ;
     -fx-background-radius: 10px;
+
+    -fx-border-color: black;
+
+
+    -fx-border-width: 0px 0px 2px 0px ;
+
+    -fx-transition :  -fx-border-width 1s;
     
     
     
   }
 
-  #textfield2:focused {
+
+#textfield2:focused {
     -fx-background-color:rgb(241, 241, 241) ;
+
+    -fx-border-width: 0px 0px 2px 0px ;
     
-    -fx-border-width: 2px;
     
     -fx-border-color: #338ae0;
-    -fx-border-radius: 10px;
+    /* -fx-border-radius: 10px; */
     
-  }
+}
 
 
   

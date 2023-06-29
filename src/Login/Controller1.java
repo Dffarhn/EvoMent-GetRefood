@@ -13,6 +13,7 @@ import com.thoughtworks.xstream.security.AnyTypePermission;
 
 import Database.Account;
 import Database.AllAccount;
+import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -31,6 +32,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 public class Controller1 implements Initializable {
 
     @FXML
@@ -40,7 +42,7 @@ public class Controller1 implements Initializable {
     private Scene scene;
 
     @FXML
-    private AnchorPane showinputregister, showinputlogin,signupas,signupseller,signupbuyer;
+    private AnchorPane showinputregister, showinputlogin,signupas,signupseller,signupbuyer,justimage;
 
 
     @FXML
@@ -82,6 +84,16 @@ public class Controller1 implements Initializable {
     private void Chooselogin(ActionEvent event) {
 
         
+        TranslateTransition transition = new TranslateTransition(Duration.seconds(1), showinputregister);
+        transition.setByX(-440); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
+        transition.play(); //
+
+        TranslateTransition transition1 = new TranslateTransition(Duration.seconds(1), showinputlogin);
+        transition1.setByX(-440); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
+        transition1.play(); //
+        TranslateTransition transition2 = new TranslateTransition(Duration.seconds(1), justimage);
+        transition2.setByX(360); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
+        transition2.play(); //
         showinputlogin.setVisible(true);
         showinputregister.setVisible(false);
         
@@ -91,6 +103,17 @@ public class Controller1 implements Initializable {
     @FXML
     private void Choosesignup(ActionEvent event) {;
 
+        
+        TranslateTransition transition = new TranslateTransition(Duration.seconds(1), showinputregister);
+        transition.setByX(440); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
+        transition.play(); //
+        TranslateTransition transition1 = new TranslateTransition(Duration.seconds(1), showinputlogin);
+        transition1.setByX(440); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
+        transition1.play(); //
+
+        TranslateTransition transition2 = new TranslateTransition(Duration.seconds(1), justimage);
+        transition2.setByX(-360); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
+        transition2.play(); //
         showinputlogin.setVisible(false);
         showinputregister.setVisible(true);
     }
