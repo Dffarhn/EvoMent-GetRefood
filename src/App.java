@@ -14,6 +14,7 @@ public class App extends Application {
       // Parent root = FXMLLoader.load(getClass().getResource("PageSeeProduct/seepro.fxml"));
       Parent root = FXMLLoader.load(getClass().getResource("HomePage/Homepage.fxml"));
       // Parent root = FXMLLoader.load(getClass().getResource("HomePage\\berandaseller.fxml"));
+      // Parent root = FXMLLoader.load(getClass().getResource("MyProfile\\Myprofile.fxml"));
       Scene scene = new Scene(root);
       stage.setScene(scene);
       stage.show();

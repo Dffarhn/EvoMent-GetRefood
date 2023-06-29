@@ -17,7 +17,15 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.paint.ImagePattern;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
 public class MyprofileController implements Initializable {
+
+    
+    @FXML
+    private Circle circmage;
 
     @FXML
     private TextArea showalamatprofile;
@@ -108,6 +116,11 @@ public class MyprofileController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         update();
+
+        Image img = new Image("/MyProfile/mif.jpg");
+
+
+        circmage.setFill(new ImagePattern(img));
         
     }
 }
