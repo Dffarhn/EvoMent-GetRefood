@@ -190,6 +190,10 @@ public class Myrefood implements Initializable {
                     // banyakPenjualanLabel.setText(banyakPenjualanLabel.getText()+ barangdatashow.getRefoodBarang().get(i).getStockproduk());
                     Label NamaPesanan = (Label) item.lookup("#NamaPesanan");
                     NamaPesanan.setText(Pesananuser.getRefoodPesanan().get(i).getProduct().getNamaproduk());
+                    Label nomortoko = (Label) item.lookup("#nomortoko");
+                    nomortoko.setText(Pesananuser.getRefoodPesanan().get(i).getProduct().getOwner().getNomorBadan());
+                    Label alamattoko = (Label) item.lookup("#alamattoko");
+                    alamattoko.setText(Pesananuser.getRefoodPesanan().get(i).getProduct().getOwner().getAlamatBadan());
                     Label jumlahpesanan = (Label) item.lookup("#jumlahpesanan");
                     jumlahpesanan.setText("X "+Pesananuser.getRefoodPesanan().get(i).getJumlahpesanan());
                     Label statusorder = (Label) item.lookup("#statusorder");

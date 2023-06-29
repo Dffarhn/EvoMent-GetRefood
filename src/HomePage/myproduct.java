@@ -195,7 +195,7 @@ public class myproduct implements Initializable {
                     // Set different text for each label
                     Label nameLabel = (Label) item.lookup("#nameLabel");
                     nameLabel.setText(barangdatashow.getRefoodBarang().get(i).getNamaproduk());
-        
+                    
                     Label banyakPenjualanLabel = (Label) item.lookup("#banyakPenjualanLabel");
                     banyakPenjualanLabel.setText(banyakPenjualanLabel.getText()+ barangdatashow.getRefoodBarang().get(i).getStockproduk());
                     Label Penjual = (Label) item.lookup("#Penjual");
