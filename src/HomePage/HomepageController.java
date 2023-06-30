@@ -52,6 +52,8 @@ public class HomepageController implements Initializable {
     private Button butmyprod;
      @FXML
     private Button addprodbut;
+     @FXML
+    private Button listdisbut;
 
     
 
@@ -188,6 +190,17 @@ public class HomepageController implements Initializable {
         Openscene os = new Openscene();
 
         Pane root = os.getPane("HomePage/myproduct");
+
+        nowshow = root;
+        mainshow.getChildren().setAll(root);
+        
+    }
+    @FXML
+    private void ToDistribusi(ActionEvent event) throws Exception {
+
+        Openscene os = new Openscene();
+
+        Pane root = os.getPane("ListDistribusiPage/listdistribusi");
 
         nowshow = root;
         mainshow.getChildren().setAll(root);
@@ -587,6 +600,8 @@ public class HomepageController implements Initializable {
             
         }else{
             // System.out.println("ini harus buyer");
+
+            listdisbut.setVisible(false);
 
             addprodbut.setVisible(false);
             

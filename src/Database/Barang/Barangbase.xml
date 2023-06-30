@@ -1,8 +1,391 @@
-<?xml version="1.0" ?><BarangInfo><Barang><owner><email>adiva@gmail.com</email><password>adiva123</password><NamaBadan>ASDOS</NamaBadan><NomorBadan>082253507890</NomorBadan><alamatBadan>uii</alamatBadan><role>Seller</role></owner><namaproduk>BuahApel</namaproduk><deskripsiproduk>Buah yang hampir segar dan lain-lain</deskripsiproduk><categoriproduk>Buah</categoriproduk><expiredproduk>27-09-2023</expiredproduk><pengirimanproduk>jne</pengirimanproduk><fotoproduk>Database/Barang/fotoProduct/Apelll.png</fotoproduk><stockproduk>20</stockproduk></Barang><Barang><owner><email>adiva@gmail.com</email><password>adiva123</password><NamaBadan>ASDOS</NamaBadan><NomorBadan>082253507890</NomorBadan><alamatBadan>uii</alamatBadan><role>Seller</role></owner><namaproduk>Pisang Raja </namaproduk><deskripsiproduk>Pisang Raja ini sudah pasti enak loh</deskripsiproduk><categoriproduk>Buah</categoriproduk><expiredproduk>2023-06-30</expiredproduk><pengirimanproduk>jne,pickup,</pengirimanproduk><fotoproduk>Database/Barang/fotoProduct/Pisangg.png</fotoproduk><stockproduk>20</stockproduk></Barang><Barang><owner><email>adiva@gmail.com</email><password>adiva123</password><NamaBadan>ASDOS</NamaBadan><NomorBadan>082253507890</NomorBadan><alamatBadan>uii</alamatBadan><role>Seller</role></owner><namaproduk>alpukat manis</namaproduk><deskripsiproduk>alpukat ini di petik langsung oleh bapa saya</deskripsiproduk><categoriproduk>Buah</categoriproduk><expiredproduk>2024-06-12</expiredproduk><pengirimanproduk>pickup,</pengirimanproduk><fotoproduk>Database/Barang/fotoProduct/alpukat.png</fotoproduk><stockproduk>34</stockproduk></Barang><Barang><owner><email>adiva@gmail.com</email><password>adiva123</password><NamaBadan>ASDOS</NamaBadan><NomorBadan>082253507890</NomorBadan><alamatBadan>uii</alamatBadan><role>Seller</role></owner><namaproduk>delima agus</namaproduk><deskripsiproduk>delima ini sangat bagus untuk kesehatan karena di tanam dengan hati yang
-            tulus</deskripsiproduk><categoriproduk>Buah</categoriproduk><expiredproduk>2024-06-10</expiredproduk><pengirimanproduk>jne,</pengirimanproduk><fotoproduk>Database/Barang/fotoProduct/delimaa.png</fotoproduk><stockproduk>76</stockproduk></Barang><Barang><owner><email>adiva@gmail.com</email><password>adiva123</password><NamaBadan>ASDOS</NamaBadan><NomorBadan>082253507890</NomorBadan><alamatBadan>uii</alamatBadan><role>Seller</role></owner><namaproduk>nanas muda</namaproduk><deskripsiproduk>membantu untuk para kalian yang sedang berdiet dikarenakan tingkat keasaman
-            yang di luar nayla dan gak habis fikri</deskripsiproduk><categoriproduk>Buah</categoriproduk><expiredproduk>2023-07-27</expiredproduk><pengirimanproduk>jnt,pickup,</pengirimanproduk><fotoproduk>Database/Barang/fotoProduct/nanas.png</fotoproduk><stockproduk>76</stockproduk></Barang><Barang><owner><email>adiva@gmail.com</email><password>adiva123</password><NamaBadan>ASDOS</NamaBadan><NomorBadan>082253507890</NomorBadan><alamatBadan>uii</alamatBadan><role>Seller</role></owner><namaproduk>Bayam Sehat</namaproduk><deskripsiproduk>bayam ini mengandung gizi lebih dari yang seharusnya</deskripsiproduk><categoriproduk>Sayur</categoriproduk><expiredproduk>2023-06-30</expiredproduk><pengirimanproduk>jnt,</pengirimanproduk><fotoproduk>Database/Barang/fotoProduct/bayam.png</fotoproduk><stockproduk>12</stockproduk></Barang><Barang><owner><email>adiva@gmail.com</email><password>adiva123</password><NamaBadan>ASDOS</NamaBadan><NomorBadan>082253507890</NomorBadan><alamatBadan>uii</alamatBadan><role>Seller</role></owner><namaproduk>kangkung muda</namaproduk><deskripsiproduk>kangkung ini sangat cocok untuk dihidangkan bersama capcay</deskripsiproduk><categoriproduk>Sayur</categoriproduk><expiredproduk>2023-08-14</expiredproduk><pengirimanproduk>jne,pickup,</pengirimanproduk><fotoproduk>Database/Barang/fotoProduct/kangkung.png</fotoproduk><stockproduk>80</stockproduk></Barang><Barang><owner><email>adiva@gmail.com</email><password>adiva123</password><NamaBadan>ASDOS</NamaBadan><NomorBadan>082253507890</NomorBadan><alamatBadan>uii</alamatBadan><role>Seller</role></owner><namaproduk>tahu bulat </namaproduk><deskripsiproduk>tahu bulat ini sangat lejat dan bergizi</deskripsiproduk><categoriproduk>Sayur</categoriproduk><expiredproduk>2023-06-21</expiredproduk><pengirimanproduk>pickup,</pengirimanproduk><fotoproduk>Database/Barang/fotoProduct/tahuuu.png</fotoproduk><stockproduk>32</stockproduk></Barang><Barang><owner><email>adiva@gmail.com</email><password>adiva123</password><NamaBadan>ASDOS</NamaBadan><NomorBadan>082253507890</NomorBadan><alamatBadan>uii</alamatBadan><role>Seller</role></owner><namaproduk>Tempe putih</namaproduk><deskripsiproduk>tempe ini langsung di olah oleh induk keledai</deskripsiproduk><categoriproduk>Sayur</categoriproduk><expiredproduk>2023-06-28</expiredproduk><pengirimanproduk>jnt,</pengirimanproduk><fotoproduk>Database/Barang/fotoProduct/tempee.png</fotoproduk><stockproduk>67</stockproduk></Barang><Barang><owner><email>adiva@gmail.com</email><password>adiva123</password><NamaBadan>ASDOS</NamaBadan><NomorBadan>082253507890</NomorBadan><alamatBadan>uii</alamatBadan><role>Seller</role></owner><namaproduk>pakcoy</namaproduk><deskripsiproduk>pakcoy enak sekali</deskripsiproduk><categoriproduk>Buah</categoriproduk><expiredproduk>2023-06-29</expiredproduk><pengirimanproduk>jne,jnt,</pengirimanproduk><fotoproduk>Database/Barang/fotoProduct/pakcoy.jpg</fotoproduk><stockproduk>100</stockproduk></Barang><Barang><owner><email>jeki@gmail.com</email><password>jeki123</password><NamaBadan>jekiboy</NamaBadan><NomorBadan>082243678912</NomorBadan><alamatBadan>wirobrajan</alamatBadan><role>Seller</role></owner><namaproduk>mangga</namaproduk><deskripsiproduk>mangga lejat dan bergizi</deskripsiproduk><categoriproduk>Buah</categoriproduk><expiredproduk>2023-06-30</expiredproduk><pengirimanproduk>jne,pickup,</pengirimanproduk><fotoproduk>Database/Barang/fotoProduct/manggajeki.jpg</fotoproduk><stockproduk>180</stockproduk></Barang><Barang><owner><email>widyahelo123@gmail.com</email><password>widya123</password><NamaBadan>PT WIDYA</NamaBadan><NomorBadan>0825437689</NomorBadan><alamatBadan>DIAS KOST MUSLIM</alamatBadan><role>Seller</role></owner><namaproduk>seblak</namaproduk><deskripsiproduk>seblak widya enak tau lezat dan bergijikkkk</deskripsiproduk><categoriproduk>Makanan</categoriproduk><expiredproduk>2024-06-20</expiredproduk><pengirimanproduk>jne,jnt,pickup,</pengirimanproduk><fotoproduk>Database/Barang/fotoProduct/Seblak.jpg</fotoproduk><stockproduk>100</stockproduk></Barang><Barang><owner><email>widyahelo123@gmail.com</email><password>widya123</password><NamaBadan>PT WIDYA</NamaBadan><NomorBadan>0825437689</NomorBadan><alamatBadan>DIAS KOST MUSLIM</alamatBadan><role>Seller</role></owner><namaproduk>Wortel</namaproduk><deskripsiproduk>wortel ini sangat bagus untuk kesehatan mata</deskripsiproduk><categoriproduk>Sayur</categoriproduk><expiredproduk>2023-06-29</expiredproduk><pengirimanproduk>jne,pickup,</pengirimanproduk><fotoproduk>Database/Barang/fotoProduct/wortel.jpg</fotoproduk><stockproduk>74</stockproduk></Barang><Barang><owner><email>widyahelo123@gmail.com</email><password>widya123</password><NamaBadan>PT WIDYA</NamaBadan><NomorBadan>0825437689</NomorBadan><alamatBadan>DIAS KOST MUSLIM</alamatBadan><role>Seller</role></owner><namaproduk>sirup</namaproduk><deskripsiproduk>marjan</deskripsiproduk><categoriproduk>Minuman</categoriproduk><expiredproduk>2023-06-29</expiredproduk><pengirimanproduk>pickup,</pengirimanproduk><fotoproduk>Database/Barang/fotoProduct/sirupmiftah.png</fotoproduk><stockproduk>60</stockproduk></Barang><Barang><owner><email>widyahelo123@gmail.com</email><password>widya123</password><NamaBadan>PT WIDYA</NamaBadan><NomorBadan>0825437689</NomorBadan><alamatBadan>DIAS KOST MUSLIM</alamatBadan><role>Seller</role></owner><namaproduk>Cabai</namaproduk><deskripsiproduk>cabai ayman mantap sekali</deskripsiproduk><categoriproduk>Sayur</categoriproduk><expiredproduk>2023-06-30</expiredproduk><pengirimanproduk>jne,jnt,</pengirimanproduk><fotoproduk>Database/Barang/fotoProduct/cabaiayman.png</fotoproduk><stockproduk>32</stockproduk></Barang><Barang><owner><email>widyahelo123@gmail.com</email><password>widya123</password><NamaBadan>PT WIDYA</NamaBadan><NomorBadan>0825437689</NomorBadan><alamatBadan>DIAS KOST MUSLIM</alamatBadan><role>Seller</role></owner><namaproduk>Susu kuda liar</namaproduk><deskripsiproduk>susu kuda dari falah</deskripsiproduk><categoriproduk>Minuman</categoriproduk><expiredproduk>2023-06-28</expiredproduk><pengirimanproduk>jne,</pengirimanproduk><fotoproduk>Database/Barang/fotoProduct/susu.jpg</fotoproduk><stockproduk>45</stockproduk></Barang><Barang><owner><email>User</email><password>Admin</password><NamaBadan>EVO-MENT</NamaBadan><NomorBadan>082253503356</NomorBadan><alamatBadan>Jalan Kaliurang KM 14 Candi Karang, Sardonoharjo, Kec.Ngaglik, Kab.Sleman,
-                Daerah Istimewa</alamatBadan><role>Seller</role></owner><namaproduk>MONDE BUTTER</namaproduk><deskripsiproduk>Monde Butter Cookies dibuat dari bahan-bahan pilihan dan bermutu tinggi
+<?xml version="1.0"?>
+<BarangInfo>
+    <Barang>
+        <owner>
+            <email>adiva@gmail.com</email>
+            <password>adiva123</password>
+            <NamaBadan>ASDOS</NamaBadan>
+            <NomorBadan>082253507890</NomorBadan>
+            <alamatBadan>uii</alamatBadan>
+            <role>Seller</role>
+        </owner>
+        <namaproduk>BuahApel</namaproduk>
+        <deskripsiproduk>Buah yang hampir segar dan lain-lain</deskripsiproduk>
+        <categoriproduk>Buah</categoriproduk>
+        <expiredproduk>27-09-2023</expiredproduk>
+        <pengirimanproduk>jne</pengirimanproduk>
+        <fotoproduk>Database/Barang/fotoProduct/Apelll.png</fotoproduk>
+        <stockproduk>20</stockproduk>
+    </Barang>
+    <Barang>
+        <owner>
+            <email>adiva@gmail.com</email>
+            <password>adiva123</password>
+            <NamaBadan>ASDOS</NamaBadan>
+            <NomorBadan>082253507890</NomorBadan>
+            <alamatBadan>uii</alamatBadan>
+            <role>Seller</role>
+        </owner>
+        <namaproduk>Pisang Raja </namaproduk>
+        <deskripsiproduk>Pisang Raja ini sudah pasti enak loh</deskripsiproduk>
+        <categoriproduk>Buah</categoriproduk>
+        <expiredproduk>2023-06-30</expiredproduk>
+        <pengirimanproduk>jne,pickup,</pengirimanproduk>
+        <fotoproduk>Database/Barang/fotoProduct/Pisangg.png</fotoproduk>
+        <stockproduk>20</stockproduk>
+    </Barang>
+    <Barang>
+        <owner>
+            <email>adiva@gmail.com</email>
+            <password>adiva123</password>
+            <NamaBadan>ASDOS</NamaBadan>
+            <NomorBadan>082253507890</NomorBadan>
+            <alamatBadan>uii</alamatBadan>
+            <role>Seller</role>
+        </owner>
+        <namaproduk>alpukat manis</namaproduk>
+        <deskripsiproduk>alpukat ini di petik langsung oleh bapa saya</deskripsiproduk>
+        <categoriproduk>Buah</categoriproduk>
+        <expiredproduk>2024-06-12</expiredproduk>
+        <pengirimanproduk>pickup,</pengirimanproduk>
+        <fotoproduk>Database/Barang/fotoProduct/alpukat.png</fotoproduk>
+        <stockproduk>34</stockproduk>
+    </Barang>
+    <Barang>
+        <owner>
+            <email>adiva@gmail.com</email>
+            <password>adiva123</password>
+            <NamaBadan>ASDOS</NamaBadan>
+            <NomorBadan>082253507890</NomorBadan>
+            <alamatBadan>uii</alamatBadan>
+            <role>Seller</role>
+        </owner>
+        <namaproduk>delima agus</namaproduk>
+        <deskripsiproduk>delima ini sangat bagus untuk kesehatan karena di tanam dengan hati yang
+            tulus</deskripsiproduk>
+        <categoriproduk>Buah</categoriproduk>
+        <expiredproduk>2024-06-10</expiredproduk>
+        <pengirimanproduk>jne,</pengirimanproduk>
+        <fotoproduk>Database/Barang/fotoProduct/delimaa.png</fotoproduk>
+        <stockproduk>76</stockproduk>
+    </Barang>
+    <Barang>
+        <owner>
+            <email>adiva@gmail.com</email>
+            <password>adiva123</password>
+            <NamaBadan>ASDOS</NamaBadan>
+            <NomorBadan>082253507890</NomorBadan>
+            <alamatBadan>uii</alamatBadan>
+            <role>Seller</role>
+        </owner>
+        <namaproduk>nanas muda</namaproduk>
+        <deskripsiproduk>membantu untuk para kalian yang sedang berdiet dikarenakan tingkat keasaman
+            yang di luar nayla dan gak habis fikri</deskripsiproduk>
+        <categoriproduk>Buah</categoriproduk>
+        <expiredproduk>2023-07-27</expiredproduk>
+        <pengirimanproduk>jnt,pickup,</pengirimanproduk>
+        <fotoproduk>Database/Barang/fotoProduct/nanas.png</fotoproduk>
+        <stockproduk>76</stockproduk>
+    </Barang>
+    <Barang>
+        <owner>
+            <email>adiva@gmail.com</email>
+            <password>adiva123</password>
+            <NamaBadan>ASDOS</NamaBadan>
+            <NomorBadan>082253507890</NomorBadan>
+            <alamatBadan>uii</alamatBadan>
+            <role>Seller</role>
+        </owner>
+        <namaproduk>Bayam Sehat</namaproduk>
+        <deskripsiproduk>bayam ini mengandung gizi lebih dari yang seharusnya</deskripsiproduk>
+        <categoriproduk>Sayur</categoriproduk>
+        <expiredproduk>2023-06-30</expiredproduk>
+        <pengirimanproduk>jnt,</pengirimanproduk>
+        <fotoproduk>Database/Barang/fotoProduct/bayam.png</fotoproduk>
+        <stockproduk>12</stockproduk>
+    </Barang>
+    <Barang>
+        <owner>
+            <email>adiva@gmail.com</email>
+            <password>adiva123</password>
+            <NamaBadan>ASDOS</NamaBadan>
+            <NomorBadan>082253507890</NomorBadan>
+            <alamatBadan>uii</alamatBadan>
+            <role>Seller</role>
+        </owner>
+        <namaproduk>kangkung muda</namaproduk>
+        <deskripsiproduk>kangkung ini sangat cocok untuk dihidangkan bersama capcay</deskripsiproduk>
+        <categoriproduk>Sayur</categoriproduk>
+        <expiredproduk>2023-08-14</expiredproduk>
+        <pengirimanproduk>jne,pickup,</pengirimanproduk>
+        <fotoproduk>Database/Barang/fotoProduct/kangkung.png</fotoproduk>
+        <stockproduk>80</stockproduk>
+    </Barang>
+    <Barang>
+        <owner>
+            <email>adiva@gmail.com</email>
+            <password>adiva123</password>
+            <NamaBadan>ASDOS</NamaBadan>
+            <NomorBadan>082253507890</NomorBadan>
+            <alamatBadan>uii</alamatBadan>
+            <role>Seller</role>
+        </owner>
+        <namaproduk>tahu bulat </namaproduk>
+        <deskripsiproduk>tahu bulat ini sangat lejat dan bergizi</deskripsiproduk>
+        <categoriproduk>Sayur</categoriproduk>
+        <expiredproduk>2023-06-21</expiredproduk>
+        <pengirimanproduk>pickup,</pengirimanproduk>
+        <fotoproduk>Database/Barang/fotoProduct/tahuuu.png</fotoproduk>
+        <stockproduk>32</stockproduk>
+    </Barang>
+    <Barang>
+        <owner>
+            <email>adiva@gmail.com</email>
+            <password>adiva123</password>
+            <NamaBadan>ASDOS</NamaBadan>
+            <NomorBadan>082253507890</NomorBadan>
+            <alamatBadan>uii</alamatBadan>
+            <role>Seller</role>
+        </owner>
+        <namaproduk>Tempe putih</namaproduk>
+        <deskripsiproduk>tempe ini langsung di olah oleh induk keledai</deskripsiproduk>
+        <categoriproduk>Sayur</categoriproduk>
+        <expiredproduk>2023-06-28</expiredproduk>
+        <pengirimanproduk>jnt,</pengirimanproduk>
+        <fotoproduk>Database/Barang/fotoProduct/tempee.png</fotoproduk>
+        <stockproduk>67</stockproduk>
+    </Barang>
+    <Barang>
+        <owner>
+            <email>adiva@gmail.com</email>
+            <password>adiva123</password>
+            <NamaBadan>ASDOS</NamaBadan>
+            <NomorBadan>082253507890</NomorBadan>
+            <alamatBadan>uii</alamatBadan>
+            <role>Seller</role>
+        </owner>
+        <namaproduk>pakcoy</namaproduk>
+        <deskripsiproduk>pakcoy enak sekali</deskripsiproduk>
+        <categoriproduk>Buah</categoriproduk>
+        <expiredproduk>2023-06-29</expiredproduk>
+        <pengirimanproduk>jne,jnt,</pengirimanproduk>
+        <fotoproduk>Database/Barang/fotoProduct/pakcoy.jpg</fotoproduk>
+        <stockproduk>100</stockproduk>
+    </Barang>
+    <Barang>
+        <owner>
+            <email>jeki@gmail.com</email>
+            <password>jeki123</password>
+            <NamaBadan>jekiboy</NamaBadan>
+            <NomorBadan>082243678912</NomorBadan>
+            <alamatBadan>wirobrajan</alamatBadan>
+            <role>Seller</role>
+        </owner>
+        <namaproduk>mangga</namaproduk>
+        <deskripsiproduk>mangga lejat dan bergizi</deskripsiproduk>
+        <categoriproduk>Buah</categoriproduk>
+        <expiredproduk>2023-06-30</expiredproduk>
+        <pengirimanproduk>jne,pickup,</pengirimanproduk>
+        <fotoproduk>Database/Barang/fotoProduct/manggajeki.jpg</fotoproduk>
+        <stockproduk>180</stockproduk>
+    </Barang>
+    <Barang>
+        <owner>
+            <email>widyahelo123@gmail.com</email>
+            <password>widya123</password>
+            <NamaBadan>PT WIDYA</NamaBadan>
+            <NomorBadan>0825437689</NomorBadan>
+            <alamatBadan>DIAS KOST MUSLIM</alamatBadan>
+            <role>Seller</role>
+        </owner>
+        <namaproduk>seblak</namaproduk>
+        <deskripsiproduk>seblak widya enak tau lezat dan bergijikkkk</deskripsiproduk>
+        <categoriproduk>Makanan</categoriproduk>
+        <expiredproduk>2024-06-20</expiredproduk>
+        <pengirimanproduk>jne,jnt,pickup,</pengirimanproduk>
+        <fotoproduk>Database/Barang/fotoProduct/Seblak.jpg</fotoproduk>
+        <stockproduk>100</stockproduk>
+    </Barang>
+    <Barang>
+        <owner>
+            <email>widyahelo123@gmail.com</email>
+            <password>widya123</password>
+            <NamaBadan>PT WIDYA</NamaBadan>
+            <NomorBadan>0825437689</NomorBadan>
+            <alamatBadan>DIAS KOST MUSLIM</alamatBadan>
+            <role>Seller</role>
+        </owner>
+        <namaproduk>Wortel</namaproduk>
+        <deskripsiproduk>wortel ini sangat bagus untuk kesehatan mata</deskripsiproduk>
+        <categoriproduk>Sayur</categoriproduk>
+        <expiredproduk>2023-06-29</expiredproduk>
+        <pengirimanproduk>jne,pickup,</pengirimanproduk>
+        <fotoproduk>Database/Barang/fotoProduct/wortel.jpg</fotoproduk>
+        <stockproduk>74</stockproduk>
+    </Barang>
+    <Barang>
+        <owner>
+            <email>widyahelo123@gmail.com</email>
+            <password>widya123</password>
+            <NamaBadan>PT WIDYA</NamaBadan>
+            <NomorBadan>0825437689</NomorBadan>
+            <alamatBadan>DIAS KOST MUSLIM</alamatBadan>
+            <role>Seller</role>
+        </owner>
+        <namaproduk>sirup</namaproduk>
+        <deskripsiproduk>marjan</deskripsiproduk>
+        <categoriproduk>Minuman</categoriproduk>
+        <expiredproduk>2023-06-29</expiredproduk>
+        <pengirimanproduk>pickup,</pengirimanproduk>
+        <fotoproduk>Database/Barang/fotoProduct/sirupmiftah.png</fotoproduk>
+        <stockproduk>60</stockproduk>
+    </Barang>
+    <Barang>
+        <owner>
+            <email>widyahelo123@gmail.com</email>
+            <password>widya123</password>
+            <NamaBadan>PT WIDYA</NamaBadan>
+            <NomorBadan>0825437689</NomorBadan>
+            <alamatBadan>DIAS KOST MUSLIM</alamatBadan>
+            <role>Seller</role>
+        </owner>
+        <namaproduk>Cabai</namaproduk>
+        <deskripsiproduk>cabai ayman mantap sekali</deskripsiproduk>
+        <categoriproduk>Sayur</categoriproduk>
+        <expiredproduk>2023-06-30</expiredproduk>
+        <pengirimanproduk>jne,jnt,</pengirimanproduk>
+        <fotoproduk>Database/Barang/fotoProduct/cabaiayman.png</fotoproduk>
+        <stockproduk>32</stockproduk>
+    </Barang>
+    <Barang>
+        <owner>
+            <email>widyahelo123@gmail.com</email>
+            <password>widya123</password>
+            <NamaBadan>PT WIDYA</NamaBadan>
+            <NomorBadan>0825437689</NomorBadan>
+            <alamatBadan>DIAS KOST MUSLIM</alamatBadan>
+            <role>Seller</role>
+        </owner>
+        <namaproduk>Susu kuda liar</namaproduk>
+        <deskripsiproduk>susu kuda dari falah</deskripsiproduk>
+        <categoriproduk>Minuman</categoriproduk>
+        <expiredproduk>2023-06-28</expiredproduk>
+        <pengirimanproduk>jne,</pengirimanproduk>
+        <fotoproduk>Database/Barang/fotoProduct/susu.jpg</fotoproduk>
+        <stockproduk>45</stockproduk>
+    </Barang>
+    <Barang>
+        <owner>
+            <email>User</email>
+            <password>Admin</password>
+            <NamaBadan>EVO-MENT</NamaBadan>
+            <NomorBadan>082253503356</NomorBadan>
+            <alamatBadan>Jalan Kaliurang KM 14 Candi Karang, Sardonoharjo, Kec.Ngaglik, Kab.Sleman,
+                Daerah Istimewa</alamatBadan>
+            <role>Seller</role>
+        </owner>
+        <namaproduk>MONDE BUTTER</namaproduk>
+        <deskripsiproduk>Monde Butter Cookies dibuat dari bahan-bahan pilihan dan bermutu tinggi
             dengan cita rasa yang nikmat dan harum. Warnai saat bersantai anda dengan kelezatannya.
             Komposisi : Tepung terigu, mentega, gula, telur, kelapa bubuk, pengembang (ammonium
-            bikarbonat dan natrium bikarbonat), sirup glukosa, garam, kismis, vainili.</deskripsiproduk><categoriproduk>Makanan</categoriproduk><expiredproduk>2023-07-26</expiredproduk><pengirimanproduk>jnt,pickup,</pengirimanproduk><fotoproduk>Database/Barang/fotoProduct/Monde.png</fotoproduk><stockproduk>3</stockproduk></Barang><Barang><owner><email>adiva@gmail.com</email><password>adiva123</password><NamaBadan>ASDOS</NamaBadan><NomorBadan>082253507890</NomorBadan><alamatBadan>uii</alamatBadan><role>Seller</role></owner><namaproduk>Terong Ungu</namaproduk><deskripsiproduk>Terong dengan khasiat menyembuhkan penyakit patah hati :)</deskripsiproduk><categoriproduk>Sayur</categoriproduk><expiredproduk>2023-07-13</expiredproduk><pengirimanproduk>jne,pickup,</pengirimanproduk><fotoproduk>Database/Barang/fotoProduct/Teronggg.png</fotoproduk><stockproduk>70</stockproduk></Barang><Barang><owner><email>adiva@gmail.com</email><password>adiva123</password><NamaBadan>ASDOS</NamaBadan><NomorBadan>082253507890</NomorBadan><alamatBadan>uii</alamatBadan><role>Seller</role></owner><namaproduk>Es Cendol Garut</namaproduk><deskripsiproduk>es cendol yang di olah dengan beragam komposisi yang sangat menyehatkan
-            badan</deskripsiproduk><categoriproduk>Minuman</categoriproduk><expiredproduk>2023-08-22</expiredproduk><pengirimanproduk>jne,jnt,</pengirimanproduk><fotoproduk>Database/Barang/fotoProduct/escendol.png</fotoproduk><stockproduk>9</stockproduk></Barang><Barang><owner><email>jeki@gmail.com</email><password>jeki123</password><NamaBadan>jekiboy</NamaBadan><NomorBadan>082243678912</NomorBadan><alamatBadan>wirobrajan</alamatBadan><role>Seller</role></owner><namaproduk>kiwi manis</namaproduk><deskripsiproduk>kiwi dari pepohonan jeki</deskripsiproduk><categoriproduk>Buah</categoriproduk><expiredproduk>2024-06-19</expiredproduk><pengirimanproduk>jne,pickup,</pengirimanproduk><fotoproduk>Database/Barang/fotoProduct/kiwi.png</fotoproduk><stockproduk>19</stockproduk></Barang><Barang><owner><email>widyahelo123@gmail.com</email><password>widya123</password><NamaBadan>PT WIDYA</NamaBadan><NomorBadan>0825437689</NomorBadan><alamatBadan>DIAS KOST MUSLIM</alamatBadan><role>Seller</role></owner><namaproduk>Chitato Dousa</namaproduk><deskripsiproduk>Chitato Dousa Flavor adalah keripik kentang dengan rasa unik yang menggabungkan kelezatan manis dan gurih. Setiap gigitan Chitato Dousa Flavor memberikan pengalaman rasa yang menggoda dan memuaskan. Dibuat dengan bahan berkualitas tinggi dan diproses dengan teknologi canggih, keripik ini memiliki tekstur yang renyah dan cita rasa yang berpadu sempurna. Chitato Dousa Flavor cocok sebagai camilan manis-gurih untuk dinikmati kapan saja dan di mana saja, menjadikannya pilihan yang tepat untuk momen santai bersama keluarga dan teman-teman.</deskripsiproduk><categoriproduk>Makanan</categoriproduk><expiredproduk>2023-07-20</expiredproduk><pengirimanproduk>jne,pickup,</pengirimanproduk><fotoproduk>Database/Barang/fotoProduct/Chitatodousaflavor.png</fotoproduk><stockproduk>30</stockproduk></Barang><Barang><owner><email>sedap@gmail.com</email><password>sedap123</password><NamaBadan>PT Sedap Indonesia</NamaBadan><NomorBadan>0-21-861-3045</NomorBadan><alamatBadan>Jl Madrasah I 11 RT 008/10, Dki Jakarta</alamatBadan><role>Seller</role></owner><namaproduk>Sedap Pedas</namaproduk><deskripsiproduk>Mie sedap ini sangat enak sekali untuk di makan bersamaan dengan telur dan juga sosis akan membuat bergairah dan lezat</deskripsiproduk><categoriproduk>Makanan</categoriproduk><expiredproduk>2023-07-31</expiredproduk><pengirimanproduk>jne,jnt,pickup,</pengirimanproduk><fotoproduk>Database/Barang/fotoProduct/Sedapmie.png</fotoproduk><stockproduk>300</stockproduk></Barang></BarangInfo>
+            bikarbonat dan natrium bikarbonat), sirup glukosa, garam, kismis, vainili.</deskripsiproduk>
+        <categoriproduk>Makanan</categoriproduk>
+        <expiredproduk>2023-07-26</expiredproduk>
+        <pengirimanproduk>jnt,pickup,</pengirimanproduk>
+        <fotoproduk>Database/Barang/fotoProduct/Monde.png</fotoproduk>
+        <stockproduk>3</stockproduk>
+    </Barang>
+    <Barang>
+        <owner>
+            <email>adiva@gmail.com</email>
+            <password>adiva123</password>
+            <NamaBadan>ASDOS</NamaBadan>
+            <NomorBadan>082253507890</NomorBadan>
+            <alamatBadan>uii</alamatBadan>
+            <role>Seller</role>
+        </owner>
+        <namaproduk>Terong Ungu</namaproduk>
+        <deskripsiproduk>Terong dengan khasiat menyembuhkan penyakit patah hati :)</deskripsiproduk>
+        <categoriproduk>Sayur</categoriproduk>
+        <expiredproduk>2023-07-13</expiredproduk>
+        <pengirimanproduk>jne,pickup,</pengirimanproduk>
+        <fotoproduk>Database/Barang/fotoProduct/Teronggg.png</fotoproduk>
+        <stockproduk>70</stockproduk>
+    </Barang>
+    <Barang>
+        <owner>
+            <email>adiva@gmail.com</email>
+            <password>adiva123</password>
+            <NamaBadan>ASDOS</NamaBadan>
+            <NomorBadan>082253507890</NomorBadan>
+            <alamatBadan>uii</alamatBadan>
+            <role>Seller</role>
+        </owner>
+        <namaproduk>Es Cendol Garut</namaproduk>
+        <deskripsiproduk>es cendol yang di olah dengan beragam komposisi yang sangat menyehatkan
+            badan</deskripsiproduk>
+        <categoriproduk>Minuman</categoriproduk>
+        <expiredproduk>2023-08-22</expiredproduk>
+        <pengirimanproduk>jne,jnt,</pengirimanproduk>
+        <fotoproduk>Database/Barang/fotoProduct/escendol.png</fotoproduk>
+        <stockproduk>9</stockproduk>
+    </Barang>
+    <Barang>
+        <owner>
+            <email>jeki@gmail.com</email>
+            <password>jeki123</password>
+            <NamaBadan>jekiboy</NamaBadan>
+            <NomorBadan>082243678912</NomorBadan>
+            <alamatBadan>wirobrajan</alamatBadan>
+            <role>Seller</role>
+        </owner>
+        <namaproduk>kiwi manis</namaproduk>
+        <deskripsiproduk>kiwi dari pepohonan jeki</deskripsiproduk>
+        <categoriproduk>Buah</categoriproduk>
+        <expiredproduk>2024-06-19</expiredproduk>
+        <pengirimanproduk>jne,pickup,</pengirimanproduk>
+        <fotoproduk>Database/Barang/fotoProduct/kiwi.png</fotoproduk>
+        <stockproduk>19</stockproduk>
+    </Barang>
+    <Barang>
+        <owner>
+            <email>widyahelo123@gmail.com</email>
+            <password>widya123</password>
+            <NamaBadan>PT WIDYA</NamaBadan>
+            <NomorBadan>0825437689</NomorBadan>
+            <alamatBadan>DIAS KOST MUSLIM</alamatBadan>
+            <role>Seller</role>
+        </owner>
+        <namaproduk>Chitato Dousa</namaproduk>
+        <deskripsiproduk>Chitato Dousa Flavor adalah keripik kentang dengan rasa unik yang
+            menggabungkan kelezatan manis dan gurih. Setiap gigitan Chitato Dousa Flavor memberikan
+            pengalaman rasa yang menggoda dan memuaskan. Dibuat dengan bahan berkualitas tinggi dan
+            diproses dengan teknologi canggih, keripik ini memiliki tekstur yang renyah dan cita
+            rasa yang berpadu sempurna. Chitato Dousa Flavor cocok sebagai camilan manis-gurih untuk
+            dinikmati kapan saja dan di mana saja, menjadikannya pilihan yang tepat untuk momen
+            santai bersama keluarga dan teman-teman.</deskripsiproduk>
+        <categoriproduk>Makanan</categoriproduk>
+        <expiredproduk>2023-07-20</expiredproduk>
+        <pengirimanproduk>jne,pickup,</pengirimanproduk>
+        <fotoproduk>Database/Barang/fotoProduct/Chitatodousaflavor.png</fotoproduk>
+        <stockproduk>30</stockproduk>
+    </Barang>
+    <Barang>
+        <owner>
+            <email>sedap@gmail.com</email>
+            <password>sedap123</password>
+            <NamaBadan>PT Sedap Indonesia</NamaBadan>
+            <NomorBadan>0-21-861-3045</NomorBadan>
+            <alamatBadan>Jl Madrasah I 11 RT 008/10, Dki Jakarta</alamatBadan>
+            <role>Seller</role>
+        </owner>
+        <namaproduk>Sedap Pedas</namaproduk>
+        <deskripsiproduk>Mie sedap ini sangat enak sekali untuk di makan bersamaan dengan telur dan
+            juga sosis akan membuat bergairah dan lezat</deskripsiproduk>
+        <categoriproduk>Makanan</categoriproduk>
+        <expiredproduk>2023-07-31</expiredproduk>
+        <pengirimanproduk>jne,jnt,pickup,</pengirimanproduk>
+        <fotoproduk>Database/Barang/fotoProduct/Sedapmie.png</fotoproduk>
+        <stockproduk>250</stockproduk>
+    </Barang>
+</BarangInfo>

@@ -122,6 +122,11 @@
                   <Font name="System Bold" size="19.0" />
                </font>
             </Button>
+            <Button fx:id="listdisbut" mnemonicParsing="false" onAction="#ToDistribusi" prefHeight="57.0" prefWidth="188.0" styleClass="SidebarBut" stylesheets="@Homepage.css" text="List Distribusi" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Button>
             <Button mnemonicParsing="false" onAction="#Logout" prefHeight="57.0" prefWidth="188.0" styleClass="SidebarBut" stylesheets="@Homepage.css" text="Logout" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="19.0" />

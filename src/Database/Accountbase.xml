@@ -1,2 +1,100 @@
-<?xml version="1.0" ?><AccountInfo><Account><email>sedap@gmail.com</email><password>sedap123</password><NamaBadan>PT Sedap Indonesia</NamaBadan><NomorBadan>0-21-861-3045</NomorBadan><alamatBadan>Jl Madrasah I 11 RT 008/10, Dki Jakarta</alamatBadan><role>Seller</role></Account><Account><email>indofood@gmail.com</email><password>indofood123</password><NamaBadan>PT Indofood</NamaBadan><NomorBadan>021-80880929</NomorBadan><alamatBadan>Jl Raya Condet 47, Dki Jakarta</alamatBadan><role>Seller</role></Account><Account><email>champ@gmail.com</email><password>champ123</password><NamaBadan>PT CHAMP Indonesia</NamaBadan><NomorBadan>0-21-798-9010</NomorBadan><alamatBadan>Jl Mampang Prapatan X 2, Dki Jakarta</alamatBadan><role>Seller</role></Account><Account><email>jeki@gmail.com</email><password>jeki123</password><NamaBadan>jekiboy</NamaBadan><NomorBadan>082243678912</NomorBadan><alamatBadan>wirobrajan</alamatBadan><role>Seller</role></Account><Account><email>User</email><password>Admin</password><NamaBadan>EVO-MENT</NamaBadan><NomorBadan>082253503356</NomorBadan><alamatBadan>Jalan Kaliurang KM 14 Candi Karang, Sardonoharjo, Kec.Ngaglik, Kab.Sleman,
-            Daerah Istimewa</alamatBadan><role>Seller</role></Account><Account><email>ramaa@gmail.com</email><password>rama123</password><NamaBadan>Ramaaa</NamaBadan><NomorBadan>0876913456</NomorBadan><alamatBadan>burjo pamungkas</alamatBadan><role>Seller</role></Account><Account><email>mifta</email><password>mifta</password><NamaBadan>mifta</NamaBadan><NomorBadan>081</NomorBadan><alamatBadan>jalan mifta</alamatBadan><role>Buyer</role></Account><Account><email>widyahelo123@gmail.com</email><password>widya123</password><NamaBadan>PT WIDYA</NamaBadan><NomorBadan>0825437689</NomorBadan><alamatBadan>DIAS KOST MUSLIM</alamatBadan><role>Seller</role></Account><Account><email>belina@gmail.com</email><password>belina123</password><NamaBadan>BelinaGeng</NamaBadan><NomorBadan>08123456789</NomorBadan><alamatBadan>Jakal Atas</alamatBadan><role>Buyer</role></Account><Account><email>adiva@gmail.com</email><password>adiva123</password><NamaBadan>ASDOS</NamaBadan><NomorBadan>082253507890</NomorBadan><alamatBadan>uii</alamatBadan><role>Seller</role></Account><Account><email>d.raihan2004@gmail.com</email><password>Raihannajwa123</password><NamaBadan>Evo-Ment</NamaBadan><NomorBadan>082253503356</NomorBadan><alamatBadan>Palagan</alamatBadan><role>Admin</role></Account></AccountInfo>
+<?xml version="1.0"?>
+<AccountInfo>
+    <Account>
+        <email>ayman@gmail.com</email>
+        <password>ayman123</password>
+        <NamaBadan>PT Ayman</NamaBadan>
+        <NomorBadan>083465123476</NomorBadan>
+        <alamatBadan>jalan kaliurang perumahan pamungkas</alamatBadan>
+        <role>Buyer</role>
+    </Account>
+    <Account>
+        <email>sedap@gmail.com</email>
+        <password>sedap123</password>
+        <NamaBadan>PT Sedap Indonesia</NamaBadan>
+        <NomorBadan>0-21-861-3045</NomorBadan>
+        <alamatBadan>Jl Madrasah I 11 RT 008/10, Dki Jakarta</alamatBadan>
+        <role>Seller</role>
+    </Account>
+    <Account>
+        <email>indofood@gmail.com</email>
+        <password>indofood123</password>
+        <NamaBadan>PT Indofood</NamaBadan>
+        <NomorBadan>021-80880929</NomorBadan>
+        <alamatBadan>Jl Raya Condet 47, Dki Jakarta</alamatBadan>
+        <role>Seller</role>
+    </Account>
+    <Account>
+        <email>champ@gmail.com</email>
+        <password>champ123</password>
+        <NamaBadan>PT CHAMP Indonesia</NamaBadan>
+        <NomorBadan>0-21-798-9010</NomorBadan>
+        <alamatBadan>Jl Mampang Prapatan X 2, Dki Jakarta</alamatBadan>
+        <role>Seller</role>
+    </Account>
+    <Account>
+        <email>jeki@gmail.com</email>
+        <password>jeki123</password>
+        <NamaBadan>jekiboy</NamaBadan>
+        <NomorBadan>082243678912</NomorBadan>
+        <alamatBadan>wirobrajan</alamatBadan>
+        <role>Seller</role>
+    </Account>
+    <Account>
+        <email>User</email>
+        <password>Admin</password>
+        <NamaBadan>EVO-MENT</NamaBadan>
+        <NomorBadan>082253503356</NomorBadan>
+        <alamatBadan>Jalan Kaliurang KM 14 Candi Karang, Sardonoharjo, Kec.Ngaglik, Kab.Sleman,
+            Daerah Istimewa</alamatBadan>
+        <role>Seller</role>
+    </Account>
+    <Account>
+        <email>ramaa@gmail.com</email>
+        <password>rama123</password>
+        <NamaBadan>Ramaaa</NamaBadan>
+        <NomorBadan>0876913456</NomorBadan>
+        <alamatBadan>burjo pamungkas</alamatBadan>
+        <role>Seller</role>
+    </Account>
+    <Account>
+        <email>mifta</email>
+        <password>mifta</password>
+        <NamaBadan>mifta</NamaBadan>
+        <NomorBadan>081</NomorBadan>
+        <alamatBadan>jalan mifta</alamatBadan>
+        <role>Buyer</role>
+    </Account>
+    <Account>
+        <email>widyahelo123@gmail.com</email>
+        <password>widya123</password>
+        <NamaBadan>PT WIDYA</NamaBadan>
+        <NomorBadan>0825437689</NomorBadan>
+        <alamatBadan>DIAS KOST MUSLIM</alamatBadan>
+        <role>Seller</role>
+    </Account>
+    <Account>
+        <email>belina@gmail.com</email>
+        <password>belina123</password>
+        <NamaBadan>BelinaGeng</NamaBadan>
+        <NomorBadan>08123456789</NomorBadan>
+        <alamatBadan>Jakal Atas</alamatBadan>
+        <role>Buyer</role>
+    </Account>
+    <Account>
+        <email>adiva@gmail.com</email>
+        <password>adiva123</password>
+        <NamaBadan>ASDOS</NamaBadan>
+        <NomorBadan>082253507890</NomorBadan>
+        <alamatBadan>uii</alamatBadan>
+        <role>Seller</role>
+    </Account>
+    <Account>
+        <email>d.raihan2004@gmail.com</email>
+        <password>Raihannajwa123</password>
+        <NamaBadan>Evo-Ment</NamaBadan>
+        <NomorBadan>082253503356</NomorBadan>
+        <alamatBadan>Palagan</alamatBadan>
+        <role>Admin</role>
+    </Account>
+</AccountInfo>
