@@ -22,6 +22,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
@@ -93,7 +94,7 @@ public class Controller1 implements Initializable {
         transition1.setByX(-425); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
         transition1.play(); //
         TranslateTransition transition2 = new TranslateTransition(Duration.seconds(1), justimage);
-        transition2.setByX(300); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
+        transition2.setByX(280); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
         transition2.play(); //
 
 
@@ -128,7 +129,7 @@ public class Controller1 implements Initializable {
         transition1.play(); //
 
         TranslateTransition transition2 = new TranslateTransition(Duration.seconds(1), justimage);
-        transition2.setByX(-300); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
+        transition2.setByX(-280); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
         transition2.play(); //
         int delayDuration = 500;
     
@@ -390,6 +391,15 @@ public class Controller1 implements Initializable {
         
     }
 
+     private void showAlert(String massage) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Information Sign Up");
+        // alert.setHeaderText(null);
+        alert.setContentText(massage);
+
+        alert.showAndWait();
+    }
+
 
 
 
@@ -417,8 +427,42 @@ public class Controller1 implements Initializable {
         dataAccount.getRefoodAccounts().add(0,tempAccount);
         xmlupdate();
 
-        showinputlogin.setVisible(true);
-        showinputregister.setVisible(false);
+        showAlert("Selamat anda telah terdaftar menjadi Seller");
+
+        TranslateTransition transition = new TranslateTransition(Duration.seconds(1), showinputregister);
+        transition.setByX(-425); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
+        transition.play(); //
+
+        TranslateTransition transition1 = new TranslateTransition(Duration.seconds(1), showinputlogin);
+        transition1.setByX(-425); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
+        transition1.play();
+
+        TranslateTransition transition2 = new TranslateTransition(Duration.seconds(1), justimage);
+        transition2.setByX(280); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
+        transition2.play(); //
+
+
+        int delayDuration = 500;
+
+        // Create a PauseTransition with the desired delay duration
+        PauseTransition pauseTransition = new PauseTransition(Duration.millis(delayDuration));
+
+        // Set the action to be performed after the delay
+        pauseTransition.setOnFinished(even -> {
+            // Perform any desired action here
+            showinputlogin.setVisible(true);
+            signupas.setVisible(true);
+            signupseller.setVisible(false);
+            showinputregister.setVisible(false);
+            // showinputlogin.setVisible(true);
+            // showinputregister.setVisible(false);
+        });
+
+        // Start the PauseTransition
+        pauseTransition.play();
+
+        
+
 
         loginemail.setText("");
         loginpass.setText("");
@@ -444,6 +488,16 @@ public class Controller1 implements Initializable {
 
         dataAccount.getRefoodAccounts().add(0,tempAccount);
         xmlupdate();
+
+        showAlert("Selamat anda telah terdaftar menjadi Buyer");
+
+        TranslateTransition transition = new TranslateTransition(Duration.seconds(1), showinputregister);
+        transition.setByX(-425); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
+        transition.play(); //
+
+        TranslateTransition transition1 = new TranslateTransition(Duration.seconds(1), showinputlogin);
+        transition1.setByX(-425); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
+        transition1.play();
 
         showinputlogin.setVisible(true);
         showinputregister.setVisible(false);

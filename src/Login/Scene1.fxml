@@ -22,16 +22,16 @@
          <children>
             <AnchorPane fx:id="showinputregister" prefHeight="438.0" prefWidth="313.0" style="-fx-background-color: F9FFFF; -fx-background-radius: 20;" stylesheets="@CssLogin.css" visible="false">
                <children>
-                  <Label layoutX="84.0" layoutY="21.0" prefHeight="89.0" prefWidth="225.0" text="Sign Up ">
+                  <Label layoutX="85.0" layoutY="-17.0" prefHeight="89.0" prefWidth="225.0" text="Sign Up ">
                      <font>
-                        <Font size="51.0" />
+                        <Font name="System Bold" size="51.0" />
                      </font></Label>
-                  <Label layoutX="163.0" layoutY="104.0" text="With Us">
+                  <Label layoutX="164.0" layoutY="66.0" text="With Us">
                      <font>
-                        <Font size="28.0" />
+                        <Font name="System Bold" size="28.0" />
                      </font>
                   </Label>
-                  <AnchorPane fx:id="signupas" layoutX="19.0" layoutY="164.0" prefHeight="253.0" prefWidth="290.0">
+                  <AnchorPane fx:id="signupas" layoutX="16.0" layoutY="120.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="311.0" prefWidth="266.0">
                      <children>
                         <Button layoutX="82.0" layoutY="35.0" mnemonicParsing="false" onAction="#ChoosesignupBuyer" prefHeight="49.0" prefWidth="183.0" styleClass="buttonchosesignas" stylesheets="@CssLogin.css" text="Lembaga Swadaya" textFill="WHITE">
                            <font>
@@ -46,7 +46,7 @@
                         <FontAwesomeIcon glyphName="HOME" layoutX="28.0" layoutY="75.0" size="40" />
                      </children>
                   </AnchorPane>
-                  <AnchorPane fx:id="signupseller" layoutX="14.0" layoutY="100.0" prefHeight="326.0" prefWidth="264.0" visible="false">
+                  <AnchorPane fx:id="signupseller" layoutX="33.0" layoutY="107.0" prefHeight="326.0" prefWidth="264.0" visible="false">
                      <children>
                         <TextField id="textfield2" fx:id="daftarselleremail" layoutX="20.0" layoutY="210.0" prefHeight="25.0" prefWidth="223.0" stylesheets="@CssLogin.css" />
                         <TextField id="textfield2" fx:id="daftarsellerpass" layoutX="20.0" layoutY="260.0" prefHeight="25.0" prefWidth="223.0" stylesheets="@CssLogin.css" />
@@ -62,7 +62,7 @@
                         <Button layoutX="14.0" layoutY="292.0" mnemonicParsing="false" onAction="#CancelsignupSeller" text="&lt;" />
                      </children>
                   </AnchorPane>
-                  <AnchorPane fx:id="signupbuyer" layoutX="24.0" layoutY="110.0" prefHeight="326.0" prefWidth="264.0" visible="false">
+                  <AnchorPane fx:id="signupbuyer" layoutX="33.0" layoutY="107.0" prefHeight="326.0" prefWidth="264.0" visible="false">
                      <children>
                         <TextField id="textfield2" fx:id="daftarbuyeremail" layoutX="20.0" layoutY="210.0" prefHeight="25.0" prefWidth="223.0" stylesheets="@CssLogin.css" />
                         <TextField id="textfield2" fx:id="daftarbuyerpass" layoutX="20.0" layoutY="260.0" prefHeight="25.0" prefWidth="223.0" stylesheets="@CssLogin.css" />

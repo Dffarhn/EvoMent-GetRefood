@@ -135,8 +135,10 @@
   -fx-border-width: 0px 0px 0px 0px ;
   -fx-border-color: rgb(99, 69, 69);
   -fx-translate-y: 0;
-  -fx-transition: -fx-border-width 0.6s,
-                  -fx-translate-y 0.6s;
+  -fx-transition: -fx-border-width 1s,
+                  -fx-translate-y 1s;
+
+  -fx-cursor: hand ;
 
 
 
@@ -149,7 +151,7 @@
 
   -fx-border-width: 0px 0px 3px 0px ;
 
-  -fx-translate-y: -5;
+  -fx-translate-y: -3;
 
 }
 
