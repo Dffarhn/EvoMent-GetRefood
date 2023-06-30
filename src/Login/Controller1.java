@@ -499,8 +499,34 @@ public class Controller1 implements Initializable {
         transition1.setByX(-425); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
         transition1.play();
 
-        showinputlogin.setVisible(true);
-        showinputregister.setVisible(false);
+        TranslateTransition transition2 = new TranslateTransition(Duration.seconds(1), justimage);
+        transition2.setByX(280); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
+        transition2.play(); //
+
+
+
+
+        int delayDuration = 500;
+
+        // Create a PauseTransition with the desired delay duration
+        PauseTransition pauseTransition = new PauseTransition(Duration.millis(delayDuration));
+
+        // Set the action to be performed after the delay
+        pauseTransition.setOnFinished(even -> {
+            // Perform any desired action here
+            showinputlogin.setVisible(true);
+            signupas.setVisible(true);
+            signupbuyer.setVisible(false);
+            showinputregister.setVisible(false);
+            // showinputlogin.setVisible(true);
+            // showinputregister.setVisible(false);
+        });
+
+        // Start the PauseTransition
+        pauseTransition.play();
+
+        // showinputlogin.setVisible(true);
+        // showinputregister.setVisible(false);
         loginemail.setText("");
         loginpass.setText("");
         
