@@ -82,14 +82,10 @@
 .buttonmasuk {
     -fx-font-family: "Roboto", sans-serif;
     -fx-font-weight: normal;
-    -fx-font-size: 14px;
     -fx-text-fill: #fff;
     -fx-background-color: #395346;
     
-    -fx-padding: 10px 30px;
-    -fx-effect: none;
     -fx-background-radius: 40px;
-    -fx-transition-duration: 1000ms;
     -fx-alignment: center;
     -fx-cursor: hand;
     -fx-opacity: 1;
@@ -129,5 +125,32 @@
     
 }
 
+
+
+.buttonchosesignas{
+  -fx-background-color: #44725b;
+  -fx-background-radius: 20px;
+  -fx-border-radius: 20px;
+
+  -fx-border-width: 0px 0px 0px 0px ;
+  -fx-border-color: rgb(99, 69, 69);
+  -fx-translate-y: 0;
+  -fx-transition: -fx-border-width 0.6s,
+                  -fx-translate-y 0.6s;
+
+
+
+
+  
+}
+
+
+.buttonchosesignas:hover{
+
+  -fx-border-width: 0px 0px 3px 0px ;
+
+  -fx-translate-y: -5;
+
+}
 
   

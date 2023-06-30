@@ -88,7 +88,7 @@
             </AnchorPane>
             <Button fx:id="buttonback" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#Toback" text="&lt;-" visible="false" />
          </children></AnchorPane>
-      <VBox layoutX="-2.0" layoutY="-1.0" prefHeight="700.0" prefWidth="172.0" spacing="20.0" styleClass="Sidebar" stylesheets="@Homepage.css">
+      <VBox layoutX="-2.0" layoutY="-1.0" prefHeight="702.0" prefWidth="172.0" spacing="20.0" styleClass="Sidebar" stylesheets="@Homepage.css">
          <children>
             <Button mnemonicParsing="false" onAction="#ToBeranda" prefHeight="57.0" prefWidth="189.0" styleClass="SidebarBut" stylesheets="@Homepage.css" text="Beranda" textFill="WHITE">
                <padding>
@@ -118,6 +118,11 @@
                <padding>
                   <Insets bottom="20.0" top="20.0" />
                </padding>
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#Logout" prefHeight="57.0" prefWidth="188.0" styleClass="SidebarBut" stylesheets="@Homepage.css" text="Logout" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="19.0" />
                </font>

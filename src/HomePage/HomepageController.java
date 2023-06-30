@@ -194,6 +194,26 @@ public class HomepageController implements Initializable {
         
     }
     @FXML
+    private void Logout(ActionEvent event) throws IOException {
+
+        // Openscene os = new Openscene();
+
+        // Pane root = os.getPane("Login/Scene1");
+
+        // nowshow = root;
+        // mainshow.getChildren().setAll(root);
+
+
+   
+        root = FXMLLoader.load(getClass().getClassLoader().getResource("Login/Scene1.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+        
+        
+    }
+    @FXML
     private void ToBeranda(ActionEvent event) throws Exception {
         try {
 

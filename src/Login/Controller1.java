@@ -13,6 +13,7 @@ import com.thoughtworks.xstream.security.AnyTypePermission;
 
 import Database.Account;
 import Database.AllAccount;
+import javafx.animation.PauseTransition;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -85,17 +86,32 @@ public class Controller1 implements Initializable {
 
         
         TranslateTransition transition = new TranslateTransition(Duration.seconds(1), showinputregister);
-        transition.setByX(-440); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
+        transition.setByX(-425); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
         transition.play(); //
 
         TranslateTransition transition1 = new TranslateTransition(Duration.seconds(1), showinputlogin);
-        transition1.setByX(-440); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
+        transition1.setByX(-425); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
         transition1.play(); //
         TranslateTransition transition2 = new TranslateTransition(Duration.seconds(1), justimage);
-        transition2.setByX(360); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
+        transition2.setByX(300); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
         transition2.play(); //
-        showinputlogin.setVisible(true);
-        showinputregister.setVisible(false);
+
+
+                // Delay duration in milliseconds
+        int delayDuration = 500;
+
+        // Create a PauseTransition with the desired delay duration
+        PauseTransition pauseTransition = new PauseTransition(Duration.millis(delayDuration));
+
+        // Set the action to be performed after the delay
+        pauseTransition.setOnFinished(even -> {
+            // Perform any desired action here
+            showinputlogin.setVisible(true);
+            showinputregister.setVisible(false);
+        });
+
+        // Start the PauseTransition
+        pauseTransition.play();
         
     }
 
@@ -105,17 +121,29 @@ public class Controller1 implements Initializable {
 
         
         TranslateTransition transition = new TranslateTransition(Duration.seconds(1), showinputregister);
-        transition.setByX(440); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
+        transition.setByX(425); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
         transition.play(); //
         TranslateTransition transition1 = new TranslateTransition(Duration.seconds(1), showinputlogin);
-        transition1.setByX(440); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
+        transition1.setByX(425); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
         transition1.play(); //
 
         TranslateTransition transition2 = new TranslateTransition(Duration.seconds(1), justimage);
-        transition2.setByX(-360); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
+        transition2.setByX(-300); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
         transition2.play(); //
-        showinputlogin.setVisible(false);
-        showinputregister.setVisible(true);
+        int delayDuration = 500;
+    
+        // Create a PauseTransition with the desired delay duration
+        PauseTransition pauseTransition = new PauseTransition(Duration.millis(delayDuration));
+    
+        // Set the action to be performed after the delay
+        pauseTransition.setOnFinished(even -> {
+            // Perform any desired action here
+            showinputlogin.setVisible(false);
+            showinputregister.setVisible(true);
+        });
+    
+        // Start the PauseTransition
+        pauseTransition.play();
     }
 
     @FXML
