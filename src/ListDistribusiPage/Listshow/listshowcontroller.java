@@ -14,6 +14,7 @@ public class listshowcontroller implements Initializable {
         System.out.println("KEKLIK");
         
     }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
     }

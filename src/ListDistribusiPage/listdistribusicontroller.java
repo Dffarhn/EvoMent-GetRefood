@@ -1,8 +1,11 @@
 package ListDistribusiPage;
 
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -14,14 +17,20 @@ import Database.Account;
 import Database.AllAccount;
 import Database.AntrianPesanan.AllPesanan;
 import Database.AntrianPesanan.Pesanan;
+import Database.Barang.AllBarang;
+import Database.Barang.Barang;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 public class listdistribusicontroller implements Initializable {
@@ -159,6 +168,123 @@ public class listdistribusicontroller implements Initializable {
     }
 
 
+     ArrayList<ArrayList<Pesanan>> datagridnew = new ArrayList<>();
+    @FXML
+    private void handleGridClick(MouseEvent event) {
+    //     int numCols = ((GridPane) event.getSource()).getColumnCount();
+    //     int numRows = ((GridPane) event.getSource()).getRowCount();
+
+    //     double cellWidth = ((GridPane) event.getSource()).getWidth() / numCols;
+    //     double cellHeight = ((GridPane) event.getSource()).getHeight() / numRows;
+
+    //     int clickedCol = (int) (event.getX() / cellWidth);
+    //     int clickedRow = (int) (event.getY() / cellHeight);
+
+
+    //     XStream xstream = new XStream(new StaxDriver());
+    //     xstream.processAnnotations(Pesanan.class);
+    //     xstream.processAnnotations(AllPesanan.class);
+
+    //     // Datadiri data1 = new Datadiri("Daffa","Laki-Laki");
+    //     // Datadiri data2 = new Datadiri("Najwa","Perempuan");
+    //     // Datadiri data3 = new Datadiri("Widya","Perempuan");
+    //     AllPesanan datain = new AllPesanan();
+    //     datain.getRefoodPesanan().add(datagridnew.get(clickedRow).get(clickedCol));
+        
+
+    //     // Datasum.getAlldata().add(data1);
+    //     // Datasum.getAlldata().add(data2);
+    //     // Datasum.getAlldata().add(data3);
+
+
+    //     String xml = xstream.toXML(datain);
+    //     FileOutputStream myFile = null;
+    //     try {
+    //         String folderPath = "src\\ListDistribusiPage";
+    //             String fileName = "confirmproduct.xml";
+    //             String filePath = folderPath + File.separator + fileName;
+    //         myFile = new FileOutputStream(filePath);
+    //         byte[] bytes = xml.getBytes("UTF-8");
+    //         myFile.write(bytes);
+    //     } catch (Exception e) {
+    //         System.err.println("Perhatian: " + e.getMessage());
+    //     } finally {
+    //         if (myFile != null) {
+    //             try {
+    //                 myFile.close();
+    //             } catch (IOException e) {
+    //                 e.printStackTrace();
+    //             }
+    //         }
+    //     }
+
+    // //   ToSeeprod();
+
+
+
+    }
+    
+    
+    
+    private void getupdatedistribusi(int row, int column){
+        XStream xstream = new XStream(new StaxDriver());
+        xstream.processAnnotations(Pesanan.class);
+        xstream.processAnnotations(AllPesanan.class);
+    
+        // Datadiri data1 = new Datadiri("Daffa","Laki-Laki");
+        // Datadiri data2 = new Datadiri("Najwa","Perempuan");
+        // Datadiri data3 = new Datadiri("Widya","Perempuan");
+        AllPesanan datain = new AllPesanan();
+        datain.getRefoodPesanan().add(datagridnew.get(row).get(column));
+        
+    
+        // Datasum.getAlldata().add(data1);
+        // Datasum.getAlldata().add(data2);
+        // Datasum.getAlldata().add(data3);
+    
+    
+        String xml = xstream.toXML(datain);
+        FileOutputStream myFile = null;
+        try {
+            String folderPath = "src\\ListDistribusiPage";
+                String fileName = "confirmproduct.xml";
+                String filePath = folderPath + File.separator + fileName;
+            myFile = new FileOutputStream(filePath);
+            byte[] bytes = xml.getBytes("UTF-8");
+            myFile.write(bytes);
+        } catch (Exception e) {
+            System.err.println("Perhatian: " + e.getMessage());
+        } finally {
+            if (myFile != null) {
+                try {
+                    myFile.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+    }
+
+    String datedistribusi = "";
+    @FXML
+    private void handleButtonClick(ActionEvent event, DatePicker dp) {
+        Button clickedButton = (Button) event.getSource();
+        int columnIndex = GridPane.getColumnIndex(clickedButton.getParent());
+        int rowIndex = GridPane.getRowIndex(clickedButton.getParent());
+        System.out.println("Button clicked on grid: " + columnIndex + "," + rowIndex);
+
+        String selectedDate = dp.getValue().toString();
+        System.out.println("Selected date: " + selectedDate);
+
+        getupdatedistribusi(rowIndex, columnIndex);
+
+
+    }
+
+
+
+
     
 
 
@@ -172,7 +298,7 @@ public class listdistribusicontroller implements Initializable {
 
                 int roindexnew = 0;
                 int coindexnew = 0;
-                // datagridnew.add(new ArrayList<>());
+                datagridnew.add(new ArrayList<>());
         
                 for (int i = 0 ; i < Pesananuser.getRefoodPesanan().size(); i++) {
                     
@@ -194,19 +320,30 @@ public class listdistribusicontroller implements Initializable {
                     // Label jumlahpesanan = (Label) item.lookup("#jumlahpesanan");
                     // jumlahpesanan.setText("X "+Pesananuser.getRefoodPesanan().get(i).getJumlahpesanan());
                     Label statusorder = (Label) item.lookup("#stockyangdipesan");
-                    statusorder.setText("Stock : " + Pesananuser.getRefoodPesanan().get(i).getJumlahpesanan());
+                    statusorder.setText("Jumlah Pesanan : " + Pesananuser.getRefoodPesanan().get(i).getJumlahpesanan());
     
                     ImageView imageView = (ImageView) item.lookup("#imageprod");
                     Image image = new Image(getClass().getClassLoader().getResourceAsStream(Pesananuser.getRefoodPesanan().get(i).getProduct().getFotoproduk()));
                     imageView.setImage(image);
-        
+
+
+                    // Add event handler to button
+                    
+                    
+                    DatePicker datepik = (DatePicker) item.lookup("#distribusidate");
+                    // datepik.getValue();
+                    
+                    Button button = (Button) item.lookup("#confirmbut");
+                    button.setOnAction(event -> handleButtonClick(event,datepik));
                     // showbarangnew.add(item, coindexnew, roindexnew);
-                    // datagridnew.get(0).add(barangdatashow.getRefoodBarang().get(i));
+                    datagridnew.get(0).add(Pesananuser.getRefoodPesanan().get(i));
                     listdistribusi.add(item,coindexnew,roindexnew);
                     
                     coindexnew++;
 
                     if (coindexnew > 1) {
+
+                            datagridnew.add(new ArrayList<>());
                             roindexnew++;
                             coindexnew = 0;
                     }
