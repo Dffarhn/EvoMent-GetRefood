@@ -19,6 +19,9 @@ import Database.AntrianPesanan.AllPesanan;
 import Database.AntrianPesanan.Pesanan;
 import Database.Barang.AllBarang;
 import Database.Barang.Barang;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -33,6 +36,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.shape.SVGPath;
+import javafx.util.Duration;
 public class listdistribusicontroller implements Initializable {
 
        @FXML
@@ -266,9 +271,57 @@ public class listdistribusicontroller implements Initializable {
 
     }
 
-    String datedistribusi = "";
     @FXML
-    private void handleButtonClick(ActionEvent event, DatePicker dp) {
+    private void buttondelete(ActionEvent event, DatePicker dp,Label warn, Button gone) {
+        Button clickedButton = (Button) event.getSource();
+        int columnIndex = GridPane.getColumnIndex(clickedButton.getParent());
+        int rowIndex = GridPane.getRowIndex(clickedButton.getParent());
+        System.out.println("Button clicked on grid: " + columnIndex + "," + rowIndex);
+
+        warn.setText("REJECTED");
+
+        gone.setVisible(false);
+
+        // String selectedDate = dp.getValue().toString();
+        // System.out.println("Selected date: " + selectedDate);
+
+        dp.setDisable(true);
+
+        // clickedButton.setStyle("-fx-background-color: #009900;");
+
+        clickedButton.setStyle(" -fx-shape: 'M0 0 H150 V30 H0 Z';");
+
+        //  double initialWidth = clickedButton.getWidth();
+
+
+
+        Timeline timeline = new Timeline(
+        new KeyFrame(Duration.millis(500),
+        new KeyValue(clickedButton.prefWidthProperty(), 140)
+        // new KeyValue(clickedButton.translateXProperty(), clickedButton.getTranslateX() - (140- initialWidth))
+        // new KeyValue(clickedButton.styleProperty(), "-fx-shape: 'M0 0 H150 V30 H0 Z';")
+   
+        )
+        );
+
+        timeline.play();
+
+        // warn.setVisible(true);
+
+        Timeline timeline2 = new Timeline(
+        new KeyFrame(Duration.millis(500), new KeyValue(warn.visibleProperty(), true)
+        
+        )
+        );
+
+        timeline2.play();
+
+        getupdatedistribusi(rowIndex, columnIndex);
+
+
+    }
+    @FXML
+    private void buttonprove(ActionEvent event, DatePicker dp,Label warn) {
         Button clickedButton = (Button) event.getSource();
         int columnIndex = GridPane.getColumnIndex(clickedButton.getParent());
         int rowIndex = GridPane.getRowIndex(clickedButton.getParent());
@@ -276,6 +329,37 @@ public class listdistribusicontroller implements Initializable {
 
         String selectedDate = dp.getValue().toString();
         System.out.println("Selected date: " + selectedDate);
+
+        dp.setDisable(true);
+
+        // clickedButton.setStyle("-fx-background-color: #009900;");
+
+        clickedButton.setStyle(" -fx-shape: 'M0 0 H150 V30 H0 Z';");
+
+         double initialWidth = clickedButton.getWidth();
+
+
+
+        Timeline timeline = new Timeline(
+        new KeyFrame(Duration.millis(500),
+        new KeyValue(clickedButton.prefWidthProperty(), 140),
+        new KeyValue(clickedButton.translateXProperty(), clickedButton.getTranslateX() - (140- initialWidth))
+        // new KeyValue(clickedButton.styleProperty(), "-fx-shape: 'M0 0 H150 V30 H0 Z';")
+   
+        )
+        );
+
+        timeline.play();
+
+        // warn.setVisible(true);
+
+        Timeline timeline2 = new Timeline(
+        new KeyFrame(Duration.millis(500), new KeyValue(warn.visibleProperty(), true)
+        
+        )
+        );
+
+        timeline2.play();
 
         getupdatedistribusi(rowIndex, columnIndex);
 
@@ -299,6 +383,7 @@ public class listdistribusicontroller implements Initializable {
                 int roindexnew = 0;
                 int coindexnew = 0;
                 datagridnew.add(new ArrayList<>());
+                
         
                 for (int i = 0 ; i < Pesananuser.getRefoodPesanan().size(); i++) {
                     
@@ -332,11 +417,17 @@ public class listdistribusicontroller implements Initializable {
                     
                     DatePicker datepik = (DatePicker) item.lookup("#distribusidate");
                     // datepik.getValue();
+
+
+                    Label prove = (Label) item.lookup("#approvetext");
+
                     
                     Button button = (Button) item.lookup("#confirmbut");
-                    button.setOnAction(event -> handleButtonClick(event,datepik));
+                    button.setOnAction(event -> buttonprove(event,datepik,prove));
+                    Button button2 = (Button) item.lookup("#rejectbut");
+                    button2.setOnAction(event -> buttondelete(event,datepik,prove, button));
                     // showbarangnew.add(item, coindexnew, roindexnew);
-                    datagridnew.get(0).add(Pesananuser.getRefoodPesanan().get(i));
+                    datagridnew.get(roindexnew).add(Pesananuser.getRefoodPesanan().get(i));
                     listdistribusi.add(item,coindexnew,roindexnew);
                     
                     coindexnew++;
