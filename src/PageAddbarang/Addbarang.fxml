@@ -64,7 +64,7 @@
       <CheckBox fx:id="cekjnt" layoutX="181.0" layoutY="497.0" mnemonicParsing="false" text="J&amp;T" />
       <CheckBox fx:id="cekpickup" layoutX="274.0" layoutY="497.0" mnemonicParsing="false" text="Pick Up" />
       <TextArea fx:id="deskripsiproduk" layoutX="77.0" layoutY="218.0" prefHeight="101.0" prefWidth="996.0" wrapText="true" />
-      <Button fx:id="updateprodukbut" layoutX="664.0" layoutY="621.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="182.0" text="Update Product" visible="false" />
+      <Button fx:id="updateprodukbut" layoutX="664.0" layoutY="621.0" mnemonicParsing="false" onAction="#updatefunc" prefHeight="44.0" prefWidth="182.0" text="Update Product" visible="false" />
       <Button fx:id="deleteprodukbut" layoutX="862.0" layoutY="620.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="182.0" text="Delete Product" visible="false" />
       <Button fx:id="addproductbut" layoutX="665.0" layoutY="621.0" mnemonicParsing="false" onAction="#TambahProduct" prefHeight="44.0" prefWidth="321.0" text="Add Product" />
       <Button fx:id="backbut" layoutX="26.0" layoutY="17.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="67.0" text="Back" visible="false" />

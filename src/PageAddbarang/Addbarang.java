@@ -120,6 +120,55 @@ public class Addbarang implements Initializable {
         
     }
 
+
+    public void updatefunc(ActionEvent event) {
+    //     Barang productupdate = new Barang();
+    //     productupdate.setNamaproduk(namaproduct.getText());
+    //     productupdate.setDeskripsiproduk(deskripsiproduk.getText());
+    //     productupdate.setStockproduk(kuantitasbarang.getText());
+
+    //     productupdate.setCategoriproduk(categorieschoice.getValue().toString());
+
+    //     productupdate.setExpiredproduk(dateproduct.getValue().format(DateTimeFormatter.ofPattern("d MMMM yyyy", new Locale("id"))));
+    //     productupdate.setOwner(pemilik);
+
+    //     productupdate.setFotoproduk(pathpict.getText());
+    //     String pengirimanlist = "";
+
+
+    //     if (cekjne.isSelected()) {
+    //         pengirimanlist += "jne,";
+    //     }
+    //     if (cekjnt.isSelected()) {
+    //         pengirimanlist += "jnt,";
+    //     }
+    //     if (cekpickup.isSelected()) {
+    //         pengirimanlist += "pickup,";
+    //     }
+
+    //     productupdate.setPengirimanproduk(pengirimanlist);
+
+    //    for (int i = 0; i < barangdatabase.getRefoodBarang().size(); i++) {
+
+    //         Barang databaseinfo = barangdatabase.getRefoodBarang().get(i);
+
+    //         if (databaseinfo.getNamaproduk().equals(productupdate.getNamaproduk()) && databaseinfo.getOwner().equals(productupdate.getOwner()) ) {
+               
+
+    //                 barangdatabase.getRefoodBarang().set(i, productupdate);
+                    
+                
+                
+    //         }
+            
+    //     }
+    //     xmlupdate();
+        // System.out.println(deskripsiproduk.getText());
+        
+
+        System.out.println("update jalan nih huy update produk dong");
+    }
+
     @FXML
     private void handleChooseImage() {
         FileChooser fileChooser = new FileChooser();

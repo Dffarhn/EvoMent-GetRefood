@@ -72,8 +72,8 @@ public class HomepageController implements Initializable {
     @FXML
     private GridPane showbarangpopular;
 
-    private List<Node> defaultElements = new ArrayList<>();
-    private List<Node> defaultElementsmainshowbot = new ArrayList<>();
+    // private List<Node> defaultElements = new ArrayList<>();
+    // private List<Node> defaultElementsmainshowbot = new ArrayList<>();
 
      @FXML
     private TextField searchinput;
@@ -228,18 +228,24 @@ public class HomepageController implements Initializable {
     }
     @FXML
     private void ToBeranda(ActionEvent event) throws Exception {
-        try {
+        // try {
 
-                    mainshow.getChildren().remove(nowshow);
+        //             mainshow.getChildren().remove(nowshow);
                     
                     
             
-                    mainshow.getChildren().addAll(defaultElements);
+        //             mainshow.getChildren().addAll(defaultElements);
 
 
-        } catch (Exception e) {
-            // TODO: handle exception
-        }
+        // } catch (Exception e) {
+        //     // TODO: handle exception
+        // }
+
+        root = FXMLLoader.load(getClass().getClassLoader().getResource("HomePage/Homepage.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
         
     }
 
@@ -744,9 +750,9 @@ public class HomepageController implements Initializable {
         
 
 
-        defaultElements.addAll(mainshow.getChildren());
+        // defaultElements.addAll(mainshow.getChildren());
 
-        defaultElementsmainshowbot.addAll(mainshowbot.getChildren());
+        // defaultElementsmainshowbot.addAll(mainshowbot.getChildren());
 
         
     }

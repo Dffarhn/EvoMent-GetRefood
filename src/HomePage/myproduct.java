@@ -5,7 +5,10 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 import com.thoughtworks.xstream.XStream;
@@ -17,12 +20,17 @@ import Database.AllAccount;
 import Database.AntrianPesanan.Pesanan;
 import Database.Barang.AllBarang;
 import Database.Barang.Barang;
+import PageAddbarang.Addbarang;
 import Sceneopener.Openscene;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
@@ -35,7 +43,14 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 public class myproduct implements Initializable {
+
+      @FXML
+    private Stage stage;
+    @FXML
+    private Parent root;
+    private Scene scene;
 
     @FXML 
     private AnchorPane mainmyproduct;
@@ -44,6 +59,8 @@ public class myproduct implements Initializable {
     private GridPane showmyproduct;
 
     AllBarang barangdatashow = new AllBarang();
+
+    AllBarang updatetodatabase = new AllBarang();
 
      
     Account SellerAccount =new Account();
@@ -120,7 +137,7 @@ public class myproduct implements Initializable {
             }
         }
         AllBarang datatmp = (AllBarang) xstream.fromXML(readXML);
-        // barangdatashow = datatmp;
+        updatetodatabase = datatmp;
 
         for (int i = 0; i <datatmp.getRefoodBarang().size(); i++) {
             if (datatmp.getRefoodBarang().get(i).getOwner().getNamaBadan().equals(SellerAccount.getNamaBadan())&&datatmp.getRefoodBarang().get(i).getOwner().getNomorBadan().equals(SellerAccount.getNomorBadan())) {
@@ -159,7 +176,7 @@ public class myproduct implements Initializable {
        
         AllBarang datain = new AllBarang();
 
-        datain = barangdatashow;
+        datain = updatetodatabase;
 
 
 
@@ -207,43 +224,9 @@ public class myproduct implements Initializable {
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("PageAddbarang/Addbarang.fxml"));
         AnchorPane item = loader.load();
 
-    //          @FXML
-    // private ChoiceBox<String> categorieschoice;
-
-    // @FXML
-    // private DatePicker dateproduct;
-
-    // @FXML
-    // private TextArea deskripsiproduk;
-
-    // @FXML
-    // private TextField kuantitasbarang;
-
-    // @FXML
-    // private TextField namaproduct;
-
-    // @FXML
-    // private TextField pathpict;
-
-    // @FXML
-    // private ImageView previewpict;
-
-
-    
-    // @FXML
-    // private Button deleteprodukbut;
-
-    //     @FXML
-    // private Label labelshow;
-
-    //     @FXML
-    // private Button updateprodukbut;
-
-    //     @FXML
-    // private Button addprodukbut;
-
         TextField editnameproduct = (TextField) item.lookup("#namaproduct");
         editnameproduct.setText(datagridmyproduct.get(clickedRow).get(clickedCol).getNamaproduk());
+        editnameproduct.setDisable(true);
         TextField editstockproduct = (TextField) item.lookup("#kuantitasbarang");
         editstockproduct.setText(datagridmyproduct.get(clickedRow).get(clickedCol).getStockproduk());
         TextField editpathpictproduct = (TextField) item.lookup("#pathpict");
@@ -256,30 +239,184 @@ public class myproduct implements Initializable {
         ChoiceBox<String> editcategoriproduct = (ChoiceBox<String>) item.lookup("#categorieschoice");
         editcategoriproduct.setValue(datagridmyproduct.get(clickedRow).get(clickedCol).getCategoriproduk());
 
+        DatePicker date = (DatePicker) item.lookup("#dateproduct");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMMM yyyy", new Locale("id"));
+        formatter = formatter.withLocale(new Locale("id", "ID"));
+        LocalDate datechange = LocalDate.parse(datagridmyproduct.get(clickedRow).get(clickedCol).getExpiredproduk(), formatter);
+
+        date.setValue(datechange);
+
+        String[] listkirim = datagridmyproduct.get(clickedRow).get(clickedCol).getPengirimanproduk().split(",");
+
+        CheckBox cekjne = (CheckBox) item.lookup("#cekjne");
+        CheckBox cekjnt = (CheckBox) item.lookup("#cekjnt");
+        CheckBox cekpickup = (CheckBox) item.lookup("#cekpickup");
+
+        for (int i = 0; i < listkirim.length; i++) {
+            if (listkirim[i].equals("jne")) {
+                cekjne.setSelected(true);
+                
+            }
+            if(listkirim[i].equals("jnt")){
+                cekjnt.setSelected(true);
+
+            }
+            if(listkirim[i].equals("pickup")){
+                cekpickup.setSelected(true);
+            }
+            
+        }
+
+    //       @FXML
+    // private CheckBox cekjne;
+
+    // @FXML
+    // private CheckBox cekjnt;
+
+    // @FXML
+    // private CheckBox cekpickup;
+
+
         Button backbuton = (Button) item.lookup("#backbut");
         Button deletebutton = (Button) item.lookup("#deleteprodukbut");
         Button updatebutton = (Button) item.lookup("#updateprodukbut");
 
 
         backbuton.setVisible(true);
-        backbuton.setOnAction(even -> backfunc(even));
+        backbuton.setOnAction(even -> backfunc());
         deletebutton.setVisible(true);
+        deletebutton.setOnAction(even -> deletefunc(even, datagridmyproduct, clickedRow, clickedCol));
         updatebutton.setVisible(true);
+
+
+        updatebutton.setOnAction(even -> {
+            
+            
+            Barang productupdate = new Barang();
+            productupdate.setNamaproduk(editnameproduct.getText());
+            productupdate.setDeskripsiproduk(editdeskripsiproduct.getText());
+            productupdate.setStockproduk(editstockproduct.getText());
+
+            productupdate.setCategoriproduk(editcategoriproduct.getValue().toString());
+
+            productupdate.setExpiredproduk(date.getValue().format(DateTimeFormatter.ofPattern("d MMMM yyyy", new Locale("id"))));
+            productupdate.setOwner(SellerAccount);
+
+            productupdate.setFotoproduk(editpathpictproduct.getText());
+            String pengirimanlist = "";
+
+
+            if (cekjne.isSelected()) {
+            pengirimanlist += "jne,";
+            }
+            if (cekjnt.isSelected()) {
+            pengirimanlist += "jnt,";
+            }
+            if (cekpickup.isSelected()) {
+            pengirimanlist += "pickup,";
+            }
+
+            productupdate.setPengirimanproduk(pengirimanlist);
+
+            for (int i = 0; i < updatetodatabase.getRefoodBarang().size(); i++) {
+
+                Barang databaseinfo = updatetodatabase.getRefoodBarang().get(i);
+
+                System.out.println(databaseinfo.getNamaproduk());
+                System.out.println(productupdate.getNamaproduk());
+
+                if (databaseinfo.getNamaproduk().equals(productupdate.getNamaproduk()) && databaseinfo.getOwner().getNamaBadan().equals(productupdate.getOwner().getNamaBadan()) ) {
+                    System.out.println("masuk ni");
+                    
+                    
+                    
+                    updatetodatabase.getRefoodBarang().set(i,productupdate);
+                    break;
+                    
+                    
+                    
+                }
+                
+            }
+            xmlupdate();
+            backfunc();
+        });
         Button addbuton = (Button) item.lookup("#addproductbut");
         addbuton.setVisible(false);
-
+        
         Label label = (Label) item.lookup("#labelshow");
         label.setText("Make Ur Product Intresting");
-
+        
 
         mainmyproduct.getChildren().setAll(item);
     }
 
 
+    private void deletefunc(ActionEvent event, ArrayList<ArrayList<Barang>> datachange, int row, int column) {
+
+        Barang newupdatebarang = datachange.get(row).get(column);
+
+        for (int i = 0; i < updatetodatabase.getRefoodBarang().size(); i++) {
+
+            Barang databaseinfo = updatetodatabase.getRefoodBarang().get(i);
+
+            if (databaseinfo.getNamaproduk().equals(newupdatebarang.getNamaproduk()) && databaseinfo.getOwner().equals(newupdatebarang.getOwner()) ) {
+                if (databaseinfo.getDeskripsiproduk().equals(newupdatebarang.getDeskripsiproduk())) {
+
+                    updatetodatabase.getRefoodBarang().remove(i);
+                    
+                }
+                
+            }
+            
+        }
+
+        xmlupdate();
+
+
+        backfunc();
+
+
+        
+    }
+    // private void Updatefunc(ActionEvent event, ArrayList<ArrayList<Barang>> datachange, int row, int column) throws IOException {
+
+    //     Barang newupdatebarang = datachange.get(row).get(column);
+
+    //     for (int i = 0; i < updatetodatabase.getRefoodBarang().size(); i++) {
+
+    //         Barang databaseinfo = updatetodatabase.getRefoodBarang().get(i);
+
+    //         if (databaseinfo.getNamaproduk().equals(newupdatebarang.getNamaproduk()) && databaseinfo.getOwner().equals(newupdatebarang.getOwner()) ) {
+    //             if (databaseinfo.getDeskripsiproduk().equals(newupdatebarang.getDeskripsiproduk())) {
+
+    //                 updatetodatabase.getRefoodBarang().remove(i);
+                    
+    //             }
+                
+    //         }
+            
+    //     }
+
+    //     xmlupdate();
+
+    //     root = FXMLLoader.load(getClass().getClassLoader().getResource("HomePage/Homepage.fxml"));
+    //     stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+    //     scene = new Scene(root);
+    //     stage.setScene(scene);
+    //     stage.show();
+
+    //     // backfunc();
+
+
+        
+    // }
+
+
     
 
 
-    private void backfunc(ActionEvent event) {
+    private void backfunc() {
 
         Openscene os = new Openscene();
 
