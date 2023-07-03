@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import com.thoughtworks.xstream.XStream;
@@ -13,19 +14,31 @@ import com.thoughtworks.xstream.security.AnyTypePermission;
 
 import Database.Account;
 import Database.AllAccount;
+import Database.AntrianPesanan.Pesanan;
 import Database.Barang.AllBarang;
 import Database.Barang.Barang;
+import Sceneopener.Openscene;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.skin.ChoiceBoxSkin;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 public class myproduct implements Initializable {
+
+    @FXML 
+    private AnchorPane mainmyproduct;
 
     @FXML
     private GridPane showmyproduct;
@@ -177,6 +190,107 @@ public class myproduct implements Initializable {
     }
 
 
+    ArrayList<ArrayList<Barang>> datagridmyproduct = new ArrayList<>();
+    @FXML
+    private void handleGridClick(MouseEvent event) throws IOException {
+        int numCols = ((GridPane) event.getSource()).getColumnCount();
+        int numRows = ((GridPane) event.getSource()).getRowCount();
+
+        double cellWidth = ((GridPane) event.getSource()).getWidth() / numCols;
+        double cellHeight = ((GridPane) event.getSource()).getHeight() / numRows;
+
+        int clickedCol = (int) (event.getX() / cellWidth);
+        int clickedRow = (int) (event.getY() / cellHeight);
+
+        System.out.println(datagridmyproduct.get(clickedRow).get(clickedCol).getNamaproduk());
+
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("PageAddbarang/Addbarang.fxml"));
+        AnchorPane item = loader.load();
+
+    //          @FXML
+    // private ChoiceBox<String> categorieschoice;
+
+    // @FXML
+    // private DatePicker dateproduct;
+
+    // @FXML
+    // private TextArea deskripsiproduk;
+
+    // @FXML
+    // private TextField kuantitasbarang;
+
+    // @FXML
+    // private TextField namaproduct;
+
+    // @FXML
+    // private TextField pathpict;
+
+    // @FXML
+    // private ImageView previewpict;
+
+
+    
+    // @FXML
+    // private Button deleteprodukbut;
+
+    //     @FXML
+    // private Label labelshow;
+
+    //     @FXML
+    // private Button updateprodukbut;
+
+    //     @FXML
+    // private Button addprodukbut;
+
+        TextField editnameproduct = (TextField) item.lookup("#namaproduct");
+        editnameproduct.setText(datagridmyproduct.get(clickedRow).get(clickedCol).getNamaproduk());
+        TextField editstockproduct = (TextField) item.lookup("#kuantitasbarang");
+        editstockproduct.setText(datagridmyproduct.get(clickedRow).get(clickedCol).getStockproduk());
+        TextField editpathpictproduct = (TextField) item.lookup("#pathpict");
+        editpathpictproduct.setText(datagridmyproduct.get(clickedRow).get(clickedCol).getFotoproduk());
+        TextArea editdeskripsiproduct = (TextArea) item.lookup("#deskripsiproduk");
+        editdeskripsiproduct.setText(datagridmyproduct.get(clickedRow).get(clickedCol).getDeskripsiproduk());
+        ImageView editImageproduct = (ImageView) item.lookup("#previewpict");
+        Image image = new Image(getClass().getClassLoader().getResourceAsStream(datagridmyproduct.get(clickedRow).get(clickedCol).getFotoproduk()));
+        editImageproduct.setImage(image);
+        ChoiceBox<String> editcategoriproduct = (ChoiceBox<String>) item.lookup("#categorieschoice");
+        editcategoriproduct.setValue(datagridmyproduct.get(clickedRow).get(clickedCol).getCategoriproduk());
+
+        Button backbuton = (Button) item.lookup("#backbut");
+        Button deletebutton = (Button) item.lookup("#deleteprodukbut");
+        Button updatebutton = (Button) item.lookup("#updateprodukbut");
+
+
+        backbuton.setVisible(true);
+        backbuton.setOnAction(even -> backfunc(even));
+        deletebutton.setVisible(true);
+        updatebutton.setVisible(true);
+        Button addbuton = (Button) item.lookup("#addproductbut");
+        addbuton.setVisible(false);
+
+        Label label = (Label) item.lookup("#labelshow");
+        label.setText("Make Ur Product Intresting");
+
+
+        mainmyproduct.getChildren().setAll(item);
+    }
+
+
+    
+
+
+    private void backfunc(ActionEvent event) {
+
+        Openscene os = new Openscene();
+
+        Pane root = os.getPane("HomePage/myproduct");
+
+        mainmyproduct.getChildren().setAll(root);
+
+        // buttonback.setVisible(true);
+
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         updateroleuser();
@@ -185,7 +299,7 @@ public class myproduct implements Initializable {
         try {
                 int roindexnew = 0;
                 int coindexnew = 0;
-                // datagridnew.add(new ArrayList<>());
+                datagridmyproduct.add(new ArrayList<>());
         
                 for (int i = 0 ; i < barangdatashow.getRefoodBarang().size(); i++) {
                     
@@ -206,12 +320,14 @@ public class myproduct implements Initializable {
                     imageView.setImage(image);
         
                     showmyproduct.add(item, coindexnew, roindexnew);
-                    // datagridnew.get(0).add(barangdatashow.getRefoodBarang().get(i));
+                    datagridmyproduct.get(roindexnew).add(barangdatashow.getRefoodBarang().get(i));
                     
     
     
                     coindexnew++;
                     if (coindexnew > 3) {
+                        datagridmyproduct.add(new ArrayList<>());
+
                         coindexnew = 0;
                         roindexnew++;
                         

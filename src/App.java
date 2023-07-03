@@ -7,9 +7,9 @@ public class App extends Application {
    @Override
    public void start(Stage stage) throws Exception {
 
-      // Parent root = FXMLLoader.load(getClass().getResource("Login/Scene1.fxml"));
+      Parent root = FXMLLoader.load(getClass().getResource("Login/Scene1.fxml"));
       // Parent root = FXMLLoader.load(getClass().getResource("HomePage\\myproduct.fxml"));
-      Parent root = FXMLLoader.load(getClass().getResource("ListDistribusiPage/listdistribusi.fxml"));
+      // Parent root = FXMLLoader.load(getClass().getResource("ListDistribusiPage/listdistribusi.fxml"));
       // Parent root = FXMLLoader.load(getClass().getResource("MyReFood\\MyRefood.fxml"));
       // Parent root = FXMLLoader.load(getClass().getResource("HomePage\\searchview.fxml"));
       // Parent root = FXMLLoader.load(getClass().getResource("PageSeeProduct/seepro.fxml"));
@@ -18,6 +18,7 @@ public class App extends Application {
       // Parent root = FXMLLoader.load(getClass().getResource("MyProfile\\Myprofile.fxml"));
       Scene scene = new Scene(root);
       stage.setScene(scene);
+      stage.setTitle("Get Re-Food By Evo-Ment");
       stage.show();
    }
    public static void main(String[] args) {

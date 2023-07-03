@@ -18,6 +18,8 @@ public class Pesanan {
     private String pengirimanpesanan;
     private String infopesanan;
 
+    private String tanggalDistribusi;
+
     // public Account getPenjual() {
     //     return penjual;
     // }
@@ -64,6 +66,14 @@ public class Pesanan {
 
     public void setProduct(Barang product) {
         this.product = product;
+    }
+
+    public String getTanggalDistribusi() {
+        return tanggalDistribusi;
+    }
+
+    public void setTanggalDistribusi(String tanggalDistribusi) {
+        this.tanggalDistribusi = tanggalDistribusi;
     }
     
 }

@@ -33,6 +33,8 @@ public class search implements Initializable {
     private GridPane gridsearch;
     @FXML
     private AnchorPane mainshowsearch;
+    @FXML
+    private Label showwarnzero;
 
     AllBarang barangdatashow = new AllBarang();
 
@@ -260,6 +262,15 @@ public class search implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("salah disini dapa");
+        }
+
+        if (barangdatashow.getRefoodBarang().size()== 0) {
+            showwarnzero.setVisible(true);
+
+            
+        }else{
+            showwarnzero.setVisible(false);
+
         }
 
 

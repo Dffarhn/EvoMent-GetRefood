@@ -6,7 +6,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 import com.thoughtworks.xstream.XStream;
@@ -70,25 +72,7 @@ public class listdistribusicontroller implements Initializable {
         }
         AllAccount datatmp = (AllAccount) xstream.fromXML(readXML);
 
-        roleuser = datatmp.getRefoodAccounts().get(0);
-
-        // try {
-            
-        //             for (int i = 0; i < datatmp.getAlldata().size(); i++) {
-        //                 daftarData.add(datatmp.getAlldata().get(i));
-                        
-        //             }
-            
-        // } catch (Exception e) {
-        //     // System.out.println("salah disini dapa");
-        //     // TODO: handle exception
-        // }
-        // System.out.println(datatmp.getAlldata().size());
-
-        
-        
-
-        
+        roleuser = datatmp.getRefoodAccounts().get(0);        
         
     }
 
@@ -107,6 +91,7 @@ public class listdistribusicontroller implements Initializable {
        return myString;
     }
 
+    AllPesanan UpdatePesananDataBase =new AllPesanan();
     AllPesanan Pesananuser =new AllPesanan();
      @FXML
     private void updatepesananuser() {
@@ -135,12 +120,13 @@ public class listdistribusicontroller implements Initializable {
         AllPesanan datatmp = (AllPesanan) xstream.fromXML(readXML);
 
         // roleuser = datatmp.getRefoodAccounts().get(0);
+        UpdatePesananDataBase = datatmp;
 
         try {
             
             for (int i = 0; i < datatmp.getRefoodPesanan().size(); i++) {
     
-                if (datatmp.getRefoodPesanan().get(i).getProduct().getOwner().getNamaBadan().equals(roleuser.getNamaBadan())&& datatmp.getRefoodPesanan().get(i).getProduct().getOwner().getNomorBadan().equals(roleuser.getNomorBadan()) ) {
+                if (datatmp.getRefoodPesanan().get(i).getProduct().getOwner().getNamaBadan().equals(roleuser.getNamaBadan())&& datatmp.getRefoodPesanan().get(i).getProduct().getOwner().getNomorBadan().equals(roleuser.getNomorBadan()) && datatmp.getRefoodPesanan().get(i).getInfopesanan().equals("Menunggu Konfirmasi") ) {
     
                     Pesananuser.getRefoodPesanan().add(datatmp.getRefoodPesanan().get(i));
                     
@@ -176,62 +162,11 @@ public class listdistribusicontroller implements Initializable {
      ArrayList<ArrayList<Pesanan>> datagridnew = new ArrayList<>();
     @FXML
     private void handleGridClick(MouseEvent event) {
-    //     int numCols = ((GridPane) event.getSource()).getColumnCount();
-    //     int numRows = ((GridPane) event.getSource()).getRowCount();
-
-    //     double cellWidth = ((GridPane) event.getSource()).getWidth() / numCols;
-    //     double cellHeight = ((GridPane) event.getSource()).getHeight() / numRows;
-
-    //     int clickedCol = (int) (event.getX() / cellWidth);
-    //     int clickedRow = (int) (event.getY() / cellHeight);
-
-
-    //     XStream xstream = new XStream(new StaxDriver());
-    //     xstream.processAnnotations(Pesanan.class);
-    //     xstream.processAnnotations(AllPesanan.class);
-
-    //     // Datadiri data1 = new Datadiri("Daffa","Laki-Laki");
-    //     // Datadiri data2 = new Datadiri("Najwa","Perempuan");
-    //     // Datadiri data3 = new Datadiri("Widya","Perempuan");
-    //     AllPesanan datain = new AllPesanan();
-    //     datain.getRefoodPesanan().add(datagridnew.get(clickedRow).get(clickedCol));
-        
-
-    //     // Datasum.getAlldata().add(data1);
-    //     // Datasum.getAlldata().add(data2);
-    //     // Datasum.getAlldata().add(data3);
-
-
-    //     String xml = xstream.toXML(datain);
-    //     FileOutputStream myFile = null;
-    //     try {
-    //         String folderPath = "src\\ListDistribusiPage";
-    //             String fileName = "confirmproduct.xml";
-    //             String filePath = folderPath + File.separator + fileName;
-    //         myFile = new FileOutputStream(filePath);
-    //         byte[] bytes = xml.getBytes("UTF-8");
-    //         myFile.write(bytes);
-    //     } catch (Exception e) {
-    //         System.err.println("Perhatian: " + e.getMessage());
-    //     } finally {
-    //         if (myFile != null) {
-    //             try {
-    //                 myFile.close();
-    //             } catch (IOException e) {
-    //                 e.printStackTrace();
-    //             }
-    //         }
-    //     }
-
-    // //   ToSeeprod();
-
-
-
     }
     
     
     
-    private void getupdatedistribusi(int row, int column){
+    private void getupdatedistribusi(){
         XStream xstream = new XStream(new StaxDriver());
         xstream.processAnnotations(Pesanan.class);
         xstream.processAnnotations(AllPesanan.class);
@@ -240,7 +175,8 @@ public class listdistribusicontroller implements Initializable {
         // Datadiri data2 = new Datadiri("Najwa","Perempuan");
         // Datadiri data3 = new Datadiri("Widya","Perempuan");
         AllPesanan datain = new AllPesanan();
-        datain.getRefoodPesanan().add(datagridnew.get(row).get(column));
+        // datain.getRefoodPesanan().add(datagridnew.get(row).get(column));
+        datain = UpdatePesananDataBase;
         
     
         // Datasum.getAlldata().add(data1);
@@ -251,8 +187,8 @@ public class listdistribusicontroller implements Initializable {
         String xml = xstream.toXML(datain);
         FileOutputStream myFile = null;
         try {
-            String folderPath = "src\\ListDistribusiPage";
-                String fileName = "confirmproduct.xml";
+            String folderPath = "src\\Database\\AntrianPesanan";
+                String fileName = "PesananBase.xml";
                 String filePath = folderPath + File.separator + fileName;
             myFile = new FileOutputStream(filePath);
             byte[] bytes = xml.getBytes("UTF-8");
@@ -298,8 +234,6 @@ public class listdistribusicontroller implements Initializable {
         Timeline timeline = new Timeline(
         new KeyFrame(Duration.millis(500),
         new KeyValue(clickedButton.prefWidthProperty(), 140)
-        // new KeyValue(clickedButton.translateXProperty(), clickedButton.getTranslateX() - (140- initialWidth))
-        // new KeyValue(clickedButton.styleProperty(), "-fx-shape: 'M0 0 H150 V30 H0 Z';")
    
         )
         );
@@ -316,7 +250,13 @@ public class listdistribusicontroller implements Initializable {
 
         timeline2.play();
 
-        getupdatedistribusi(rowIndex, columnIndex);
+        datagridnew.get(rowIndex).get(columnIndex).setInfopesanan("Rejected");
+
+        updatetodatabasepesanan(datagridnew, rowIndex, columnIndex);
+
+        getupdatedistribusi();
+
+
 
 
     }
@@ -360,10 +300,43 @@ public class listdistribusicontroller implements Initializable {
         );
 
         timeline2.play();
+        
+        datagridnew.get(rowIndex).get(columnIndex).setTanggalDistribusi(dp.getValue().format(DateTimeFormatter.ofPattern("d MMMM yyyy", new Locale("id"))));
+        datagridnew.get(rowIndex).get(columnIndex).setInfopesanan("APPROVED");
 
-        getupdatedistribusi(rowIndex, columnIndex);
+        updatetodatabasepesanan(datagridnew, rowIndex, columnIndex);
+
+        getupdatedistribusi();
 
 
+
+    }
+
+
+    private void updatetodatabasepesanan(ArrayList<ArrayList<Pesanan>> datachange,int row,int column){
+        for (int i = 0; i < UpdatePesananDataBase.getRefoodPesanan().size(); i++) {
+            if (UpdatePesananDataBase.getRefoodPesanan().get(i).getProduct().getNamaproduk().equals(datachange.get(row).get(column).getProduct().getNamaproduk())) {
+                if (UpdatePesananDataBase.getRefoodPesanan().get(i).getPembeli().getNamaBadan().equals(datachange.get(row).get(column).getPembeli().getNamaBadan())) {
+                    if (UpdatePesananDataBase.getRefoodPesanan().get(i).getProduct().getStockproduk().equals(datachange.get(row).get(column).getProduct().getStockproduk())) {
+
+                        // UpdatePesananDataBase.getRefoodPesanan().get(i).setPembeli(datachange.get(row).get(column).getPembeli());
+                        // UpdatePesananDataBase.getRefoodPesanan().get(i).setProduct(datachange.get(row).get(column).getProduct());
+                        try {
+                            UpdatePesananDataBase.getRefoodPesanan().get(i).setTanggalDistribusi(datachange.get(row).get(column).getTanggalDistribusi());                  
+                        } catch (Exception e) {
+                            // TODO: handle exception
+                        }
+                        UpdatePesananDataBase.getRefoodPesanan().get(i).setInfopesanan(datachange.get(row).get(column).getInfopesanan());
+                        // UpdatePesananDataBase.getRefoodPesanan().get(i).setPembeli(datachange.get(row).get(column).getPembeli());
+                        // UpdatePesananDataBase.getRefoodPesanan().get(i).setPembeli(datachange.get(row).get(column).getPembeli());
+
+                    }
+                    
+                }
+                
+            }
+            
+        }
     }
 
 

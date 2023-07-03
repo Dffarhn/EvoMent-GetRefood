@@ -5,6 +5,8 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 import com.thoughtworks.xstream.XStream;
@@ -84,7 +86,7 @@ public class Addbarang implements Initializable {
 
         product.setCategoriproduk(categorieschoice.getValue().toString());
 
-        product.setExpiredproduk(dateproduct.getValue().toString());
+        product.setExpiredproduk(dateproduct.getValue().format(DateTimeFormatter.ofPattern("d MMMM yyyy", new Locale("id"))));
         product.setOwner(pemilik);
 
         product.setFotoproduk(pathpict.getText());

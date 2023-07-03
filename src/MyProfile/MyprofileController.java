@@ -117,7 +117,10 @@ public class MyprofileController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         update();
 
-        Image img = new Image("/MyProfile/mif.jpg");
+        Image img = new Image("/MyProfile/perusahaanpict.png");
+
+        // // src\MyProfile\backgroundup2.png
+        // src\MyProfile\perusahaanpict.png
 
 
         circmage.setFill(new ImagePattern(img));
