@@ -163,6 +163,52 @@ public class listdistribusicontroller implements Initializable {
     @FXML
     private void handleGridClick(MouseEvent event) {
     }
+
+    @FXML
+    private void xmlupdatebarangdatabase() {
+
+        XStream xstream = new XStream(new StaxDriver());
+       xstream.processAnnotations(Barang.class);
+        xstream.processAnnotations(AllBarang.class);
+
+        // Datadiri data1 = new Datadiri("Daffa","Laki-Laki");
+        // Datadiri data2 = new Datadiri("Najwa","Perempuan");
+        // Datadiri data3 = new Datadiri("Widya","Perempuan");
+        AllBarang datain = new AllBarang();
+        System.out.println("Update xml jalan");
+
+        datain = barangdatabase;
+
+
+        // Datasum.getAlldata().add(data1);
+        // Datasum.getAlldata().add(data2);
+        // Datasum.getAlldata().add(data3);
+
+
+        String xml = xstream.toXML(datain);
+        FileOutputStream myFile = null;
+        try {
+            String folderPath = "src\\Database\\Barang";
+                String fileName = "Barangbase.xml";
+                String filePath = folderPath + File.separator + fileName;
+            myFile = new FileOutputStream(filePath);
+            byte[] bytes = xml.getBytes("UTF-8");
+            myFile.write(bytes);
+        } catch (Exception e) {
+            System.err.println("Perhatian: " + e.getMessage());
+        } finally {
+            if (myFile != null) {
+                try {
+                    myFile.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+        
+        
+    }
     
     
     
@@ -252,7 +298,7 @@ public class listdistribusicontroller implements Initializable {
 
         datagridnew.get(rowIndex).get(columnIndex).setInfopesanan("Rejected");
 
-        updatetodatabasepesanan(datagridnew, rowIndex, columnIndex);
+        updatetodatabasepesanan(datagridnew, rowIndex, columnIndex,false);
 
         getupdatedistribusi();
 
@@ -304,16 +350,75 @@ public class listdistribusicontroller implements Initializable {
         datagridnew.get(rowIndex).get(columnIndex).setTanggalDistribusi(dp.getValue().format(DateTimeFormatter.ofPattern("d MMMM yyyy", new Locale("id"))));
         datagridnew.get(rowIndex).get(columnIndex).setInfopesanan("APPROVED");
 
-        updatetodatabasepesanan(datagridnew, rowIndex, columnIndex);
+        updatetodatabasepesanan(datagridnew, rowIndex, columnIndex,true);
 
         getupdatedistribusi();
 
 
 
     }
+    AllBarang barangdatabase = new AllBarang();
+
+    @FXML
+    private void updatebarang() {
+
+        XStream xstream = new XStream(new StaxDriver());
+        xstream.addPermission(AnyTypePermission.ANY);
+        xstream.processAnnotations(Barang.class);
+        xstream.processAnnotations(AllBarang.class);
+        xstream.ignoreUnknownElements();
+        FileInputStream getFile = null;
+        String readXML = "";
+        try {
+            getFile = new FileInputStream("src\\Database\\Barang\\Barangbase.xml");
+            readXML = xmlToString(getFile);
+        } catch (Exception e) {
+            System.err.println("Perhatian:"  + e.getMessage());
+        } finally {
+            if (getFile != null) {
+                try {
+                    getFile.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        AllBarang datatmp = (AllBarang) xstream.fromXML(readXML);
+        barangdatabase = datatmp;
+        
+
+        
+        
+    }
 
 
-    private void updatetodatabasepesanan(ArrayList<ArrayList<Pesanan>> datachange,int row,int column){
+    private void updatebarangrejected(ArrayList<ArrayList<Pesanan>> datachange,int row,int column){
+
+        for (int i = 0; i < barangdatabase.getRefoodBarang().size(); i++) {
+            if (barangdatabase.getRefoodBarang().get(i).getNamaproduk().equals(datachange.get(row).get(column).getProduct().getNamaproduk())) {
+                if (barangdatabase.getRefoodBarang().get(i).getDeskripsiproduk().equals(datachange.get(row).get(column).getProduct().getDeskripsiproduk())) {
+                    if (barangdatabase.getRefoodBarang().get(i).getExpiredproduk().equals(datachange.get(row).get(column).getProduct().getExpiredproduk())) {
+
+                        System.out.println("ada");
+
+                        barangdatabase.getRefoodBarang().get(i).setStockproduk(String.valueOf(Integer.valueOf(barangdatabase.getRefoodBarang().get(i).getStockproduk())+ Integer.valueOf(datachange.get(row).get(column).getJumlahpesanan())));
+                        // System.out.println(barangdatabase.getRefoodBarang().get(i).getStockproduk());
+                        
+                        break;
+
+
+                    }
+                    
+                }
+                
+            }
+            
+        }
+
+    }
+
+
+    private void updatetodatabasepesanan(ArrayList<ArrayList<Pesanan>> datachange,int row,int column, boolean todo){
         for (int i = 0; i < UpdatePesananDataBase.getRefoodPesanan().size(); i++) {
             if (UpdatePesananDataBase.getRefoodPesanan().get(i).getProduct().getNamaproduk().equals(datachange.get(row).get(column).getProduct().getNamaproduk())) {
                 if (UpdatePesananDataBase.getRefoodPesanan().get(i).getPembeli().getNamaBadan().equals(datachange.get(row).get(column).getPembeli().getNamaBadan())) {
@@ -321,12 +426,21 @@ public class listdistribusicontroller implements Initializable {
 
                         // UpdatePesananDataBase.getRefoodPesanan().get(i).setPembeli(datachange.get(row).get(column).getPembeli());
                         // UpdatePesananDataBase.getRefoodPesanan().get(i).setProduct(datachange.get(row).get(column).getProduct());
-                        try {
+
+                        if (todo) {
                             UpdatePesananDataBase.getRefoodPesanan().get(i).setTanggalDistribusi(datachange.get(row).get(column).getTanggalDistribusi());                  
-                        } catch (Exception e) {
-                            // TODO: handle exception
+                            
+                            UpdatePesananDataBase.getRefoodPesanan().get(i).setInfopesanan(datachange.get(row).get(column).getInfopesanan());
+                        }else{
+                            System.out.println("masuksini");
+                            updatebarangrejected(datachange, row, column);
+                            xmlupdatebarangdatabase();
+                            UpdatePesananDataBase.getRefoodPesanan().get(i).setInfopesanan(datachange.get(row).get(column).getInfopesanan());
+                            // UpdatePesananDataBase.getRefoodPesanan().remove(i);
+
+
                         }
-                        UpdatePesananDataBase.getRefoodPesanan().get(i).setInfopesanan(datachange.get(row).get(column).getInfopesanan());
+                        
                         // UpdatePesananDataBase.getRefoodPesanan().get(i).setPembeli(datachange.get(row).get(column).getPembeli());
                         // UpdatePesananDataBase.getRefoodPesanan().get(i).setPembeli(datachange.get(row).get(column).getPembeli());
 
@@ -350,6 +464,7 @@ public class listdistribusicontroller implements Initializable {
 
         updateroleuser();
         updatepesananuser();
+        updatebarang();
 
         try {
 

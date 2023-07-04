@@ -24,6 +24,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
@@ -42,9 +43,21 @@ public class seeproductController implements Initializable {
     private Scene scene;
 
 
+    @FXML
+    private Button buybutton;
+    @FXML
+    private Button cancelbutform;
+
+    
+
+
     
     
-      @FXML
+      public Button getCancelbutform() {
+        return cancelbutform;
+    }
+
+    @FXML
     private Label seepodpemilik;
 
     @FXML
@@ -67,6 +80,13 @@ public class seeproductController implements Initializable {
     @FXML
     private ScrollPane pagedetailsproduct;
 
+    // public ScrollPane getPagedetailsproduct() {
+    //     return pagedetailsproduct;
+    // }
+    // public AnchorPane getPagepesan() {
+    //     return pagepesan;
+    // }
+
     @FXML
     private AnchorPane pagepesan;
 
@@ -75,14 +95,14 @@ public class seeproductController implements Initializable {
 
 
     @FXML
-    private void topagepesan(ActionEvent event) {
+    public void topagepesan(ActionEvent event) {
         pagedetailsproduct.setVisible(false);
         pagepesan.setVisible(true);
         confirmpesanan();
         
     }
     @FXML
-    private void cancelpagepesan(ActionEvent event) {
+    public void cancelpagepesan(ActionEvent event) {
         pagedetailsproduct.setVisible(true);
         pagepesan.setVisible(false);
         
@@ -364,8 +384,8 @@ public class seeproductController implements Initializable {
     }
 
     
-
-
+    
+    
     @FXML
     private void confirmpesanan() {
 
@@ -378,11 +398,6 @@ public class seeproductController implements Initializable {
 
         nomorpenjual.setText(seebarang.getRefoodBarang().get(0).getOwner().getNomorBadan());
 
-        String []distribusi = seebarang.getRefoodBarang().get(0).getPengirimanproduk().split(",");
-        for (String i : distribusi) {
-            pilihdistribusi.getItems().add(i);
-            
-        }
 
         alamatpenjual.setText(seebarang.getRefoodBarang().get(0).getOwner().getAlamatBadan());
         
@@ -465,9 +480,13 @@ public class seeproductController implements Initializable {
         
     }
 
-    
-    
+    public Button getButton(){
+        return buybutton;
+    }
 
+    
+    
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
@@ -478,7 +497,10 @@ public class seeproductController implements Initializable {
         seepodpemilik.setText(seebarang.getRefoodBarang().get(0).getOwner().getNamaBadan());
         seeprodalamat.setText(seeprodalamat.getText()+" "+seebarang.getRefoodBarang().get(0).getOwner().getAlamatBadan());
 
-        seeproddes.setText(seebarang.getRefoodBarang().get(0).getDeskripsiproduk());
+        seeproddes.setText(seebarang.getRefoodBarang().get(0).getDeskripsiproduk().replace("\n", "").replaceAll("\\s+", " ").trim());
+
+        // System.out.println(seebarang.getRefoodBarang().get(0).getDeskripsiproduk().replace("\n", "").replaceAll("\\s+", " ").trim());
+        // System.out.println(seebarang.getRefoodBarang().get(0).getDeskripsiproduk().trim());
         
         seeprodname.setText(seebarang.getRefoodBarang().get(0).getNamaproduk());
         Image image = new Image(getClass().getClassLoader().getResourceAsStream(seebarang.getRefoodBarang().get(0).getFotoproduk()));
@@ -488,5 +510,10 @@ public class seeproductController implements Initializable {
 
         seeprodstock.setText(seeprodstock.getText()+" "+seebarang.getRefoodBarang().get(0).getStockproduk());
     
+        String []distribusi = seebarang.getRefoodBarang().get(0).getPengirimanproduk().split(",");
+        for (String i : distribusi) {
+            pilihdistribusi.getItems().add(i);
+            
+        }
     }
 }

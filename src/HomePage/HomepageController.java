@@ -21,8 +21,10 @@ import Database.Account;
 import Database.AllAccount;
 import Database.Barang.AllBarang;
 import Database.Barang.Barang;
+import PageSeeProduct.seeproductController;
 import Sceneopener.Openscene;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -338,13 +340,59 @@ public class HomepageController implements Initializable {
     }
 
     @FXML
-    private void ToSeeprod() {
+    private void ToSeeprod() throws IOException {
 
-        Openscene os = new Openscene();
+        // Openscene os = new Openscene();
 
-        Pane root = os.getPane("PageSeeProduct/seepro");
+        // Pane root = os.getPane("PageSeeProduct/seepro");
 
-        nowshow = root;
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("PageSeeProduct/seepro.fxml"));
+        Parent root = loader.load();
+
+        seeproductController controller = loader.getController();
+
+        Button buyButton = controller.getButton();
+        Button backbut = controller.getCancelbutform();
+        // buyButton.setText("test");
+
+        // Button buttonbuy = (Button) root.lookup("#siproductif #buybutton");
+        // buttonbuy.setText("halo");
+
+        // EventHandler<ActionEvent> buyButtonAction = buyButton.getOnAction();
+        // System.out.println(buyButton.getOnAction());
+
+
+        buyButton.setOnAction(event ->{
+            // buyButtonAction
+
+            controller.topagepesan(event);
+            buttonback.setVisible(false);
+            // System.out.println("ehmasuk");
+            
+        });
+        backbut.setOnAction(event ->{
+            // buyButtonAction
+
+            controller.cancelpagepesan(event);
+            buttonback.setVisible(true);
+            // System.out.println("ehmasuk");
+            
+        });
+
+
+
+
+    
+    // // Get the controller instance of the "seepro" page
+    //     seeproductController seeproController = loader.getController();
+    
+    // // Set the onAction event for the button in the "seepro" controller
+    //     seeproController..setOnAction(event -> {
+    //     // Handle the button click event here
+    //         System.out.println("Button clicked!");
+    //     });
+
+        // nowshow = root;
         mainshowbot.getChildren().setAll(root);
 
         buttonback.setVisible(true);
@@ -358,7 +406,7 @@ public class HomepageController implements Initializable {
     
     ArrayList<ArrayList<Barang>> datagridnew = new ArrayList<>();
     @FXML
-    private void handleGridClick(MouseEvent event) {
+    private void handleGridClick(MouseEvent event) throws IOException {
         int numCols = ((GridPane) event.getSource()).getColumnCount();
         int numRows = ((GridPane) event.getSource()).getRowCount();
 
@@ -414,7 +462,7 @@ public class HomepageController implements Initializable {
 
 
     @FXML
-    private void handleGridClickmost(MouseEvent event) {
+    private void handleGridClickmost(MouseEvent event) throws IOException {
         int numCols = ((GridPane) event.getSource()).getColumnCount();
         int numRows = ((GridPane) event.getSource()).getRowCount();
 
@@ -468,7 +516,7 @@ public class HomepageController implements Initializable {
 
     }
     @FXML
-    private void handleGridClickothers(MouseEvent event) {
+    private void handleGridClickothers(MouseEvent event) throws IOException {
         int numCols = ((GridPane) event.getSource()).getColumnCount();
         int numRows = ((GridPane) event.getSource()).getRowCount();
 
