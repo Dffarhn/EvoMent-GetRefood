@@ -237,8 +237,7 @@ public class myproduct implements Initializable {
         editcategoriproduct.setValue(datagridmyproduct.get(clickedRow).get(clickedCol).getCategoriproduk());
 
         DatePicker date = (DatePicker) item.lookup("#dateproduct");
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMMM yyyy", new Locale("id"));
-        formatter = formatter.withLocale(new Locale("id", "ID"));
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d MMMM yyyy", new Locale("id", "ID"));
         LocalDate datechange = LocalDate.parse(datagridmyproduct.get(clickedRow).get(clickedCol).getExpiredproduk(), formatter);
 
         date.setValue(datechange);
