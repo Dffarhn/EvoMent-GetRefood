@@ -78,10 +78,13 @@ public class Barang {
     }
 
     public String removePrefix(String input) {
-        String prefix = "D:\\TUGASBESARFPA\\src\\";
-        if (input.startsWith(prefix)) {
-            return input.substring(prefix.length());
+        String databasePrefix = "Database\\";
+        int prefixIndex = input.indexOf(databasePrefix);
+
+        if (prefixIndex != -1) {
+            return input.substring(prefixIndex);
         }
+
         return input;
     }
 
