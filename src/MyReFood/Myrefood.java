@@ -183,9 +183,7 @@ public class Myrefood implements Initializable {
                     AnchorPane item = loader.load();
         
                     // Set different text for each label
-                    Label nameLabel = (Label) item.lookup("#NamaToko");
-                    nameLabel.setText(Pesananuser.getRefoodPesanan().get(i).getProduct().getOwner().getNamaBadan() + " >");
-        
+                    
                     // Label banyakPenjualanLabel = (Label) item.lookup("#banyakPenjualanLabel");
                     // banyakPenjualanLabel.setText(banyakPenjualanLabel.getText()+ barangdatashow.getRefoodBarang().get(i).getStockproduk());
                     Label NamaPesanan = (Label) item.lookup("#NamaPesanan");
@@ -198,7 +196,22 @@ public class Myrefood implements Initializable {
                     jumlahpesanan.setText("X "+Pesananuser.getRefoodPesanan().get(i).getJumlahpesanan());
                     Label statusorder = (Label) item.lookup("#statusorder");
                     statusorder.setText(Pesananuser.getRefoodPesanan().get(i).getInfopesanan());
-    
+
+                    Label nameLabel = (Label) item.lookup("#NamaToko");
+                    if (Pesananuser.getRefoodPesanan().get(i).getInfopesanan().equals("APPROVED")) {
+                        if (Pesananuser.getRefoodPesanan().get(i).getPengirimanpesanan().equals("pickup")) {
+                            
+                            nameLabel.setText(Pesananuser.getRefoodPesanan().get(i).getProduct().getOwner().getNamaBadan() + " > u can pickup at " + Pesananuser.getRefoodPesanan().get(i).getTanggalDistribusi() );
+                        }else{
+
+                            nameLabel.setText(Pesananuser.getRefoodPesanan().get(i).getProduct().getOwner().getNamaBadan() + " > will be order at " + Pesananuser.getRefoodPesanan().get(i).getTanggalDistribusi() );
+                        }
+                        
+                    }else{
+                        
+                        nameLabel.setText(Pesananuser.getRefoodPesanan().get(i).getProduct().getOwner().getNamaBadan() + " >");
+                    }
+                    
                     ImageView imageView = (ImageView) item.lookup("#fotoproduk");
                     Image image = new Image(getClass().getClassLoader().getResourceAsStream(Pesananuser.getRefoodPesanan().get(i).getProduct().getFotoproduk()));
                     imageView.setImage(image);

@@ -25,5 +25,10 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
+      <Label fx:id="showdatefalse" layoutX="331.0" layoutY="44.0" prefHeight="17.0" prefWidth="153.0" text="*harap masukan jadwal" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="9.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

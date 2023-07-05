@@ -15,7 +15,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <ScrollPane layoutX="-1.0" layoutY="94.0" prefHeight="595.0" prefWidth="1110.0">
+      <ScrollPane fx:id="showlistdistribusi" layoutX="-1.0" layoutY="94.0" prefHeight="595.0" prefWidth="1110.0">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="877.0" prefWidth="1079.0">
                <children>
@@ -36,5 +36,10 @@
             </AnchorPane>
         </content>
       </ScrollPane>
+      <Label fx:id="warnisempty" alignment="CENTER" layoutX="5.0" layoutY="171.0" prefHeight="88.0" prefWidth="1104.0" text="Belum ada yang memesan !" visible="false">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

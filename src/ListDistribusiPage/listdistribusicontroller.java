@@ -296,7 +296,7 @@ public class listdistribusicontroller implements Initializable {
 
         timeline2.play();
 
-        datagridnew.get(rowIndex).get(columnIndex).setInfopesanan("Rejected");
+        datagridnew.get(rowIndex).get(columnIndex).setInfopesanan("REJECTED");
 
         updatetodatabasepesanan(datagridnew, rowIndex, columnIndex,false);
 
@@ -307,52 +307,68 @@ public class listdistribusicontroller implements Initializable {
 
     }
     @FXML
-    private void buttonprove(ActionEvent event, DatePicker dp,Label warn) {
+    private void buttonprove(ActionEvent event, DatePicker dp,Label warn, Label showwarndate) {
         Button clickedButton = (Button) event.getSource();
         int columnIndex = GridPane.getColumnIndex(clickedButton.getParent());
         int rowIndex = GridPane.getRowIndex(clickedButton.getParent());
         System.out.println("Button clicked on grid: " + columnIndex + "," + rowIndex);
+        boolean accep = true;
 
-        String selectedDate = dp.getValue().toString();
-        System.out.println("Selected date: " + selectedDate);
+        try {
+            
+            String selectedDate = dp.getValue().toString();
+            System.out.println("Selected date: " + selectedDate);
+        } catch (Exception e) {
+            System.out.println("masuk sini");
+            accep = false;
+            showwarndate.setVisible(true);
+            // TODO: handle exception
+        }
 
-        dp.setDisable(true);
+        if (accep) {
+            showwarndate.setVisible(false);
 
-        // clickedButton.setStyle("-fx-background-color: #009900;");
+            
+            dp.setDisable(true);
+    
+            // clickedButton.setStyle("-fx-background-color: #009900;");
+    
+            clickedButton.setStyle(" -fx-shape: 'M0 0 H150 V30 H0 Z';");
+    
+             double initialWidth = clickedButton.getWidth();
+    
+    
+    
+            Timeline timeline = new Timeline(
+            new KeyFrame(Duration.millis(500),
+            new KeyValue(clickedButton.prefWidthProperty(), 140),
+            new KeyValue(clickedButton.translateXProperty(), clickedButton.getTranslateX() - (140- initialWidth))
+            // new KeyValue(clickedButton.styleProperty(), "-fx-shape: 'M0 0 H150 V30 H0 Z';")
+       
+            )
+            );
+    
+            timeline.play();
+    
+            // warn.setVisible(true);
+    
+            Timeline timeline2 = new Timeline(
+            new KeyFrame(Duration.millis(500), new KeyValue(warn.visibleProperty(), true)
+            
+            )
+            );
+    
+            timeline2.play();
+            
+            datagridnew.get(rowIndex).get(columnIndex).setTanggalDistribusi(dp.getValue().format(DateTimeFormatter.ofPattern("d MMMM yyyy", new Locale("id"))));
+            datagridnew.get(rowIndex).get(columnIndex).setInfopesanan("APPROVED");
+    
+            updatetodatabasepesanan(datagridnew, rowIndex, columnIndex,true);
+    
+            getupdatedistribusi();
+        }
 
-        clickedButton.setStyle(" -fx-shape: 'M0 0 H150 V30 H0 Z';");
 
-         double initialWidth = clickedButton.getWidth();
-
-
-
-        Timeline timeline = new Timeline(
-        new KeyFrame(Duration.millis(500),
-        new KeyValue(clickedButton.prefWidthProperty(), 140),
-        new KeyValue(clickedButton.translateXProperty(), clickedButton.getTranslateX() - (140- initialWidth))
-        // new KeyValue(clickedButton.styleProperty(), "-fx-shape: 'M0 0 H150 V30 H0 Z';")
-   
-        )
-        );
-
-        timeline.play();
-
-        // warn.setVisible(true);
-
-        Timeline timeline2 = new Timeline(
-        new KeyFrame(Duration.millis(500), new KeyValue(warn.visibleProperty(), true)
-        
-        )
-        );
-
-        timeline2.play();
-        
-        datagridnew.get(rowIndex).get(columnIndex).setTanggalDistribusi(dp.getValue().format(DateTimeFormatter.ofPattern("d MMMM yyyy", new Locale("id"))));
-        datagridnew.get(rowIndex).get(columnIndex).setInfopesanan("APPROVED");
-
-        updatetodatabasepesanan(datagridnew, rowIndex, columnIndex,true);
-
-        getupdatedistribusi();
 
 
 
@@ -455,8 +471,8 @@ public class listdistribusicontroller implements Initializable {
 
 
 
-
-    
+    @FXML
+    private Label warnisempty;
 
 
     @Override
@@ -508,10 +524,11 @@ public class listdistribusicontroller implements Initializable {
 
 
                     Label prove = (Label) item.lookup("#approvetext");
+                    Label datefalse = (Label) item.lookup("#showdatefalse");
 
                     
                     Button button = (Button) item.lookup("#confirmbut");
-                    button.setOnAction(event -> buttonprove(event,datepik,prove));
+                    button.setOnAction(event -> buttonprove(event,datepik,prove,datefalse));
                     Button button2 = (Button) item.lookup("#rejectbut");
                     button2.setOnAction(event -> buttondelete(event,datepik,prove, button));
                     // showbarangnew.add(item, coindexnew, roindexnew);
@@ -535,6 +552,15 @@ public class listdistribusicontroller implements Initializable {
             } catch (IOException e) {
                 e.printStackTrace();
                 System.out.println("salah disini dapa");
+            }
+
+            if (Pesananuser.getRefoodPesanan().isEmpty()) {
+                System.out.println("ga ada yang beli");
+
+                warnisempty.setVisible(true);
+                
+            }else{
+                warnisempty.setVisible(false);
             }
 
 
