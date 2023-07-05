@@ -20,7 +20,7 @@
             <Button layoutX="667.0" layoutY="14.0" mnemonicParsing="false" onAction="#ToSearch" prefHeight="33.0" prefWidth="63.0" style="-fx-cursor: hand;" text="Search" textFill="#1b0505" />
             <AnchorPane fx:id="mainshowbot" layoutY="65.0" prefHeight="636.0" prefWidth="1109.0">
                <children>
-                  <ScrollPane hbarPolicy="NEVER" prefHeight="632.0" prefWidth="899.0" style="-fx-background-color: white;">
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="632.0" prefWidth="1109.0" style="-fx-background-color: white;">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2000.0" prefWidth="1105.0">
                            <children>

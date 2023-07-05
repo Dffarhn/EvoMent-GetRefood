@@ -58,11 +58,10 @@ public class myproduct implements Initializable {
     @FXML
     private GridPane showmyproduct;
 
-    AllBarang barangdatashow = new AllBarang();
-
+    
     AllBarang updatetodatabase = new AllBarang();
 
-     
+    
     Account SellerAccount =new Account();
      @FXML
     private void updateroleuser() {
@@ -112,6 +111,7 @@ public class myproduct implements Initializable {
         
     }
 
+    AllBarang barangdatashow = new AllBarang();
     @FXML
     private void updatebarang() {
 
@@ -145,9 +145,6 @@ public class myproduct implements Initializable {
             }
             
         }
-        
-
-        
         
     }
 

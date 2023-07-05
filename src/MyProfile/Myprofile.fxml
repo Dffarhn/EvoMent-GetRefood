@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
@@ -25,21 +28,21 @@
                   <Font name="System Bold" size="26.0" />
                </font>
             </Label>
-            <Label layoutX="561.0" layoutY="500.0" prefHeight="36.0" prefWidth="431.0" text="Adress :">
+            <Label layoutX="234.0" layoutY="510.0" prefHeight="36.0" prefWidth="431.0" text="Adress :">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="560.0" layoutY="339.0" prefHeight="36.0" prefWidth="236.0" text="Email : ">
+            <Label layoutX="233.0" layoutY="349.0" prefHeight="36.0" prefWidth="236.0" text="Email : ">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <TextField fx:id="showemailprofile" disable="true" layoutX="564.0" layoutY="373.0" prefHeight="31.0" prefWidth="340.0" style="-fx-background-color: white; -fx-background-radius: 15;">
+            <TextField fx:id="showemailprofile" disable="true" layoutX="237.0" layoutY="383.0" prefHeight="31.0" prefWidth="340.0" style="-fx-background-color: white; -fx-background-radius: 15;">
                <font>
                   <Font name="System Bold" size="19.0" />
                </font></TextField>
-            <Label layoutX="562.0" layoutY="415.0" prefHeight="36.0" prefWidth="432.0" text="Phone : ">
+            <Label layoutX="235.0" layoutY="425.0" prefHeight="36.0" prefWidth="432.0" text="Phone : ">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -49,12 +52,20 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <TextField fx:id="showephoneprofile" disable="true" layoutX="566.0" layoutY="446.0" prefHeight="31.0" prefWidth="340.0" style="-fx-background-color: white; -fx-background-radius: 15;">
+            <TextField fx:id="showephoneprofile" disable="true" layoutX="239.0" layoutY="456.0" prefHeight="31.0" prefWidth="340.0" style="-fx-background-color: white; -fx-background-radius: 15;">
                <font>
                   <Font size="19.0" />
                </font></TextField>
-            <TextArea fx:id="showalamatprofile" disable="true" layoutX="566.0" layoutY="531.0" prefHeight="64.0" prefWidth="340.0" style="-fx-background-color: white;" wrapText="true" />
+            <TextArea fx:id="showalamatprofile" disable="true" layoutX="239.0" layoutY="541.0" prefHeight="64.0" prefWidth="340.0" style="-fx-background-color: white;" wrapText="true" />
             <Circle fx:id="circmage" fill="DODGERBLUE" layoutX="152.0" layoutY="215.0" radius="72.0" stroke="BLACK" strokeType="INSIDE" />
+            <BarChart fx:id="aktifchart" barGap="1.0" categoryGap="5.0" layoutX="653.0" layoutY="325.0" prefHeight="335.0" prefWidth="432.0" title="How Productive u are">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
          </children>
       </AnchorPane>
    </children>
