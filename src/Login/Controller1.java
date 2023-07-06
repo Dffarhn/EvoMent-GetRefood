@@ -190,12 +190,12 @@ public class Controller1 implements Initializable {
         
         for (int i = 0; i < dataAccount.getRefoodAccounts().size(); i++) {
             
+            
             warnloginpass.setText("");
             warnloginemail.setText("");
             Account cekAccount = dataAccount.getRefoodAccounts().get(i);
             boolean isada = false;
             if (cekAccount.getEmail().equals(loginemail.getText()) ) {
-                System.out.println("iyanih ada");
                 isada = true;
 
                 System.out.println(loginpass.getText());
@@ -423,8 +423,9 @@ public class Controller1 implements Initializable {
 
         tempAccount.setRole(daftarrol);
 
-
+        // index 0 supaya database
         dataAccount.getRefoodAccounts().add(0,tempAccount);
+        //menambahkan ke database
         xmlupdate();
 
         showAlert("Selamat anda telah terdaftar menjadi Seller");
@@ -469,7 +470,7 @@ public class Controller1 implements Initializable {
         
     }
 
-    
+    // ini adalah cara untuk buyer sign up
     @FXML
     private void ToDaftarDatabaseBuyer(ActionEvent event) {
 
@@ -487,6 +488,8 @@ public class Controller1 implements Initializable {
 
 
         dataAccount.getRefoodAccounts().add(0,tempAccount);
+
+        //buat menambhakn yang sign up ke database
         xmlupdate();
 
         showAlert("Selamat anda telah terdaftar menjadi Buyer");

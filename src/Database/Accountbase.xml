@@ -1,6 +1,14 @@
 <?xml version="1.0"?>
 <AccountInfo>
     <Account>
+        <email>clean@gmail.com</email>
+        <password>clean123</password>
+        <NamaBadan>clean pt</NamaBadan>
+        <NomorBadan>0989731234</NomorBadan>
+        <alamatBadan>jalan palagan</alamatBadan>
+        <role>Seller</role>
+    </Account>
+    <Account>
         <email>ijatsumbing22@gmail.com</email>
         <password>2222</password>
         <NamaBadan>PT. Sumbing</NamaBadan>

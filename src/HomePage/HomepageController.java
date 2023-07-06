@@ -342,26 +342,16 @@ public class HomepageController implements Initializable {
     @FXML
     private void ToSeeprod() throws IOException {
 
-        // Openscene os = new Openscene();
-
-        // Pane root = os.getPane("PageSeeProduct/seepro");
 
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("PageSeeProduct/seepro.fxml"));
         Parent root = loader.load();
 
         seeproductController controller = loader.getController();
-
+        //dapetin button
         Button buyButton = controller.getButton();
         Button backbut = controller.getCancelbutform();
-        // buyButton.setText("test");
 
-        // Button buttonbuy = (Button) root.lookup("#siproductif #buybutton");
-        // buttonbuy.setText("halo");
-
-        // EventHandler<ActionEvent> buyButtonAction = buyButton.getOnAction();
-        // System.out.println(buyButton.getOnAction());
-
-
+        // ngatur fungsi si button pada seepro.fxml melalui others controller
         buyButton.setOnAction(event ->{
             // buyButtonAction
 
@@ -380,27 +370,14 @@ public class HomepageController implements Initializable {
         });
 
 
-
-
-    
-    // // Get the controller instance of the "seepro" page
-    //     seeproductController seeproController = loader.getController();
-    
-    // // Set the onAction event for the button in the "seepro" controller
-    //     seeproController..setOnAction(event -> {
-    //     // Handle the button click event here
-    //         System.out.println("Button clicked!");
-    //     });
-
-        // nowshow = root;
+        //buat ngejadiin tampilan utama menjadi tampilan produk yang di pilih
         mainshowbot.getChildren().setAll(root);
 
         buttonback.setVisible(true);
         
     }
 
-    // int coindex = 0;
-    // int roindex = 0;
+    //untuk nyimpen data setiap gridpane
     ArrayList<ArrayList<Barang>> datagridmost = new ArrayList<>();
     ArrayList<ArrayList<Barang>> datagridothers = new ArrayList<>();
     
@@ -421,9 +398,6 @@ public class HomepageController implements Initializable {
         xstream.processAnnotations(Barang.class);
         xstream.processAnnotations(AllBarang.class);
 
-        // Datadiri data1 = new Datadiri("Daffa","Laki-Laki");
-        // Datadiri data2 = new Datadiri("Najwa","Perempuan");
-        // Datadiri data3 = new Datadiri("Widya","Perempuan");
         AllBarang datain = new AllBarang();
         datain.getRefoodBarang().add(datagridnew.get(clickedRow).get(clickedCol));
         
@@ -453,7 +427,7 @@ public class HomepageController implements Initializable {
                 }
             }
         }
-
+        // memunculkan seepro.fxml
       ToSeeprod();
 
 
@@ -624,8 +598,6 @@ public class HomepageController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         updateroleuser();
         
-        
-        
         updatebarang();
 
         // System.out.println(roleuser.getRole());
@@ -658,7 +630,7 @@ public class HomepageController implements Initializable {
             listdisbut.setVisible(false);
 
             addprodbut.setVisible(false);
-            
+            // untuk new grid
             try {
                 int roindexnew = 0;
                 int coindexnew = 0;
@@ -683,6 +655,13 @@ public class HomepageController implements Initializable {
                     imageView.setImage(image);
         
                     showbarangnew.add(item, coindexnew, roindexnew);
+
+
+                    //add(item,0,0)
+                    //add(item,1,0)
+                    //add(item,2,0)
+                    //add(item,4,0)
+                
                     datagridnew.get(0).add(barangdatashow.getRefoodBarang().get(i));
                     
     
@@ -696,7 +675,7 @@ public class HomepageController implements Initializable {
                 e.printStackTrace();
                 System.out.println("salah disini dapa");
             }
-    
+            //Ini untuk others grid
             try {
     
                 HashSet<Integer> generatedNumbers = new LinkedHashSet<>();
@@ -752,7 +731,7 @@ public class HomepageController implements Initializable {
             }
     
             
-            
+            // untuk the most stock available
             try {
                 
                 AllBarang barangdatashowurut = new AllBarang();

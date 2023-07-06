@@ -69,6 +69,11 @@ public class search implements Initializable {
 
         System.out.println(search);
 
+        // aku adalah manusia
+
+
+        //adalah filter untuk mengetahui
+
         for (int i = 0; i < datatmp.getRefoodBarang().size(); i++) {
 
             if (datatmp.getRefoodBarang().get(i).getNamaproduk().toLowerCase().contains(search.toLowerCase())) {
