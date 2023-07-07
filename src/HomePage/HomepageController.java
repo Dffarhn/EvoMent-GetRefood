@@ -76,15 +76,13 @@ public class HomepageController implements Initializable {
     @FXML
     private GridPane showbarangpopular;
 
-    // private List<Node> defaultElements = new ArrayList<>();
-    // private List<Node> defaultElementsmainshowbot = new ArrayList<>();
 
      @FXML
     private TextField searchinput;
 
     AllBarang barangdatashow = new AllBarang();
 
-    Pane nowshow = new Pane();
+    
 
     String Search = "";
 
@@ -142,7 +140,7 @@ public class HomepageController implements Initializable {
                 }
             }
         }
-        // // nowshow = root;
+
 
         Pane root = os.getPane("HomePage/searchview");
         try {
@@ -162,7 +160,7 @@ public class HomepageController implements Initializable {
         Openscene os = new Openscene();
 
         Pane root = os.getPane("MyProfile/Myprofile");
-        nowshow = root;
+        
         mainshow.getChildren().setAll(root);
         
     }
@@ -173,7 +171,7 @@ public class HomepageController implements Initializable {
 
         Pane root = os.getPane("MyReFood/MyRefood");
 
-        nowshow = root;
+        
         mainshow.getChildren().setAll(root);
         
     }
@@ -184,7 +182,7 @@ public class HomepageController implements Initializable {
 
         Pane root = os.getPane("PageAddbarang/Addbarang");
 
-        nowshow = root;
+        
         mainshow.getChildren().setAll(root);
         
     }
@@ -195,7 +193,7 @@ public class HomepageController implements Initializable {
 
         Pane root = os.getPane("HomePage/myproduct");
 
-        nowshow = root;
+        
         mainshow.getChildren().setAll(root);
         
     }
@@ -206,21 +204,12 @@ public class HomepageController implements Initializable {
 
         Pane root = os.getPane("ListDistribusiPage/listdistribusi");
 
-        nowshow = root;
+        
         mainshow.getChildren().setAll(root);
         
     }
     @FXML
     private void Logout(ActionEvent event) throws IOException {
-
-        // Openscene os = new Openscene();
-
-        // Pane root = os.getPane("Login/Scene1");
-
-        // nowshow = root;
-        // mainshow.getChildren().setAll(root);
-
-
    
         root = FXMLLoader.load(getClass().getClassLoader().getResource("Login/Scene1.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -232,18 +221,6 @@ public class HomepageController implements Initializable {
     }
     @FXML
     private void ToBeranda(ActionEvent event) throws Exception {
-        // try {
-
-        //             mainshow.getChildren().remove(nowshow);
-                    
-                    
-            
-        //             mainshow.getChildren().addAll(defaultElements);
-
-
-        // } catch (Exception e) {
-        //     // TODO: handle exception
-        // }
 
         root = FXMLLoader.load(getClass().getClassLoader().getResource("HomePage/Homepage.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -404,9 +381,7 @@ public class HomepageController implements Initializable {
         datain.getRefoodBarang().add(datagridnew.get(clickedRow).get(clickedCol));
         
 
-        // Datasum.getAlldata().add(data1);
-        // Datasum.getAlldata().add(data2);
-        // Datasum.getAlldata().add(data3);
+
 
 
         String xml = xstream.toXML(datain);
@@ -453,16 +428,11 @@ public class HomepageController implements Initializable {
         xstream.processAnnotations(Barang.class);
         xstream.processAnnotations(AllBarang.class);
 
-        // Datadiri data1 = new Datadiri("Daffa","Laki-Laki");
-        // Datadiri data2 = new Datadiri("Najwa","Perempuan");
-        // Datadiri data3 = new Datadiri("Widya","Perempuan");
+
         AllBarang datain = new AllBarang();
         datain.getRefoodBarang().add(datagridmost.get(clickedRow).get(clickedCol));
         
 
-        // Datasum.getAlldata().add(data1);
-        // Datasum.getAlldata().add(data2);
-        // Datasum.getAlldata().add(data3);
 
 
         String xml = xstream.toXML(datain);
@@ -506,16 +476,11 @@ public class HomepageController implements Initializable {
         xstream.processAnnotations(Barang.class);
         xstream.processAnnotations(AllBarang.class);
 
-        // Datadiri data1 = new Datadiri("Daffa","Laki-Laki");
-        // Datadiri data2 = new Datadiri("Najwa","Perempuan");
-        // Datadiri data3 = new Datadiri("Widya","Perempuan");
         AllBarang datain = new AllBarang();
         datain.getRefoodBarang().add(datagridothers.get(clickedRow).get(clickedCol));
         
 
-        // Datasum.getAlldata().add(data1);
-        // Datasum.getAlldata().add(data2);
-        // Datasum.getAlldata().add(data3);
+     
 
 
         String xml = xstream.toXML(datain);
@@ -575,18 +540,7 @@ public class HomepageController implements Initializable {
 
         roleuser = datatmp.getRefoodAccounts().get(0);
 
-        // try {
-            
-        //             for (int i = 0; i < datatmp.getAlldata().size(); i++) {
-        //                 daftarData.add(datatmp.getAlldata().get(i));
-                        
-        //             }
-            
-        // } catch (Exception e) {
-        //     // System.out.println("salah disini dapa");
-        //     // TODO: handle exception
-        // }
-        // System.out.println(datatmp.getAlldata().size());
+     
 
         
         
@@ -608,11 +562,11 @@ public class HomepageController implements Initializable {
         
         updatebarang();
 
-        // System.out.println(roleuser.getRole());
+
 
 
         if (roleuser.getRole().equals("Seller")) {
-            // mainshow.setVisible(false);
+
 
             butmyprod.setText("My-Product");
             // ActionEvent fakeEvent = new ActionEvent();
@@ -627,13 +581,12 @@ public class HomepageController implements Initializable {
 
             Pane root = os.getPane("HomePage/berandaseller");
 
-            nowshow = root;
+            
             mainshow.getChildren().setAll(root);
 
         
             
         }else{
-            // System.out.println("ini harus buyer");
 
             listdisbut.setVisible(false);
 
@@ -689,6 +642,9 @@ public class HomepageController implements Initializable {
                 HashSet<Integer> generatedNumbers = new LinkedHashSet<>();
                 int min = 0;
                 int max = barangdatashow.getRefoodBarang().size()-1;
+
+                // harus di perbaiki ketika barang sudah mencapai angka lebih dari 30 barang yang ada pada getrefood
+                int jumlahonothers = 29;
     
                 while (generatedNumbers.size() < barangdatashow.getRefoodBarang().size()) {
                     int randomNumber = (int) (Math.random() * (max - min + 1)) + min;
@@ -697,10 +653,6 @@ public class HomepageController implements Initializable {
                 int roindex = 0;
                 int coindex = 0;
                 datagridothers.add(new ArrayList<>());
-                // datagridothers.add(new ArrayList<>());
-                // datagridothers.add(new ArrayList<>());
-                // datagridothers.add(new ArrayList<>());
-                // datagridothers.add(new ArrayList<>());
     
                 for (int i : generatedNumbers) {
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("DisplayShow\\DisplayBarang.fxml"));
@@ -786,6 +738,7 @@ public class HomepageController implements Initializable {
         namehompage.setText(roleuser.getNamaBadan());
 
         Image img = new Image("/MyProfile/userimage.png");
+        System.out.println(barangdatashow.getRefoodBarang().size());
 
         // // src\MyProfile\backgroundup2.png
         // src\MyProfile\perusahaanpict.png

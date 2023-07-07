@@ -205,7 +205,6 @@ public class Controller1 implements Initializable {
                 if (hidepas.decryptPassword(cekAccount.getPassword()).equals(loginpass.getText())) {
                     
                     Currentuser(cekAccount);
-                    // System.out.println("nyampe password ada");
                     root = FXMLLoader.load(getClass().getClassLoader().getResource("HomePage/Homepage.fxml"));
                     stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                     scene = new Scene(root);
@@ -215,7 +214,6 @@ public class Controller1 implements Initializable {
                     
                     
                 }else{
-                    // System.out.println("Salah nih");
                     
 
                     warnloginpass.setText("*Password anda salah");
@@ -266,19 +264,6 @@ public class Controller1 implements Initializable {
         }
         AllAccount datatmp = (AllAccount) xstream.fromXML(readXML);
 
-        // try {
-            
-        //             for (int i = 0; i < datatmp.getAlldata().size(); i++) {
-        //                 daftarData.add(datatmp.getAlldata().get(i));
-                        
-        //             }
-            
-        // } catch (Exception e) {
-        //     // System.out.println("salah disini dapa");
-        //     // TODO: handle exception
-        // }
-        // System.out.println(datatmp.getAlldata().size());
-
         dataAccount = datatmp;
         
 
@@ -309,18 +294,14 @@ public class Controller1 implements Initializable {
        xstream.processAnnotations(Account.class);
         xstream.processAnnotations(AllAccount.class);
 
-        // Datadiri data1 = new Datadiri("Daffa","Laki-Laki");
-        // Datadiri data2 = new Datadiri("Najwa","Perempuan");
-        // Datadiri data3 = new Datadiri("Widya","Perempuan");
+     
         AllAccount datain = new AllAccount();
         System.out.println("Update xml jalan");
 
         datain = dataAccount;
 
 
-        // Datasum.getAlldata().add(data1);
-        // Datasum.getAlldata().add(data2);
-        // Datasum.getAlldata().add(data3);
+    
 
 
         String xml = xstream.toXML(datain);
@@ -354,17 +335,10 @@ public class Controller1 implements Initializable {
        xstream.processAnnotations(Account.class);
         xstream.processAnnotations(AllAccount.class);
 
-        // Datadiri data1 = new Datadiri("Daffa","Laki-Laki");
-        // Datadiri data2 = new Datadiri("Najwa","Perempuan");
-        // Datadiri data3 = new Datadiri("Widya","Perempuan");
         AllAccount datain = new AllAccount();
-        System.out.println("Update xml jalan");
+        // System.out.println("Update xml jalan");
 
         datain.getRefoodAccounts().add(user);
-
-        // Datasum.getAlldata().add(data1);
-        // Datasum.getAlldata().add(data2);
-        // Datasum.getAlldata().add(data3);
 
 
         String xml = xstream.toXML(datain);
@@ -395,7 +369,7 @@ public class Controller1 implements Initializable {
      private void showAlert(String massage) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Information Sign Up");
-        // alert.setHeaderText(null);
+   
         alert.setContentText(massage);
 
         alert.showAndWait();
@@ -405,71 +379,100 @@ public class Controller1 implements Initializable {
 
 
 
+    
+    @FXML
+    private Label showwarnbuyeremail;
 
+    @FXML
+    private Label showwarnselleremail;
 
 
 
     @FXML
     private void ToDaftarDatabaseSeller(ActionEvent event) {
 
-        Account tempAccount = new Account();
-
-        tempAccount.setNamaBadan(daftarsellernama.getText());
-        tempAccount.setAlamatBadan(daftarselleralamat.getText());
-
-        tempAccount.setNomorBadan(daftarsellernomor.getText());
-
-        tempAccount.setEmail(daftarselleremail.getText());
-        tempAccount.setPassword(hidepas.encryptPassword(daftarsellerpass.getText()));
-
-        // hidepas.encryptPassword(daftarsellerpass.getText());
-
-        tempAccount.setRole(daftarrol);
-
-        // index 0 supaya database
-        dataAccount.getRefoodAccounts().add(0,tempAccount);
-        //menambahkan ke database
-        xmlupdate();
-
-        showAlert("Selamat anda telah terdaftar menjadi Seller");
-
-        TranslateTransition transition = new TranslateTransition(Duration.seconds(1), showinputregister);
-        transition.setByX(-425); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
-        transition.play(); //
-
-        TranslateTransition transition1 = new TranslateTransition(Duration.seconds(1), showinputlogin);
-        transition1.setByX(-425); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
-        transition1.play();
-
-        TranslateTransition transition2 = new TranslateTransition(Duration.seconds(1), justimage);
-        transition2.setByX(280); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
-        transition2.play(); //
-
-
-        int delayDuration = 500;
-
-        // Create a PauseTransition with the desired delay duration
-        PauseTransition pauseTransition = new PauseTransition(Duration.millis(delayDuration));
-
-        // Set the action to be performed after the delay
-        pauseTransition.setOnFinished(even -> {
-            // Perform any desired action here
-            showinputlogin.setVisible(true);
-            signupas.setVisible(true);
-            signupseller.setVisible(false);
-            showinputregister.setVisible(false);
-            // showinputlogin.setVisible(true);
-            // showinputregister.setVisible(false);
-        });
-
-        // Start the PauseTransition
-        pauseTransition.play();
+        boolean bisadaftar = true;
 
         
+        for (int i = 0; i < dataAccount.getRefoodAccounts().size(); i++) {
+            
+            if (dataAccount.getRefoodAccounts().get(i).getEmail().equals(daftarselleremail.getText())) {
 
+                bisadaftar = false;
+                break;
 
-        loginemail.setText("");
-        loginpass.setText("");
+                
+                
+                
+            }
+            
+        }
+        
+        if (bisadaftar) {
+            
+            showwarnselleremail.setVisible(false);
+            Account tempAccount = new Account();
+    
+            tempAccount.setNamaBadan(daftarsellernama.getText());
+            tempAccount.setAlamatBadan(daftarselleralamat.getText());
+    
+            tempAccount.setNomorBadan(daftarsellernomor.getText());
+    
+            tempAccount.setEmail(daftarselleremail.getText());
+    
+            tempAccount.setPassword(hidepas.encryptPassword(daftarsellerpass.getText()));
+    
+    
+    
+            tempAccount.setRole(daftarrol);
+    
+            // index 0 supaya database
+            dataAccount.getRefoodAccounts().add(0,tempAccount);
+            //menambahkan ke database
+            xmlupdate();
+    
+            showAlert("Selamat anda telah terdaftar menjadi Seller");
+    
+            TranslateTransition transition = new TranslateTransition(Duration.seconds(1), showinputregister);
+            transition.setByX(-425); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
+            transition.play(); //
+    
+            TranslateTransition transition1 = new TranslateTransition(Duration.seconds(1), showinputlogin);
+            transition1.setByX(-425); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
+            transition1.play();
+    
+            TranslateTransition transition2 = new TranslateTransition(Duration.seconds(1), justimage);
+            transition2.setByX(280); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
+            transition2.play(); //
+    
+    
+            int delayDuration = 500;
+    
+            // Create a PauseTransition with the desired delay duration
+            PauseTransition pauseTransition = new PauseTransition(Duration.millis(delayDuration));
+    
+            // Set the action to be performed after the delay
+            pauseTransition.setOnFinished(even -> {
+    
+                showinputlogin.setVisible(true);
+                signupas.setVisible(true);
+                signupseller.setVisible(false);
+                showinputregister.setVisible(false);
+    
+            });
+    
+            // Start the PauseTransition
+            pauseTransition.play();
+    
+            
+    
+    
+            loginemail.setText("");
+            loginpass.setText("");
+        }else{
+            System.out.println("belum bisa daftar");
+            showwarnselleremail.setVisible(true);
+        }
         
     }
 
@@ -477,64 +480,90 @@ public class Controller1 implements Initializable {
     @FXML
     private void ToDaftarDatabaseBuyer(ActionEvent event) {
 
-        Account tempAccount = new Account();
+        
+        boolean bisadaftar = true;
 
-        tempAccount.setNamaBadan(daftarbuyernama.getText());
-        tempAccount.setAlamatBadan(daftarbuyeralamat.getText());
+        
+        for (int i = 0; i < dataAccount.getRefoodAccounts().size(); i++) {
+            
+            if (dataAccount.getRefoodAccounts().get(i).getEmail().equals(daftarbuyeremail.getText())) {
+                
+                bisadaftar = false;
+                break;
+                
+                
+                
+                
+            }
+            
+        }
+        
+        if (bisadaftar) {
+            showwarnbuyeremail.setVisible(false);
+            
+            Account tempAccount = new Account();
+    
+            tempAccount.setNamaBadan(daftarbuyernama.getText());
+            tempAccount.setAlamatBadan(daftarbuyeralamat.getText());
+    
+            tempAccount.setNomorBadan(daftarbuyernomor.getText());
+    
+            tempAccount.setEmail(daftarbuyeremail.getText());
+            tempAccount.setPassword(hidepas.encryptPassword(daftarbuyerpass.getText()));
+    
+            tempAccount.setRole(daftarrol);
+    
+    
+            dataAccount.getRefoodAccounts().add(0,tempAccount);
+    
+            //buat menambhakn yang sign up ke database
+            xmlupdate();
+    
+            showAlert("Selamat anda telah terdaftar menjadi Buyer");
+    
+            TranslateTransition transition = new TranslateTransition(Duration.seconds(1), showinputregister);
+            transition.setByX(-425); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
+            transition.play(); //
+    
+            TranslateTransition transition1 = new TranslateTransition(Duration.seconds(1), showinputlogin);
+            transition1.setByX(-425); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
+            transition1.play();
+    
+            TranslateTransition transition2 = new TranslateTransition(Duration.seconds(1), justimage);
+            transition2.setByX(280); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
+            transition2.play(); //
+    
+    
+    
+    
+            int delayDuration = 500;
+    
+            // Create a PauseTransition with the desired delay duration
+            PauseTransition pauseTransition = new PauseTransition(Duration.millis(delayDuration));
+    
+            // Set the action to be performed after the delay
+            pauseTransition.setOnFinished(even -> {
+                // Perform any desired action here
+                showinputlogin.setVisible(true);
+                signupas.setVisible(true);
+                signupbuyer.setVisible(false);
+                showinputregister.setVisible(false);
+                // showinputlogin.setVisible(true);
+                // showinputregister.setVisible(false);
+            });
+    
+            // Start the PauseTransition
+            pauseTransition.play();
+    
+            loginemail.setText("");
+            loginpass.setText("");
+        }else{
 
-        tempAccount.setNomorBadan(daftarbuyernomor.getText());
+            showwarnbuyeremail.setVisible(true);
 
-        tempAccount.setEmail(daftarbuyeremail.getText());
-        tempAccount.setPassword(hidepas.encryptPassword(daftarsellerpass.getText()));
-
-        tempAccount.setRole(daftarrol);
+        }
 
 
-        dataAccount.getRefoodAccounts().add(0,tempAccount);
-
-        //buat menambhakn yang sign up ke database
-        xmlupdate();
-
-        showAlert("Selamat anda telah terdaftar menjadi Buyer");
-
-        TranslateTransition transition = new TranslateTransition(Duration.seconds(1), showinputregister);
-        transition.setByX(-425); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
-        transition.play(); //
-
-        TranslateTransition transition1 = new TranslateTransition(Duration.seconds(1), showinputlogin);
-        transition1.setByX(-425); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
-        transition1.play();
-
-        TranslateTransition transition2 = new TranslateTransition(Duration.seconds(1), justimage);
-        transition2.setByX(280); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
-        transition2.play(); //
-
-
-
-
-        int delayDuration = 500;
-
-        // Create a PauseTransition with the desired delay duration
-        PauseTransition pauseTransition = new PauseTransition(Duration.millis(delayDuration));
-
-        // Set the action to be performed after the delay
-        pauseTransition.setOnFinished(even -> {
-            // Perform any desired action here
-            showinputlogin.setVisible(true);
-            signupas.setVisible(true);
-            signupbuyer.setVisible(false);
-            showinputregister.setVisible(false);
-            // showinputlogin.setVisible(true);
-            // showinputregister.setVisible(false);
-        });
-
-        // Start the PauseTransition
-        pauseTransition.play();
-
-        // showinputlogin.setVisible(true);
-        // showinputregister.setVisible(false);
-        loginemail.setText("");
-        loginpass.setText("");
         
     }
 
@@ -553,8 +582,7 @@ public class Controller1 implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // roleuser.getItems().addAll("Penjual","Pembeli");
-        // butlogin.setStyle("-fx-opacity : 1");
+
         update();
     }
 }

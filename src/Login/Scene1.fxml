@@ -60,6 +60,11 @@
                         <Label layoutX="20.0" layoutY="14.0" prefHeight="17.0" prefWidth="120.0" text="Nama Perusahaan" />
                         <TextField id="textfield2" fx:id="daftarsellernama" layoutX="17.0" layoutY="37.0" prefHeight="25.0" prefWidth="223.0" stylesheets="@CssLogin.css" />
                         <Button layoutX="14.0" layoutY="292.0" mnemonicParsing="false" onAction="#CancelsignupSeller" text="&lt;" />
+                        <Label fx:id="showwarnselleremail" layoutX="61.0" layoutY="190.0" text="* Email ini telah terdaftar" textFill="#c32b2b" visible="false">
+                           <font>
+                              <Font name="System Italic" size="9.0" />
+                           </font>
+                        </Label>
                      </children>
                   </AnchorPane>
                   <AnchorPane fx:id="signupbuyer" layoutX="33.0" layoutY="107.0" prefHeight="326.0" prefWidth="264.0" visible="false">
@@ -75,6 +80,11 @@
                         <Label layoutX="19.0" layoutY="67.0" prefHeight="17.0" prefWidth="120.0" text="Alamat Lembaga" />
                         <Label layoutX="20.0" layoutY="14.0" prefHeight="17.0" prefWidth="120.0" text="Nama Lembaga" />
                         <TextField id="textfield2" fx:id="daftarbuyernama" layoutX="17.0" layoutY="37.0" prefHeight="25.0" prefWidth="223.0" stylesheets="@CssLogin.css" />
+                        <Label fx:id="showwarnbuyeremail" layoutX="56.0" layoutY="190.0" text="* Email ini telah terdaftar" textFill="#c32b2b" visible="false">
+                           <font>
+                              <Font name="System Italic" size="9.0" />
+                           </font>
+                        </Label>
                         <Button layoutX="14.0" layoutY="292.0" mnemonicParsing="false" onAction="#Cancelsignupbuyer" text="&lt;" />
                      </children>
                   </AnchorPane>

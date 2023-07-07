@@ -191,7 +191,7 @@ public class berandaseller implements Initializable {
                 int coindexnew = 0;
                 // datagridnew.add(new ArrayList<>());
         
-                for (int i = barangdatashow.getRefoodBarang().size()-1 ; i > barangdatashow.getRefoodBarang().size()-10; i--) {
+                for (int i = barangdatashow.getRefoodBarang().size()-1 ; i > barangdatashow.getRefoodBarang().size()-11; i--) {
                     
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("DisplayShow\\DisplayBarang.fxml"));
                     AnchorPane item = loader.load();
