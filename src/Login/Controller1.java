@@ -431,7 +431,7 @@ public class Controller1 implements Initializable {
             //menambahkan ke database
             xmlupdate();
     
-            showAlert("Selamat anda telah terdaftar menjadi Seller");
+            showAlert("Selamat anda telah terdaftar menjadi Supplier");
     
             TranslateTransition transition = new TranslateTransition(Duration.seconds(1), showinputregister);
             transition.setByX(-425); // Set the relative translation along the X-axis // Set the relative translation along the Y-axis
