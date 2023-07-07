@@ -13,6 +13,7 @@ import com.thoughtworks.xstream.security.AnyTypePermission;
 
 import Database.Account;
 import Database.AllAccount;
+import Database.PasswordUtils;
 import javafx.animation.PauseTransition;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
@@ -201,7 +202,7 @@ public class Controller1 implements Initializable {
                 System.out.println(loginpass.getText());
                 
                 
-                if (cekAccount.getPassword().equals(loginpass.getText())) {
+                if (hidepas.decryptPassword(cekAccount.getPassword()).equals(loginpass.getText())) {
                     
                     Currentuser(cekAccount);
                     // System.out.println("nyampe password ada");
@@ -399,7 +400,7 @@ public class Controller1 implements Initializable {
 
         alert.showAndWait();
     }
-
+    PasswordUtils hidepas = new PasswordUtils();
 
 
 
@@ -419,7 +420,9 @@ public class Controller1 implements Initializable {
         tempAccount.setNomorBadan(daftarsellernomor.getText());
 
         tempAccount.setEmail(daftarselleremail.getText());
-        tempAccount.setPassword(daftarsellerpass.getText());
+        tempAccount.setPassword(hidepas.encryptPassword(daftarsellerpass.getText()));
+
+        // hidepas.encryptPassword(daftarsellerpass.getText());
 
         tempAccount.setRole(daftarrol);
 
@@ -482,7 +485,7 @@ public class Controller1 implements Initializable {
         tempAccount.setNomorBadan(daftarbuyernomor.getText());
 
         tempAccount.setEmail(daftarbuyeremail.getText());
-        tempAccount.setPassword(daftarbuyerpass.getText());
+        tempAccount.setPassword(hidepas.encryptPassword(daftarsellerpass.getText()));
 
         tempAccount.setRole(daftarrol);
 

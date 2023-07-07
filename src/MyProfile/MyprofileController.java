@@ -319,7 +319,7 @@ public class MyprofileController implements Initializable {
 
         }
 
-        Image img = new Image("/MyProfile/perusahaanpict.png");
+        Image img = new Image("/MyProfile/userimage.png");
 
         // // src\MyProfile\backgroundup2.png
         // src\MyProfile\perusahaanpict.png

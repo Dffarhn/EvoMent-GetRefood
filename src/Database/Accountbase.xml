@@ -1,8 +1,24 @@
 <?xml version="1.0"?>
 <AccountInfo>
     <Account>
+        <email>eco@gmail.com</email>
+        <password>LigkJSIj</password>
+        <NamaBadan>PT Ecofan</NamaBadan>
+        <NomorBadan>083456712398</NomorBadan>
+        <alamatBadan>Jl Pemuda Baru I 20-22, Sumatera Utara</alamatBadan>
+        <role>Seller</role>
+    </Account>
+    <Account>
+        <email>Micro@gmail.com</email>
+        <password>JiIoOSR6eXg=</password>
+        <NamaBadan>PT Microfood </NamaBadan>
+        <NomorBadan>0-61-663-7066</NomorBadan>
+        <alamatBadan>LANTASAN BARU PATUMBAK MDN, Sumatera Utara</alamatBadan>
+        <role>Buyer</role>
+    </Account>
+    <Account>
         <email>clean@gmail.com</email>
-        <password>clean123</password>
+        <password>KCcuKiV6eXg=</password>
         <NamaBadan>clean pt</NamaBadan>
         <NomorBadan>0989731234</NomorBadan>
         <alamatBadan>jalan palagan</alamatBadan>
@@ -10,7 +26,7 @@
     </Account>
     <Account>
         <email>ijatsumbing22@gmail.com</email>
-        <password>2222</password>
+        <password>eXl5eQ==</password>
         <NamaBadan>PT. Sumbing</NamaBadan>
         <NomorBadan>086765748</NomorBadan>
         <alamatBadan>jL. bibir</alamatBadan>
@@ -18,7 +34,7 @@
     </Account>
     <Account>
         <email>123@gmail.com</email>
-        <password>12345</password>
+        <password>enl4f34=</password>
         <NamaBadan>keysha</NamaBadan>
         <NomorBadan>123</NomorBadan>
         <alamatBadan>informatika</alamatBadan>
@@ -26,7 +42,7 @@
     </Account>
     <Account>
         <email>alya@gmail.com</email>
-        <password>alya123</password>
+        <password>KicyKnp5eA==</password>
         <NamaBadan>Alya Corp.</NamaBadan>
         <NomorBadan>082278148593</NomorBadan>
         <alamatBadan>Jl. Soekarno Hatta komplek LIK B14 Gedebage, Jawa Barat</alamatBadan>
@@ -34,7 +50,7 @@
     </Account>
     <Account>
         <email>key@gmail.com</email>
-        <password>key123</password>
+        <password>IC4yenl4</password>
         <NamaBadan>Keysha And Friends</NamaBadan>
         <NomorBadan>082243764123</NomorBadan>
         <alamatBadan>Jalan Lodadi RT 03</alamatBadan>
@@ -42,7 +58,7 @@
     </Account>
     <Account>
         <email>ayman@gmail.com</email>
-        <password>ayman123</password>
+        <password>KjImKiV6eXg=</password>
         <NamaBadan>PT Ayman</NamaBadan>
         <NomorBadan>083465123476</NomorBadan>
         <alamatBadan>jalan kaliurang perumahan pamungkas</alamatBadan>
@@ -50,7 +66,7 @@
     </Account>
     <Account>
         <email>sedap@gmail.com</email>
-        <password>sedap123</password>
+        <password>OC4vKjt6eXg=</password>
         <NamaBadan>PT Sedap Indonesia</NamaBadan>
         <NomorBadan>0-21-861-3045</NomorBadan>
         <alamatBadan>Jl Madrasah I 11 RT 008/10, Dki Jakarta</alamatBadan>
@@ -58,7 +74,7 @@
     </Account>
     <Account>
         <email>indofood@gmail.com</email>
-        <password>indofood123</password>
+        <password>IiUvJC0kJC96eXg=</password>
         <NamaBadan>PT Indofood</NamaBadan>
         <NomorBadan>021-80880929</NomorBadan>
         <alamatBadan>Jl Raya Condet 47, Dki Jakarta</alamatBadan>
@@ -66,7 +82,7 @@
     </Account>
     <Account>
         <email>champ@gmail.com</email>
-        <password>champ123</password>
+        <password>KCMqJjt6eXg=</password>
         <NamaBadan>PT CHAMP Indonesia</NamaBadan>
         <NomorBadan>0-21-798-9010</NomorBadan>
         <alamatBadan>Jl Mampang Prapatan X 2, Dki Jakarta</alamatBadan>
@@ -74,7 +90,7 @@
     </Account>
     <Account>
         <email>jeki@gmail.com</email>
-        <password>jeki123</password>
+        <password>IS4gInp5eA==</password>
         <NamaBadan>jekiboy</NamaBadan>
         <NomorBadan>082243678912</NomorBadan>
         <alamatBadan>wirobrajan</alamatBadan>
@@ -82,7 +98,7 @@
     </Account>
     <Account>
         <email>User</email>
-        <password>Admin</password>
+        <password>Ci8mIiU=</password>
         <NamaBadan>EVO-MENT</NamaBadan>
         <NomorBadan>082253503356</NomorBadan>
         <alamatBadan>Jalan Kaliurang KM 14 Candi Karang, Sardonoharjo, Kec.Ngaglik, Kab.Sleman,
@@ -91,7 +107,7 @@
     </Account>
     <Account>
         <email>ramaa@gmail.com</email>
-        <password>rama123</password>
+        <password>OSomKnp5eA==</password>
         <NamaBadan>Ramaaa</NamaBadan>
         <NomorBadan>0876913456</NomorBadan>
         <alamatBadan>burjo pamungkas</alamatBadan>
@@ -99,7 +115,7 @@
     </Account>
     <Account>
         <email>mifta</email>
-        <password>mifta</password>
+        <password>JiItPyo=</password>
         <NamaBadan>mifta</NamaBadan>
         <NomorBadan>081</NomorBadan>
         <alamatBadan>jalan mifta</alamatBadan>
@@ -107,7 +123,7 @@
     </Account>
     <Account>
         <email>widyahelo123@gmail.com</email>
-        <password>widya123</password>
+        <password>PCIvMip6eXg=</password>
         <NamaBadan>PT WIDYA</NamaBadan>
         <NomorBadan>0825437689</NomorBadan>
         <alamatBadan>DIAS KOST MUSLIM</alamatBadan>
@@ -115,7 +131,7 @@
     </Account>
     <Account>
         <email>belina@gmail.com</email>
-        <password>belina123</password>
+        <password>KS4nIiUqenl4</password>
         <NamaBadan>BelinaGeng</NamaBadan>
         <NomorBadan>08123456789</NomorBadan>
         <alamatBadan>Jakal Atas</alamatBadan>
@@ -123,7 +139,7 @@
     </Account>
     <Account>
         <email>adiva@gmail.com</email>
-        <password>adiva123</password>
+        <password>Ki8iPSp6eXg=</password>
         <NamaBadan>ASDOS</NamaBadan>
         <NomorBadan>082253507890</NomorBadan>
         <alamatBadan>uii</alamatBadan>
@@ -131,7 +147,7 @@
     </Account>
     <Account>
         <email>d.raihan2004@gmail.com</email>
-        <password>Raihannajwa123</password>
+        <password>GSoiIyolJSohPCp6eXg=</password>
         <NamaBadan>Evo-Ment</NamaBadan>
         <NomorBadan>082253503356</NomorBadan>
         <alamatBadan>Palagan</alamatBadan>

@@ -10,6 +10,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomePage.HomepageController">
@@ -90,6 +91,19 @@
          </children></AnchorPane>
       <VBox layoutX="-2.0" layoutY="-1.0" prefHeight="702.0" prefWidth="172.0" spacing="20.0" styleClass="Sidebar" stylesheets="@Homepage.css">
          <children>
+            <Circle fx:id="circlehomepage" fill="DODGERBLUE" radius="48.0" stroke="BLACK" strokeType="INSIDE">
+               <VBox.margin>
+                  <Insets left="38.0" top="12.0" />
+               </VBox.margin>
+            </Circle>
+            <Label fx:id="namehompage" alignment="CENTER" prefHeight="39.0" prefWidth="171.0" text="namaUser" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="-20.0" />
+               </VBox.margin>
+            </Label>
             <Button mnemonicParsing="false" onAction="#ToBeranda" prefHeight="57.0" prefWidth="189.0" styleClass="SidebarBut" stylesheets="@Homepage.css" text="Beranda" textFill="WHITE">
                <padding>
                   <Insets bottom="20.0" top="20.0" />
@@ -133,9 +147,6 @@
                </font>
             </Button>
          </children>
-         <padding>
-            <Insets top="150.0" />
-         </padding>
       </VBox>
    </children>
 </AnchorPane>

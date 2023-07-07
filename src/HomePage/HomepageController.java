@@ -40,6 +40,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.ImagePattern;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 public class HomepageController implements Initializable {
      @FXML
@@ -592,7 +594,13 @@ public class HomepageController implements Initializable {
         
         
     }
+
     
+    @FXML
+    private Circle circlehomepage;
+    
+    @FXML
+    private Label namehompage;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -774,6 +782,18 @@ public class HomepageController implements Initializable {
                 System.out.println("salah disini dapa");
             }
         }
+
+        namehompage.setText(roleuser.getNamaBadan());
+
+        Image img = new Image("/MyProfile/userimage.png");
+
+        // // src\MyProfile\backgroundup2.png
+        // src\MyProfile\perusahaanpict.png
+
+
+        circlehomepage.setFill(new ImagePattern(img));
+
+
         
 
 

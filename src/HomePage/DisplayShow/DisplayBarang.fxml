@@ -14,6 +14,5 @@
       <Label fx:id="banyakPenjualanLabel" layoutX="15.0" layoutY="151.0" text="Stock : " />
       <ImageView fx:id="imageproduct" blendMode="DARKEN" fitHeight="119.0" fitWidth="167.0" layoutX="13.0" layoutY="5.0" pickOnBounds="true" />
       <Label fx:id="Penjual" layoutX="15.0" layoutY="191.0" text="by " />
-      <Label layoutX="18.0" layoutY="168.0" text="from getrefood" />
    </children>
 </AnchorPane>
