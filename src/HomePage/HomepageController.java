@@ -608,9 +608,11 @@ public class HomepageController implements Initializable {
         
                     Label banyakPenjualanLabel = (Label) item.lookup("#banyakPenjualanLabel");
                     banyakPenjualanLabel.setText(banyakPenjualanLabel.getText()+ barangdatashow.getRefoodBarang().get(i).getStockproduk());
-                    Label Penjual = (Label) item.lookup("#Penjual");
-                    Penjual.setText(Penjual.getText()+ barangdatashow.getRefoodBarang().get(i).getOwner().getNamaBadan());
-    
+                    
+                    
+                    Label expire = (Label) item.lookup("#expiredatebarang");
+                    expire.setText(expire.getText()+ barangdatashow.getRefoodBarang().get(i).getExpiredproduk());
+
                     ImageView imageView = (ImageView) item.lookup("#imageproduct");
                     Image image = new Image(getClass().getClassLoader().getResourceAsStream(barangdatashow.getRefoodBarang().get(i).getFotoproduk()));
                     imageView.setImage(image);
@@ -664,8 +666,9 @@ public class HomepageController implements Initializable {
     
                         Label banyakPenjualanLabel = (Label) item.lookup("#banyakPenjualanLabel");
                         banyakPenjualanLabel.setText(banyakPenjualanLabel.getText()+ barangdatashow.getRefoodBarang().get(i).getStockproduk());
-                        Label Penjual = (Label) item.lookup("#Penjual");
-                        Penjual.setText(Penjual.getText()+ barangdatashow.getRefoodBarang().get(i).getOwner().getNamaBadan());
+                        Label expire = (Label) item.lookup("#expiredatebarang");
+                        expire.setText(expire.getText()+ barangdatashow.getRefoodBarang().get(i).getExpiredproduk());
+                        
                         // Set the image
                         ImageView imageView = (ImageView) item.lookup("#imageproduct");
                         Image image = new Image(getClass().getClassLoader().getResourceAsStream(barangdatashow.getRefoodBarang().get(i).getFotoproduk()));
@@ -714,13 +717,14 @@ public class HomepageController implements Initializable {
     
                     Label banyakPenjualanLabel = (Label) item.lookup("#banyakPenjualanLabel");
                     banyakPenjualanLabel.setText(barangdatashowurut.getRefoodBarang().get(i).getStockproduk());
-                    Label Penjual = (Label) item.lookup("#Penjual");
-                    Penjual.setText(Penjual.getText()+ barangdatashow.getRefoodBarang().get(i).getOwner().getNamaBadan());
+                    
     
                     ImageView imageView = (ImageView) item.lookup("#imageproduct");
                     Image image = new Image(getClass().getClassLoader().getResourceAsStream(barangdatashow.getRefoodBarang().get(i).getFotoproduk()));
                     imageView.setImage(image);
-    
+                    Label expire = (Label) item.lookup("#expiredatebarang");
+                    expire.setText(expire.getText()+ barangdatashow.getRefoodBarang().get(i).getExpiredproduk());
+                    
                     showbarangpopular.add(item, coindexpopular, 0);
                     // datagridmost.get(0).add(barangdatashow.getRefoodBarang().get(i));
                     datagridmost.get(0).add(barangdatashow.getRefoodBarang().get(i));

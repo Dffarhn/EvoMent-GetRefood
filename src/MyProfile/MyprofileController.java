@@ -122,7 +122,17 @@ public class MyprofileController implements Initializable {
         showephoneprofile.setText(datauser.getRefoodAccounts().get(0).getNomorBadan());
         showalamatprofile.setText(datauser.getRefoodAccounts().get(0).getAlamatBadan());
 
-        showroleprofile.setText(datauser.getRefoodAccounts().get(0).getRole());
+        // showroleprofile.setText(datauser.getRefoodAccounts().get(0).getRole());
+
+        if (datauser.getRefoodAccounts().get(0).getRole().equals("Seller")) {
+
+            showroleprofile.setText("Supplier");
+            
+            
+        }else{
+            
+            showroleprofile.setText("User");
+        }
         
        
       

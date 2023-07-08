@@ -23,7 +23,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.RowConstraints;
 public class Myrefood implements Initializable {
 
     
@@ -162,6 +165,10 @@ public class Myrefood implements Initializable {
     @FXML
     private Label showarnzero;
 
+    
+    @FXML
+    private AnchorPane gridadd;
+
 
 
 
@@ -218,8 +225,30 @@ public class Myrefood implements Initializable {
         
                     // showbarangnew.add(item, coindexnew, roindexnew);
                     // datagridnew.get(0).add(barangdatashow.getRefoodBarang().get(i));
-                    vieworder.add(item,coindexnew,roindexnew);
                     
+                    if (i > 3) {
+                        
+                        // // vieworder.getHeight();
+                        gridadd.setPrefHeight(gridadd.getPrefHeight()+320);
+                        
+                        // vieworder.setPrefHeight(vieworder.getHeight()+419);
+
+                        vieworder.setMinHeight(vieworder.getMinHeight() + 300);
+                        // vieworder.setPrefHeight(vieworder.getPrefHeight() + 200);
+                        
+                        // RowConstraints rowConstraints = new RowConstraints();
+                        // rowConstraints.setPrefHeight(200); // Set the preferred height of the row
+                        // vieworder.getRowConstraints().add(rowConstraints);
+
+                    RowConstraints rowConstraints = new RowConstraints();
+                    rowConstraints.setMinHeight(30.0); // Set the minimum height of the row
+                    rowConstraints.setPrefHeight(30.0); // Set the preferred height of the row
+                    rowConstraints.setVgrow(Priority.SOMETIMES); // Set the vertical grow property of the row
+                    vieworder.getRowConstraints().add(rowConstraints);
+                        
+                    }
+                    
+                    vieworder.add(item,coindexnew,roindexnew);
     
     
                     roindexnew++;

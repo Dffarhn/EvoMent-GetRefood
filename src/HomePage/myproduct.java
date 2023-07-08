@@ -445,8 +445,9 @@ public class myproduct implements Initializable {
                     
                     Label banyakPenjualanLabel = (Label) item.lookup("#banyakPenjualanLabel");
                     banyakPenjualanLabel.setText(banyakPenjualanLabel.getText()+ barangdatashow.getRefoodBarang().get(i).getStockproduk());
-                    Label Penjual = (Label) item.lookup("#Penjual");
-                    Penjual.setText(Penjual.getText()+ barangdatashow.getRefoodBarang().get(i).getOwner().getNamaBadan());
+
+                    Label expire = (Label) item.lookup("#expiredatebarang");
+                    expire.setText(expire.getText()+ barangdatashow.getRefoodBarang().get(i).getExpiredproduk());
     
                     ImageView imageView = (ImageView) item.lookup("#imageproduct");
                     Image image = new Image(getClass().getClassLoader().getResourceAsStream(barangdatashow.getRefoodBarang().get(i).getFotoproduk()));

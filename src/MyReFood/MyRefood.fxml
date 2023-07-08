@@ -17,7 +17,7 @@
       </Label>
       <ScrollPane layoutX="-2.0" layoutY="84.0" prefHeight="609.0" prefWidth="1111.0">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="896.0" prefWidth="1091.0">
+          <AnchorPane fx:id="gridadd" minHeight="0.0" minWidth="0.0" prefHeight="896.0" prefWidth="1091.0">
                <children>
                   <GridPane fx:id="vieworder" layoutX="9.0" layoutY="2.0" prefHeight="891.0" prefWidth="1079.0" vgap="20.0">
                     <columnConstraints>
