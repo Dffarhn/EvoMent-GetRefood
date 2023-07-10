@@ -24,6 +24,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
@@ -358,6 +359,10 @@ public class seeproductController implements Initializable {
                 xmlupdate();
                 warnstock.setVisible(false);
                 warndistribusi.setVisible(false);
+
+                showAlert("Pembelian Anda Telah Berhasil");
+
+
         
                 root = FXMLLoader.load(getClass().getClassLoader().getResource("HomePage/Homepage.fxml"));
                 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -381,6 +386,15 @@ public class seeproductController implements Initializable {
 
         
         
+    }
+
+    private void showAlert(String massage) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Information Distribution");
+   
+        alert.setContentText(massage);
+
+        alert.showAndWait();
     }
 
     

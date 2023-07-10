@@ -23,7 +23,7 @@
                <children>
                   <ScrollPane hbarPolicy="NEVER" prefHeight="632.0" prefWidth="1109.0" style="-fx-background-color: white;">
                     <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2000.0" prefWidth="1105.0">
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2200.0" prefWidth="1105.0">
                            <children>
                               <GridPane fx:id="showbarang" hgap="20.0" layoutX="7.0" layoutY="732.0" onMouseClicked="#handleGridClickothers" prefHeight="1467.0" prefWidth="1075.0" vgap="20.0">
                                 <columnConstraints>
@@ -87,7 +87,7 @@
                   </ScrollPane>
                </children>
             </AnchorPane>
-            <Button fx:id="buttonback" layoutX="19.0" layoutY="20.0" mnemonicParsing="false" onAction="#Toback" prefHeight="28.0" prefWidth="42.0" style="-fx-border-color: black;" styleClass="backbutton" stylesheets="@Homepage.css" visible="false" />
+            <Button fx:id="buttonback" layoutX="19.0" layoutY="20.0" mnemonicParsing="false" onAction="#Toback" prefHeight="28.0" prefWidth="42.0" style="-fx-border-color: black; -fx-cursor: hand;" styleClass="backbutton" stylesheets="@Homepage.css" visible="false" />
          </children></AnchorPane>
       <VBox layoutX="-2.0" layoutY="-1.0" prefHeight="702.0" prefWidth="172.0" spacing="20.0" styleClass="Sidebar" stylesheets="@Homepage.css">
          <children>
@@ -96,7 +96,7 @@
                   <Insets left="38.0" top="12.0" />
                </VBox.margin>
             </Circle>
-            <Label fx:id="namehompage" alignment="CENTER" prefHeight="39.0" prefWidth="171.0" text="namaUser" textFill="WHITE">
+            <Label fx:id="namehompage" alignment="CENTER" prefHeight="39.0" prefWidth="171.0" text="namaUser" textFill="WHITE" wrapText="true">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>

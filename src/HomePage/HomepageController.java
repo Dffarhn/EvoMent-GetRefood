@@ -646,9 +646,9 @@ public class HomepageController implements Initializable {
                 int max = barangdatashow.getRefoodBarang().size()-1;
 
                 // harus di perbaiki ketika barang sudah mencapai angka lebih dari 30 barang yang ada pada getrefood
-                int jumlahonothers = 29;
+                // int jumlahonothers = 0;
     
-                while (generatedNumbers.size() < barangdatashow.getRefoodBarang().size()) {
+                while (generatedNumbers.size() < barangdatashow.getRefoodBarang().size() && generatedNumbers.size() < 30) {
                     int randomNumber = (int) (Math.random() * (max - min + 1)) + min;
                     generatedNumbers.add(randomNumber);
                 }
@@ -657,7 +657,7 @@ public class HomepageController implements Initializable {
                 datagridothers.add(new ArrayList<>());
     
                 for (int i : generatedNumbers) {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("DisplayShow\\DisplayBarang.fxml"));
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("DisplayShow\\DisplayBarang.fxml"));
                         AnchorPane item = loader.load();
     
                         // Set different text for each label
@@ -716,18 +716,18 @@ public class HomepageController implements Initializable {
                     nameLabel.setText(barangdatashowurut.getRefoodBarang().get(i).getNamaproduk());
     
                     Label banyakPenjualanLabel = (Label) item.lookup("#banyakPenjualanLabel");
-                    banyakPenjualanLabel.setText(barangdatashowurut.getRefoodBarang().get(i).getStockproduk());
+                    banyakPenjualanLabel.setText(banyakPenjualanLabel.getText()+ barangdatashowurut.getRefoodBarang().get(i).getStockproduk());
                     
     
                     ImageView imageView = (ImageView) item.lookup("#imageproduct");
-                    Image image = new Image(getClass().getClassLoader().getResourceAsStream(barangdatashow.getRefoodBarang().get(i).getFotoproduk()));
+                    Image image = new Image(getClass().getClassLoader().getResourceAsStream(barangdatashowurut.getRefoodBarang().get(i).getFotoproduk()));
                     imageView.setImage(image);
                     Label expire = (Label) item.lookup("#expiredatebarang");
-                    expire.setText(expire.getText()+ barangdatashow.getRefoodBarang().get(i).getExpiredproduk());
+                    expire.setText(expire.getText()+ barangdatashowurut.getRefoodBarang().get(i).getExpiredproduk());
                     
                     showbarangpopular.add(item, coindexpopular, 0);
                     // datagridmost.get(0).add(barangdatashow.getRefoodBarang().get(i));
-                    datagridmost.get(0).add(barangdatashow.getRefoodBarang().get(i));
+                    datagridmost.get(0).add(barangdatashowurut.getRefoodBarang().get(i));
     
                     coindexpopular++;
     

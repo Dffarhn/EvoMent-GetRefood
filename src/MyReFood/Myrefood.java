@@ -233,7 +233,7 @@ public class Myrefood implements Initializable {
                         
                         // vieworder.setPrefHeight(vieworder.getHeight()+419);
 
-                        vieworder.setMinHeight(vieworder.getMinHeight() + 300);
+                        vieworder.setMinHeight(vieworder.getMinHeight() + 380);
                         // vieworder.setPrefHeight(vieworder.getPrefHeight() + 200);
                         
                         // RowConstraints rowConstraints = new RowConstraints();
@@ -241,8 +241,8 @@ public class Myrefood implements Initializable {
                         // vieworder.getRowConstraints().add(rowConstraints);
 
                     RowConstraints rowConstraints = new RowConstraints();
-                    rowConstraints.setMinHeight(30.0); // Set the minimum height of the row
-                    rowConstraints.setPrefHeight(30.0); // Set the preferred height of the row
+                    rowConstraints.setMinHeight(50.0); // Set the minimum height of the row
+                    rowConstraints.setPrefHeight(50.0); // Set the preferred height of the row
                     rowConstraints.setVgrow(Priority.SOMETIMES); // Set the vertical grow property of the row
                     vieworder.getRowConstraints().add(rowConstraints);
                         

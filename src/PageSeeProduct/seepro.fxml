@@ -45,7 +45,7 @@
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font></TextArea>
-                  <Button fx:id="buybutton" layoutX="900.0" layoutY="557.0" mnemonicParsing="false" onAction="#topagepesan" prefHeight="61.0" prefWidth="184.0" text="BUY" />
+                  <Button fx:id="buybutton" layoutX="900.0" layoutY="557.0" mnemonicParsing="false" onAction="#topagepesan" prefHeight="61.0" prefWidth="184.0" style="-fx-cursor: hand;" text="Pilih" />
                   <Label fx:id="seeproddate" layoutX="446.0" layoutY="233.0" prefHeight="52.0" prefWidth="662.0" text="Expire Date :" />
                   <Label fx:id="seeprodstock" layoutX="446.0" layoutY="205.0" prefHeight="45.0" prefWidth="662.0" text="Stock :" />
                </children>
@@ -64,7 +64,7 @@
                   <Font size="19.0" />
                </font>
             </Label>
-            <Button fx:id="cancelbutform" layoutX="7.0" layoutY="27.0" mnemonicParsing="false" onAction="#cancelpagepesan" text="Cancel" />
+            <Button fx:id="cancelbutform" layoutX="7.0" layoutY="27.0" mnemonicParsing="false" onAction="#cancelpagepesan" style="-fx-cursor: hand;" text="Cancel" />
             <TextField fx:id="jumlahpesanan" alignment="CENTER_RIGHT" layoutX="238.0" layoutY="225.0" />
             <Label fx:id="maxstock" layoutX="388.0" layoutY="220.0" prefHeight="34.0" prefWidth="93.0" text="max stock">
                <font>
@@ -79,7 +79,7 @@
             <TextField fx:id="nomorpenjual" disable="true" layoutX="240.0" layoutY="431.0" />
             <Label layoutX="45.0" layoutY="486.0" prefHeight="25.0" prefWidth="83.0" text="Alamat Penjual" />
             <TextArea fx:id="alamatpenjual" disable="true" layoutX="238.0" layoutY="483.0" prefHeight="68.0" prefWidth="152.0" wrapText="true" />
-            <Button layoutX="376.0" layoutY="593.0" mnemonicParsing="false" onAction="#BikinPesanan" text="Bikin Pesanan" />
+            <Button layoutX="376.0" layoutY="593.0" mnemonicParsing="false" onAction="#BikinPesanan" style="-fx-cursor: hand;" text="Bikin Pesanan" />
             <Label fx:id="warnstock" layoutX="240.0" layoutY="255.0" prefHeight="17.0" prefWidth="219.0" text="*Sesuaikan dengan Stock yang tersedia" visible="false">
                <font>
                   <Font name="System Bold Italic" size="9.0" />
