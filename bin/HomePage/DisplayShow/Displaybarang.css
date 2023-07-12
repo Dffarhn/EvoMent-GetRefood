@@ -1,0 +1,38 @@
+.seeprod{
+    -fx-background-color:  #E32636 ;
+    -fx-cursor: hand;
+
+    -fx-background-radius : 10px;
+
+
+}
+
+
+.seeprod:hover{
+    -fx-background-color:  #e16c76 ;
+
+}
+
+
+.hoveprodpage{
+    -fx-background-color:  #D9D9D9 ;
+    -fx-cursor: hand;
+
+    -fx-translate-y: 0;
+    -fx-translate-x: 0;
+    -fx-transition: -fx-translate-y 0.2s, 
+                    -fx-translate-x 0.2s;
+
+}
+
+.hoveprodpage:hover{
+
+    -fx-background-color:  #dcd9d9 ;
+    -fx-border-width: 3px 2px 3px 2px ;
+
+    -fx-border-radius:20px ;
+    -fx-border-color: rgba(170, 79, 79, 0.86) ;
+    -fx-translate-y: -5;
+    -fx-translate-x: -3;
+
+}

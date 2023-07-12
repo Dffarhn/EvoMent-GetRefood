@@ -1,15 +1,12 @@
 
-.button3{
+.buttonsignup{
 
-  -fx-background-color: #00FFFF;
+  -fx-background-color: #D3D3D3;
 
-
-  -fx-border-radius: 0px 0px 168px 181px;
-  -fx-background-radius: 0px 0px 168px 181px;
   -fx-background-insets: 0, 1;
   -fx-text-fill: #ffffff;
   -fx-font-family: Arial;
-  -fx-font-size: 20px;
+  -fx-font-size: 10px;
   -fx-padding: 10px 20px;
   -fx-text-decoration: none;
   -fx-effect: dropshadow(three-pass-box, #666666, 3, 0, 0, 0);
@@ -19,7 +16,7 @@
 
   
 }
-.button3:hover{
+.buttonsignup:hover{
 
   -fx-background-color: #00FFFF;
   -fx-opacity: 1;
@@ -75,26 +72,28 @@
 }
 
 .backde{
-    -fx-background-color: linear-gradient(to right, rgb(252, 115, 156) 0%, rgb(206, 135, 179,0.5) 79%, rgb(161, 145, 207,0.5) 100%);
+    -fx-background-color: #008A53;
+
+    -fx-background-radius: 20px;
     
 
 }
 
-.buttonin {
+.buttonmasuk {
     -fx-font-family: "Roboto", sans-serif;
     -fx-font-weight: normal;
-    -fx-font-size: 14px;
     -fx-text-fill: #fff;
-    -fx-background-color: #0066CC;
-    -fx-padding: 10px 30px;
-    -fx-effect: none;
-    -fx-transition-duration: 1000ms;
+    -fx-background-color: #395346;
+    
+    -fx-background-radius: 40px;
     -fx-alignment: center;
     -fx-cursor: hand;
+    -fx-opacity: 1;
   }
   
-  .buttonin:hover {
-    -fx-background-color: #338ae0;
+  .buttonmasuk:hover {
+    -fx-background-color: #395346;
+    -fx-opacity: 0.8;
     
   }
 
@@ -102,23 +101,57 @@
 #textfield2 {
     -fx-background-color:rgb(255, 255, 255) ;
     -fx-background-radius: 10px;
+
+    -fx-border-color: black;
+
+
+    -fx-border-width: 0px 0px 2px 0px ;
+
+    -fx-transition :  -fx-border-width 1s;
     
     
     
   }
 
-  #textfield2:focused {
+
+#textfield2:focused {
     -fx-background-color:rgb(241, 241, 241) ;
+
+    -fx-border-width: 0px 0px 2px 0px ;
     
-    -fx-border-width: 2px;
     
     -fx-border-color: #338ae0;
-    -fx-border-radius: 10px;
+    /* -fx-border-radius: 10px; */
     
-  }
+}
 
-#panebackground{
-    -fx-background-color: linear-gradient( #efd5ff 0%, #515ada 100%);
+
+
+.buttonchosesignas{
+  -fx-background-color: #44725b;
+  -fx-background-radius: 20px;
+  -fx-border-radius: 20px;
+
+  -fx-border-width: 0px 0px 0px 0px ;
+  -fx-border-color: rgb(99, 69, 69);
+  -fx-translate-y: 0;
+  -fx-transition: -fx-border-width 1s,
+                  -fx-translate-y 1s;
+
+  -fx-cursor: hand ;
+
+
+
+
+  
+}
+
+
+.buttonchosesignas:hover{
+
+  -fx-border-width: 0px 0px 3px 0px ;
+
+  -fx-translate-y: -3;
 
 }
 
